@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Monoid",
+        "repositoryURL": "https://github.com/pointfreeco/swift-algebras",
+        "state": {
+          "branch": "monoid",
+          "revision": "542267d903c8f745994555b890a2c3c54acfb256",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
