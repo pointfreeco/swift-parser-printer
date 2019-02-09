@@ -58,41 +58,18 @@ extension PartialIso where B == (A, ()) {
   }
 }
 
-/// Converts a partial isomorphism of a flat 1-tuple to one of a right-weighted nested tuple.
-public func parenthesize<A, B>(_ f: PartialIso<A, B>) -> PartialIso<A, B> {
-  return f
+public func flatten<A, B, C>(_ tuple: (A, (B, C))) -> (A, B, C) {
+  return (tuple.0, tuple.1.0, tuple.1.1)
 }
 
-/// Converts a partial isomorphism of a flat 2-tuple to one of a right-weighted nested tuple.
-public func parenthesize<A, B, C>(_ f: PartialIso<(A, B), C>) -> PartialIso<(A, B), C> {
-  return f
+public func rightParanthesize<A, B, C>(_ tuple: (A, B, C)) -> (A, (B, C)) {
+  return (tuple.0, (tuple.1, tuple.2))
 }
 
-///// Converts a partial isomorphism of a flat 3-tuple to one of a right-weighted nested tuple.
-//public func parenthesize<A, B, C, D>(_ f: PartialIso<(A, B, C), D>) -> PartialIso<(A, (B, C)), D> {
-//  return flatten() >>> f
-//}
-//
-///// Converts a partial isomorphism of a flat 4-tuple to one of a right-weighted nested tuple.
-//public func parenthesize<A, B, C, D, E>(_ f: PartialIso<(A, B, C ,D), E>) -> PartialIso<(A, (B, (C, D))), E> {
-//  return flatten() >>> f
-//}
-//
-//// TODO: should we just bite the bullet and create our own `TupleN` types and stop using Swift tuples
-//// altogether?
-//
-///// Flattens a right-weighted nested 3-tuple.
-//private func flatten<A, B, C>() -> PartialIso<(A, (B, C)), (A, B, C)> {
-//  return .init(
-//    apply: { ($0.0, $0.1.0, $0.1.1) },
-//    unapply: { ($0, ($1, $2)) }
-//  )
-//}
-//
-///// Flattens a left-weighted nested 4-tuple.
-//private func flatten<A, B, C, D>() -> PartialIso<(A, (B, (C, D))), (A, B, C, D)> {
-//  return .init(
-//    apply: { ($0.0, $0.1.0, $0.1.1.0, $0.1.1.1) },
-//    unapply: { ($0, ($1, ($2, $3))) }
-//  )
-//}
+public func flatten<A, B, C, D, E>(_ tuple: (A, (B, (C, (D, E))))) -> (A, B, C, D, E) {
+  return (tuple.0, tuple.1.0, tuple.1.1.0, tuple.1.1.1.0, tuple.1.1.1.1)
+}
+
+public func rightParanthesize<A, B, C, D, E>(_ tuple: (A, B, C, D, E)) -> (A, (B, (C, (D, E)))) {
+  return (tuple.0, (tuple.1, (tuple.2, (tuple.3, tuple.4))))
+}
