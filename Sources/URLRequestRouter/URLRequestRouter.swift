@@ -9,11 +9,11 @@ infix operator <&>: SyntaxOperator
 
 extension Syntax where M == RequestData {
 
-  public static func </><B>(_ lhs: Syntax<A, M>, _ rhs: PartialIso<String, B>) -> Syntax<(A, B), M> {
+  public static func </> <B>(lhs: Syntax<A, M>, rhs: PartialIso<String, B>) -> Syntax<(A, B), M> {
     return lhs <%> .pathParam(rhs)
   }
 
-  public static func </>(_ lhs: Syntax<A, M>, _ rhs: PartialIso<String, ()>) -> Syntax<A, M> {
+  public static func </> (lhs: Syntax<A, M>, rhs: PartialIso<String, ()>) -> Syntax<A, M> {
     return lhs <% .pathParam(rhs)
   }
 
@@ -30,17 +30,17 @@ extension Syntax where M == RequestData {
     })
   }
 
-  public static func <?><B>(
-    _ lhs: Syntax<A, M>,
-    _ rhs: (key: String, iso: PartialIso<String, B>)
+  public static func <?> <B>(
+    lhs: Syntax<A, M>,
+    rhs: (key: String, iso: PartialIso<String, B>)
     ) -> Syntax<(A, B), M> {
 
     return lhs <%> .queryParam(rhs.key, rhs.iso)
   }
 
-  public static func <&><B>(
-    _ lhs: Syntax<A, M>,
-    _ rhs: (key: String, iso: PartialIso<String, B>)
+  public static func <&> <B>(
+    lhs: Syntax<A, M>,
+    rhs: (key: String, iso: PartialIso<String, B>)
     ) -> Syntax<(A, B), M> {
 
     return lhs <%> .queryParam(rhs.key, rhs.iso)
@@ -86,7 +86,7 @@ extension Syntax where A == Void, M == RequestData {
   public static let get = method(.get).or(method(.head))
   public static let delete = method(.delete)
 
-  public static func </> <B>(_ lhs: Syntax, _ rhs: PartialIso<String, B>) -> Syntax<B, M> {
+  public static func </> <B>(lhs: Syntax, rhs: PartialIso<String, B>) -> Syntax<B, M> {
     return lhs %> .pathParam(rhs)
   }
 
