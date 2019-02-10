@@ -6,6 +6,7 @@ let package = Package(
   name: "PrinterParser",
   products: [
     .library(name: "Syntax", targets: ["Syntax"]),
+    .library(name: "URLRequestRouter", targets: ["URLRequestRouter"]),
     .library(name: "PartialIso", targets: ["PartialIso"]),
   ],
   dependencies: [
@@ -18,6 +19,12 @@ let package = Package(
     .testTarget(
       name: "SyntaxTests",
       dependencies: ["Syntax"]),
+    .target(
+      name: "URLRequestRouter",
+      dependencies: ["Monoid", "PartialIso", "Syntax"]),
+    .testTarget(
+      name: "URLRequestRouterTests",
+      dependencies: ["URLRequestRouter"]),
     .target(
       name: "PartialIso",
       dependencies: []),

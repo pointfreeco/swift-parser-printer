@@ -28,6 +28,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "PrinterParser::URLRequestRouter"
+               BuildableName = "URLRequestRouter.framework"
+               BlueprintName = "URLRequestRouter"
+               ReferencedContainer = "container:PrinterParser.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "PrinterParser::Syntax"
                BuildableName = "Syntax.framework"
                BlueprintName = "Syntax"
@@ -59,6 +73,16 @@
                BlueprintIdentifier = "PrinterParser::PartialIsoTests"
                BuildableName = "PartialIsoTests.xctest"
                BlueprintName = "PartialIsoTests"
+               ReferencedContainer = "container:PrinterParser.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "PrinterParser::URLRequestRouterTests"
+               BuildableName = "URLRequestRouterTests.xctest"
+               BlueprintName = "URLRequestRouterTests"
                ReferencedContainer = "container:PrinterParser.xcodeproj">
             </BuildableReference>
          </TestableReference>
