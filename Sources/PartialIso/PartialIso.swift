@@ -1,3 +1,5 @@
+import Foundation
+
 public struct PartialIso<A, B> {
   public let apply: (A) -> B?
   public let unapply: (B) -> A?
@@ -64,4 +66,31 @@ public func leftFlatten<A, B, C>(_ tuple: ((A, B), C)) -> (A, B, C) {
 
 public func leftParanthesize<A, B, C>(_ tuple: (A, B, C)) -> ((A, B), C) {
   return ((tuple.0, tuple.1), tuple.2)
+}
+
+extension PartialIso where A == String, B == Int {
+
+  public static let int = PartialIso(apply: Int.init, unapply: String.init)
+
+}
+
+extension PartialIso where A == String, B == Double {
+
+  public static let float = PartialIso(apply: Double.init, unapply: String.init)
+
+}
+
+extension PartialIso where A == Data, B: Codable {
+
+  public static func json(_ type: B.Type, decoder: JSONDecoder = .init(), encoder: JSONEncoder = .init()) -> PartialIso {
+    return PartialIso(
+      apply: { try? decoder.decode(B.self, from: $0) },
+      unapply: { try? encoder.encode($0) }
+    )
+  }
+
+  public static var json: PartialIso {
+    return self.json(B.self, decoder: .init(), encoder: .init())
+  }
+
 }
