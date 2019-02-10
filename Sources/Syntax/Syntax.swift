@@ -68,8 +68,9 @@ public struct Syntax<A, M: Equatable> {
         let rhsPrint = rhs._print(b)
         return Optional.zip(lhsPrint, rhsPrint)
           .map(lhs.monoid.combine)
-          ?? lhsPrint
-          ?? rhsPrint
+        // TODO: are these needed?
+//          ?? lhsPrint
+//          ?? rhsPrint
     })
   }
 
@@ -86,8 +87,9 @@ public struct Syntax<A, M: Equatable> {
         let rhsPrint = rhs._print(())
         return Optional.zip(lhsPrint, rhsPrint)
           .map(lhs.monoid.combine)
-          ?? lhsPrint
-          ?? rhsPrint
+        // TODO: are these needed?
+        //          ?? lhsPrint
+        //          ?? rhsPrint
     })
   }
 
@@ -107,22 +109,22 @@ public struct Syntax<A, M: Equatable> {
         let rhsPrint = rhs._print(())
         return Optional.zip(lhsPrint, rhsPrint)
           .map(lhs.monoid.combine)
-          ?? lhsPrint
-          ?? rhsPrint
+        // TODO: are these needed?
+        //          ?? lhsPrint
+        //          ?? rhsPrint
     })
   }
 
-
-  static func or(_ lhs: Syntax, _ rhs: Syntax) -> Syntax {
+  func or(_ other: @escaping @autoclosure () -> Syntax) -> Syntax {
     return Syntax(
-      monoid: lhs.monoid,
+      monoid: self.monoid,
       parse: { m in
         let copy = m
-        if let a = lhs._parse(&m) { return a }
+        if let a = self._parse(&m) { return a }
         m = copy
-        return rhs._parse(&m)
+        return other()._parse(&m)
     },
-      print: { m in lhs._print(m) ?? rhs._print(m) }
+      print: { m in self._print(m) ?? other()._print(m) }
     )
   }
 }
@@ -144,8 +146,9 @@ extension Syntax where A == () {
         let rhsPrint = rhs._print(a)
         return Optional.zip(lhsPrint, rhsPrint)
           .map(lhs.monoid.combine)
-          ?? lhsPrint
-          ?? rhsPrint
+        // TODO: are these needed?
+        //          ?? lhsPrint
+        //          ?? rhsPrint
     })
   }
     static func <%><B>(_ lhs: Syntax<A, M>, _ rhs: Syntax<B, M>) -> Syntax<B, M> {
@@ -161,8 +164,9 @@ extension Syntax where A == () {
           let rhsPrint = rhs._print(a)
           return Optional.zip(lhsPrint, rhsPrint)
             .map(lhs.monoid.combine)
-            ?? lhsPrint
-            ?? rhsPrint
+          // TODO: are these needed?
+          //          ?? lhsPrint
+          //          ?? rhsPrint
       })
     }
 }

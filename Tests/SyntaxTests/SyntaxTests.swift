@@ -56,9 +56,9 @@ final class swift_parser_printerTests: XCTestCase {
   }
 
   func testUser_Operators() {
-    let idSyntax = lit("id:") <%> ws1 <%> int <%> lit(",") <%> ws1
-    let nameSyntax = lit("name:") <%> ws1 <%> quotedString <%> lit(",") <%> ws1
-    let isAdminSyntax = lit("isAdmin:") <%> ws1 <%> bool
+    let idSyntax      = lit("id:")      <%> optWs <%> int          <%> lit(",") <%> optWs
+    let nameSyntax    = lit("name:")    <%> optWs <%> quotedString <%> lit(",") <%> optWs
+    let isAdminSyntax = lit("isAdmin:") <%> optWs <%> bool
     let _userSyntax = lit("User(")
       <%> idSyntax
       <%> nameSyntax
@@ -73,10 +73,10 @@ final class swift_parser_printerTests: XCTestCase {
   func testUser_NoOperators() {
     let idSyntax = field(name: "id", syntax: int)
       .process(discarding: lit(","))
-      .process(discarding: ws1)
+      .process(discarding: optWs)
     let nameSyntax = field(name: "name", syntax: quotedString)
       .process(discarding: lit(","))
-      .process(discarding: ws1)
+      .process(discarding: optWs)
     let isAdminSyntax = field(name: "isAdmin", syntax: bool)
     let userModelSyntax = lit("User(")
       .discard(processing: idSyntax)
@@ -93,6 +93,107 @@ final class swift_parser_printerTests: XCTestCase {
     XCTAssertEqual3(
       (123, "Blob", true),
       userModelSyntax.parse("User(id:123,name:\"Blob\",isAdmin:true)")!
+    )
+  }
+
+  func testAdventDay1() {
+
+    let signedNumber = (skipWs <%> sign <%> int)
+      .map({ sign, int in sign.value * int }, { int in (int.sign, abs(int)) })
+
+    let parser = many(signedNumber, lit(","))
+
+    XCTAssertEqual([1,-1,2,-3], parser.parse("+1,-1,+2,-3"))
+    XCTAssertEqual("+1+2-3+4", parser.print([1, 2, -3, 4]))
+
+    XCTAssertEqual(1, signedNumber.parse("+1"))
+  }
+}
+
+import Monoid
+extension Syntax {
+  init(_ a: A, _ monoid: Monoid<M>) {
+    self = Syntax<A, M>.init(
+      monoid: monoid,
+      parse: { m in m = monoid.empty; return a },
+      print: { _ in monoid.empty }
+    )
+  }
+}
+
+func many<A, M>(_ syntax: Syntax<A, M>) -> Syntax<[A], M> {
+
+  return Syntax<[A], M>.init(
+    monoid: syntax.monoid,
+    parse: { m in
+
+      var result: [A] = []
+      while (true) {
+        let copy = m
+        if let a = syntax._parse(&m) { result.append(a); continue }
+        m = copy
+        break
+      }
+      return result
+
+  }, print: { xs in
+    return xs.reduce(syntax.monoid.empty) { accum, x in
+      syntax.monoid.combine(accum, syntax._print(x) ?? syntax.monoid.empty)
+    }
+  })
+
+  // TODO: not sure why this doesn't work
+//  return Syntax((), syntax.monoid).map(.`nil`())
+//    .or(
+//      (syntax.process(and: many(syntax))).map(.cons())
+//  )
+}
+
+
+func many<A, M>(_ syntax: Syntax<A, M>, _ intersperse: Syntax<(), M>) -> Syntax<[A], M> {
+
+  return Syntax<[A], M>.init(
+    monoid: syntax.monoid,
+    parse: { m in
+
+      var result: [A] = []
+      while (true) {
+        let copy = m
+        if let a = syntax._parse(&m), let _ = intersperse._parse(&m) { result.append(a); continue }
+        m = copy
+        if let a = syntax._parse(&m) { result.append(a); break }
+        m = copy
+        break
+      }
+      return result
+
+  }, print: { xs in
+    // TODO: fix intersperse
+    return xs.reduce(syntax.monoid.empty) { accum, x in
+      syntax.monoid.combine(accum, syntax._print(x) ?? syntax.monoid.empty)
+    }
+  })
+
+}
+
+import PartialIso
+extension PartialIso where A == () {
+  static func `nil`<C>() -> PartialIso<A, B> where B == [C] {
+    return PartialIso<(), [C]>.init(
+      apply: { _ in [] },
+      unapply: { $0.count == 0 ? () : nil }
+    )
+  }
+}
+extension PartialIso {
+  static func cons<C>() -> PartialIso<A, B> where A == (C, [C]), B == [C] {
+    return PartialIso<(C, [C]), [C]>.init(
+      apply: { head, tail in [head] + tail },
+      unapply: { xs in
+        guard let head = xs.first else { return nil }
+        let tail = xs.suffix(from: 1)
+        return (head, Array(tail))
+    }
     )
   }
 }
@@ -133,9 +234,33 @@ extension Syntax where M == [String] {
   }
 }
 
+enum Sign: String, CaseIterable {
+  case plus = "+"
+  case minus = "-"
+  var value: Int {
+    switch self {
+    case .plus:  return 1
+    case .minus: return -1
+    }
+  }
+}
+extension Int {
+  var sign: Sign {
+    return self >= 0 ? .plus : .minus
+  }
+}
+let sign = Syntax<Sign, String>(
+  monoid: .joined,
+  parse: { str in
+    let sign = str.count < 1 ? nil : String(str.removeFirst())
+    return sign.flatMap(Sign.init(rawValue:))
+},
+  print: { sign in sign.rawValue }
+)
+
 func field<A>(name: String, syntax: Syntax<A, String>) -> Syntax<A, String> {
   return lit("\(name):")
-    .discard(processing: ws1)
+    .discard(processing: optWs)
     .discard(processing: syntax)
 }
 
@@ -144,15 +269,15 @@ func lit(_ s: String) -> Syntax<(), String> {
     monoid: .joined,
     parse: { str in
       let hasPrefix = str.hasPrefix(s)
-      str.removeFirst(s.count)
+      if str.count >= s.count { str.removeFirst(s.count) }
       return hasPrefix ? () : nil
   },
     print: { _ in s }
   )
 }
 
-let ws0 = ws(preferred: 0)
-let ws1 = ws(preferred: 1)
+let skipWs = ws(preferred: 0)
+let optWs = ws(preferred: 1)
 func ws(preferred: Int) -> Syntax<(), String> {
   return Syntax<(), String>.init(
     monoid: .joined,
