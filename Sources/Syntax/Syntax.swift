@@ -2,7 +2,7 @@ import Monoid
 import PartialIso
 
 precedencegroup SyntaxOperator {
-  associativity: right
+  associativity: left
 }
 infix operator <%>: SyntaxOperator
 infix operator %>: SyntaxOperator
@@ -10,13 +10,21 @@ infix operator <%: SyntaxOperator
 
 public struct Syntax<A, M: Equatable> {
   let monoid: Monoid<M>
-  let _parse: (M) -> (M, A)?
+  let _parse: (inout M) -> A?
   let _print: (A) -> M?
 
+  public init(monoid: Monoid<M>, parse: @escaping (inout M) -> A?, print: @escaping (A) -> M?) {
+    self.monoid = monoid
+    self._parse = parse
+    self._print = print
+  }
+
   func parse(_ m: M) -> A? {
-    guard case let .some((m, a)) = self._parse(m) else { return nil }
+    var m = m
+    let possibleMatch = self._parse(&m)
+    guard let match = possibleMatch else { return nil }
     guard m == self.monoid.empty else { return nil }
-    return a
+    return match
   }
 
   func print(_ a: A) -> M? {
@@ -30,11 +38,12 @@ public struct Syntax<A, M: Equatable> {
 
     return Syntax<B, M>(
       monoid: self.monoid,
-      _parse: { m in
-        guard let (rest, match) = self._parse(m) else { return nil }
-        return f(match).map { (rest, $0) }
+      parse: { m in
+        let possibleMatch = self._parse(&m)
+        guard let match = possibleMatch else { return nil }
+        return f(match)
     },
-      _print: { b in
+      print: { b in
       g(b).flatMap(self._print)
     })
   }
@@ -43,62 +52,134 @@ public struct Syntax<A, M: Equatable> {
     return self.map(iso.apply, iso.unapply)
   }
 
+  func process<B>(and other: Syntax<B, M>) -> Syntax<(A, B), M> {
+    return self <%> other
+  }
   static func <%><B>(_ lhs: Syntax<A, M>, _ rhs: Syntax<B, M>) -> Syntax<(A, B), M> {
     return Syntax<(A, B), M>(
       monoid: lhs.monoid,
-      _parse: { m in
-        guard let (more, a) = lhs._parse(m) else { return nil }
-        guard let (rest, b) = rhs._parse(more) else { return nil }
-        return (rest, (a, b))
+      parse: { m in
+        guard let a = lhs._parse(&m) else { return nil }
+        guard let b = rhs._parse(&m) else { return nil }
+        return (a, b)
     },
-      _print: { a, b in
+      print: { a, b in
         let lhsPrint = lhs._print(a)
         let rhsPrint = rhs._print(b)
-        return _zip(lhsPrint, rhsPrint)
+        return Optional.zip(lhsPrint, rhsPrint)
           .map(lhs.monoid.combine)
           ?? lhsPrint
           ?? rhsPrint
     })
   }
 
-  static func <%>(_ lhs: Syntax<(), M>, _ rhs: Syntax<A, M>) -> Syntax<A, M> {
+  static func <%>(_ lhs: Syntax<A, M>, _ rhs: Syntax<(), M>) -> Syntax<A, M> {
     return Syntax<A, M>(
       monoid: lhs.monoid,
-      _parse: { m in
-        guard let (more, a) = lhs._parse(m) else { return nil }
-        guard let (rest, b) = rhs._parse(more) else { return nil }
-        return (rest, b)
+      parse: { m in
+        guard let a = lhs._parse(&m) else { return nil }
+        guard let _ = rhs._parse(&m) else { return nil }
+        return a
     },
-      _print: { a in
-        let lhsPrint = lhs._print(())
-        let rhsPrint = rhs._print(a)
-        return _zip(lhsPrint, rhsPrint)
+      print: { a in
+        let lhsPrint = lhs._print(a)
+        let rhsPrint = rhs._print(())
+        return Optional.zip(lhsPrint, rhsPrint)
           .map(lhs.monoid.combine)
           ?? lhsPrint
           ?? rhsPrint
     })
   }
+
+  func process(discarding: Syntax<(), M>) -> Syntax<A, M> {
+    return self <% discarding
+  }
+  static func <%(_ lhs: Syntax<A, M>, _ rhs: Syntax<(), M>) -> Syntax<A, M> {
+    return Syntax<A, M>(
+      monoid: lhs.monoid,
+      parse: { m in
+        guard let a = lhs._parse(&m) else { return nil }
+        guard let _ = rhs._parse(&m) else { return nil }
+        return a
+    },
+      print: { a in
+        let lhsPrint = lhs._print(a)
+        let rhsPrint = rhs._print(())
+        return Optional.zip(lhsPrint, rhsPrint)
+          .map(lhs.monoid.combine)
+          ?? lhsPrint
+          ?? rhsPrint
+    })
+  }
+
 
   static func or(_ lhs: Syntax, _ rhs: Syntax) -> Syntax {
     return Syntax(
       monoid: lhs.monoid,
-      _parse: { a in lhs._parse(a) ?? rhs._parse(a) },
-      _print: { m in lhs._print(m) ?? rhs._print(m) }
+      parse: { m in
+        let copy = m
+        if let a = lhs._parse(&m) { return a }
+        m = copy
+        return rhs._parse(&m)
+    },
+      print: { m in lhs._print(m) ?? rhs._print(m) }
     )
   }
 }
 
-private func _zip<A, B>(_ a: A?, _ b: B?) -> (A, B)? {
-  guard let a = a, let b = b else { return nil }
-  return (a, b)
+extension Syntax where A == () {
+  func discard<B>(processing other: Syntax<B, M>) -> Syntax<B, M> {
+    return self %> other
+  }
+  static func %><B>(_ lhs: Syntax<A, M>, _ rhs: Syntax<B, M>) -> Syntax<B, M> {
+    return Syntax<B, M>(
+      monoid: lhs.monoid,
+      parse: { m in
+        guard let _ = lhs._parse(&m) else { return nil }
+        guard let a = rhs._parse(&m) else { return nil }
+        return a
+    },
+      print: { a in
+        let lhsPrint = lhs._print(())
+        let rhsPrint = rhs._print(a)
+        return Optional.zip(lhsPrint, rhsPrint)
+          .map(lhs.monoid.combine)
+          ?? lhsPrint
+          ?? rhsPrint
+    })
+  }
+    static func <%><B>(_ lhs: Syntax<A, M>, _ rhs: Syntax<B, M>) -> Syntax<B, M> {
+      return Syntax<B, M>(
+        monoid: lhs.monoid,
+        parse: { m in
+          guard let _ = lhs._parse(&m) else { return nil }
+          guard let a = rhs._parse(&m) else { return nil }
+          return a
+      },
+        print: { a in
+          let lhsPrint = lhs._print(())
+          let rhsPrint = rhs._print(a)
+          return Optional.zip(lhsPrint, rhsPrint)
+            .map(lhs.monoid.combine)
+            ?? lhsPrint
+            ?? rhsPrint
+      })
+    }
+}
+
+extension Optional {
+  fileprivate static func zip<B>(_ a: Wrapped?, _ b: B?) -> (Wrapped, B)? {
+    guard let a = a, let b = b else { return nil }
+    return (a, b)
+  }
 }
 
 extension Syntax {
   init(_ monoid: Monoid<M>) {
     self = Syntax.init(
       monoid: monoid,
-      _parse: { _ in nil },
-      _print: { _ in nil }
+      parse: { _ in nil },
+      print: { _ in nil }
     )
   }
 }

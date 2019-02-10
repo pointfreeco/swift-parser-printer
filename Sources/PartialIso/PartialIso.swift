@@ -66,6 +66,22 @@ public func rightParanthesize<A, B, C>(_ tuple: (A, B, C)) -> (A, (B, C)) {
   return (tuple.0, (tuple.1, tuple.2))
 }
 
+public func leftFlatten<A, B, C>(_ tuple: ((A, B), C)) -> (A, B, C) {
+  return (tuple.0.0, tuple.0.1, tuple.1)
+}
+
+public func leftParanthesize<A, B, C>(_ tuple: (A, B, C)) -> ((A, B), C) {
+  return ((tuple.0, tuple.1), tuple.2)
+}
+
+public func flatten<A, B, C, D>(_ tuple: (A, (B, (C, (D))))) -> (A, B, C, D) {
+  return (tuple.0, tuple.1.0, tuple.1.1.0, tuple.1.1.1)
+}
+
+public func rightParanthesize<A, B, C, D>(_ tuple: (A, B, C, D)) -> (A, (B, (C, (D)))) {
+  return (tuple.0, (tuple.1, (tuple.2, (tuple.3))))
+}
+
 public func flatten<A, B, C, D, E>(_ tuple: (A, (B, (C, (D, E))))) -> (A, B, C, D, E) {
   return (tuple.0, tuple.1.0, tuple.1.1.0, tuple.1.1.1.0, tuple.1.1.1.1)
 }
