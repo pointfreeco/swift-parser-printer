@@ -5,11 +5,16 @@ import PartialIso
 
 infix operator </>: SyntaxOperator
 infix operator <?>: SyntaxOperator
+infix operator <&>: SyntaxOperator
 
 extension Syntax where M == RequestData {
 
   public static func </><B>(_ lhs: Syntax<A, M>, _ rhs: PartialIso<String, B>) -> Syntax<(A, B), M> {
     return lhs <%> .pathParam(rhs)
+  }
+
+  public static func </>(_ lhs: Syntax<A, M>, _ rhs: PartialIso<String, ()>) -> Syntax<A, M> {
+    return lhs <% .pathParam(rhs)
   }
 
   public static func pathParam(_ iso: PartialIso<String, A>) -> Syntax<A, M> {
@@ -26,6 +31,14 @@ extension Syntax where M == RequestData {
   }
 
   public static func <?><B>(
+    _ lhs: Syntax<A, M>,
+    _ rhs: (key: String, iso: PartialIso<String, B>)
+    ) -> Syntax<(A, B), M> {
+
+    return lhs <%> .queryParam(rhs.key, rhs.iso)
+  }
+
+  public static func <&><B>(
     _ lhs: Syntax<A, M>,
     _ rhs: (key: String, iso: PartialIso<String, B>)
     ) -> Syntax<(A, B), M> {
@@ -51,4 +64,85 @@ extension Syntax where M == RequestData {
     }
     )
   }
+
+}
+
+extension Syntax where A == Void, M == RequestData {
+
+  public static func method(_ method: Method) -> Syntax {
+    return Syntax<(), M>.init(
+      monoid: .requestData,
+      parse: { request in
+        guard request.method == .some(method) else { return nil }
+        request.method = nil
+        return ()
+    }, print: { a in
+      return RequestData(
+        method: .some(method)
+      )
+    })
+  }
+
+  public static let get = method(.get).or(method(.head))
+  public static let delete = method(.delete)
+
+  public static func </> <B>(_ lhs: Syntax, _ rhs: PartialIso<String, B>) -> Syntax<B, M> {
+    return lhs %> .pathParam(rhs)
+  }
+
+}
+
+extension Syntax where A: Codable, M == RequestData {
+
+  public static func body(_ iso: PartialIso<Data, A>) -> Syntax {
+    return Syntax(
+      monoid: .requestData,
+      parse: { request in
+        guard let body = request.body else { return nil }
+        request.body = nil
+        return iso.apply(body)
+    }, print: { a in
+      return RequestData(body: iso.unapply(a))
+    })
+  }
+
+  public static func post(_ iso: PartialIso<Data, A>) -> Syntax {
+    return .method(.post) %> .body(iso)
+  }
+
+  public static func put(_ iso: PartialIso<Data, A>) -> Syntax {
+    return .method(.put) %> .body(iso)
+  }
+
+  public static func patch(_ iso: PartialIso<Data, A>) -> Syntax {
+    return .method(.patch) %> .body(iso)
+  }
+
+}
+
+extension PartialIso where A == String, B == Int {
+
+  public static let int = PartialIso(apply: Int.init, unapply: String.init)
+
+}
+
+extension PartialIso where A == String, B == Double {
+
+  public static let float = PartialIso(apply: Double.init, unapply: String.init)
+
+}
+
+extension PartialIso where A == Data, B: Codable {
+
+  public static func json(_ type: B.Type, decoder: JSONDecoder = .init(), encoder: JSONEncoder = .init()) -> PartialIso {
+    return PartialIso(
+      apply: { try? decoder.decode(B.self, from: $0) },
+      unapply: { try? encoder.encode($0) }
+    )
+  }
+
+  public static var json: PartialIso {
+    return self.json(B.self, decoder: .init(), encoder: .init())
+  }
+
 }
