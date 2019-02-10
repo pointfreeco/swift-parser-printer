@@ -24,6 +24,7 @@
 
 /* Begin PBXBuildFile section */
 		CAE8571F2210D39600FD5088 /* URLRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8571E2210D39600FD5088 /* URLRequestRouter.swift */; };
+		CAE857212210DB9100FD5088 /* ExpressibleByStringLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE857202210DB9100FD5088 /* ExpressibleByStringLiteral.swift */; };
 		OBJ_106 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_121 /* Syntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Syntax.swift */; };
 		OBJ_123 /* Monoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Monoid::Monoid::Product" /* Monoid.framework */; };
@@ -183,6 +184,7 @@
 
 /* Begin PBXFileReference section */
 		CAE8571E2210D39600FD5088 /* URLRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestRouter.swift; sourceTree = "<group>"; };
+		CAE857202210DB9100FD5088 /* ExpressibleByStringLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressibleByStringLiteral.swift; sourceTree = "<group>"; };
 		"Monoid::Monoid::Product" /* Monoid.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Monoid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_11 /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
 		OBJ_13 /* Syntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.swift; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* PartialIso.swift */,
+				CAE857202210DB9100FD5088 /* ExpressibleByStringLiteral.swift */,
 			);
 			name = PartialIso;
 			path = Sources/PartialIso;
@@ -717,6 +720,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				CAE857212210DB9100FD5088 /* ExpressibleByStringLiteral.swift in Sources */,
 				OBJ_89 /* PartialIso.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
