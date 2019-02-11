@@ -74,6 +74,12 @@ extension PartialIso where A == String, B == Int {
 
 }
 
+extension PartialIso where A == String, B == String {
+
+  public static let string = PartialIso(apply: String.init, unapply: String.init)
+
+}
+
 extension PartialIso where A == String, B == Double {
 
   public static let float = PartialIso(apply: Double.init, unapply: String.init)

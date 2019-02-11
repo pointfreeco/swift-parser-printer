@@ -90,6 +90,15 @@ extension Syntax where A == Void, M == RequestData {
     return lhs %> .pathParam(rhs)
   }
 
+  public static let end = Syntax<A, M>(
+    monoid: .requestData,
+    parse: { request in
+      request.path.count == 0 ? () : nil
+  },
+    print: { a in
+      RequestData()
+  }
+  )
 }
 
 extension Syntax where A: Codable, M == RequestData {

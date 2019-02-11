@@ -8,4 +8,4 @@ struct User: Codable {
 }
 
 let route: Syntax =
-  .post(.json(User.self)) </> "hello" </> "world" </> .int <?> ("x", .int) <&> ("y", .float)
+  .get <
