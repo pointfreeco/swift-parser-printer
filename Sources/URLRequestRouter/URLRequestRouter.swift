@@ -87,6 +87,14 @@ extension Syntax where A == Void, M == RequestData {
     return lhs %> .pathParam(rhs)
   }
 
+  public static func <?> <B>(
+    lhs: Syntax,
+    rhs: (key: String, iso: PartialIso<String, B>)
+    ) -> Syntax<B, M> {
+
+    return lhs %> .queryParam(rhs.key, rhs.iso)
+  }
+
   public static var end: Syntax {
     return Syntax(
       parse: { request in

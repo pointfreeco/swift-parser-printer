@@ -11,7 +11,17 @@ enum Route {
   case home
   case episode(Int)
   case search(String)
-  case create(User)
+  case signUp(User)
+}
+
+extension PartialIso where A == Void, B == Route {
+  static let home = PartialIso(
+    apply: { Route.home },
+    unapply: {
+      guard case .home = $0 else { return nil }
+      return ()
+  }
+  )
 }
 
 extension PartialIso where A == Int, B == Route {
@@ -19,6 +29,26 @@ extension PartialIso where A == Int, B == Route {
     apply: Route.episode,
     unapply: {
       guard case let .episode(value) = $0 else { return nil }
+      return value
+  }
+  )
+}
+
+extension PartialIso where A == String, B == Route {
+  static let search = PartialIso(
+    apply: Route.search,
+    unapply: {
+      guard case let .search(value) = $0 else { return nil }
+      return value
+  }
+  )
+}
+
+extension PartialIso where A == User, B == Route {
+  static let signUp = PartialIso(
+    apply: Route.signUp,
+    unapply: {
+      guard case let .signUp(value) = $0 else { return nil }
       return value
   }
   )
@@ -50,8 +80,10 @@ extension Syntax where M == RequestData {
 }
 
 let router = Router<Route>(
-  .route(.const(.home), to: .get),
-  .route(.episode, to: .get </> "episodes" </> .int)
+  .route(.home, to: .get),
+  .route(.episode, to: .get </> "episodes" </> .int),
+  .route(.search, to: .get </> "search" <?> ("q", .string)),
+  .route(.signUp, to: .post(.json) </> "sign-up")
 )
 
 //let route: Syntax =
