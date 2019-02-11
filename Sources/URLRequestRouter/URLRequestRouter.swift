@@ -13,10 +13,6 @@ extension Syntax where M == RequestData {
     self.init(monoid: .requestData, parse: parse, print: print)
   }
 
-  public static func </> (lhs: Syntax<A, M>, rhs: PartialIso<String, ()>) -> Syntax<A, M> {
-    return lhs <% .pathParam(rhs)
-  }
-
   public static func pathParam(_ iso: PartialIso<String, A>) -> Syntax<A, M> {
     return Syntax(
       parse: { request in
