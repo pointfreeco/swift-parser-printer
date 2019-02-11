@@ -11,6 +11,17 @@ public typealias Router<A> = Syntax<A, RequestData>
 
 extension Syntax where M == RequestData {
 
+  public func route(request: URLRequest) -> A? {
+    return self.route(requestData: RequestData(request: request))
+  }
+
+  /* public? */ func route(requestData: RequestData) -> A? {
+    var requestData = requestData
+    guard let match = (self <% .end)._parse(&requestData) else { return nil }
+    guard requestData == self.monoid.empty else { return nil }
+    return match
+  }
+
   public init(parse: @escaping (inout RequestData) -> A?, print: @escaping (A) -> RequestData?) {
     self.init(monoid: .requestData, parse: parse, print: print)
   }
