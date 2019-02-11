@@ -1,5 +1,6 @@
-import Syntax
+import Foundation
 import PartialIso
+import Syntax
 import URLRequestRouter
 
 struct User: Codable {
@@ -54,40 +55,16 @@ extension PartialIso where A == User, B == Route {
   )
 }
 
-typealias Router<A> = Syntax<A, RequestData>
-
-extension Syntax where M == RequestData {
-  public static func route<A0>(_ f: PartialIso<A0, A>, to syntax: Syntax<A0, M>) -> Syntax {
-    return (syntax <% .end).map(f)
-  }
-}
-
-extension PartialIso where A == Void {
-  public static func const(_ b: B) -> PartialIso {
-    return PartialIso(
-      apply: { .some(b) },
-      unapply: { _ in () }
-    )
-  }
-}
-
-extension Syntax where M == RequestData {
-  public typealias ArrayLiteralElement = Syntax
-
-  public init(_ elements: Syntax...) {
-    self = elements.reduce(into: .init(.requestData)) { $0 = $0.or($1) }
-  }
-}
-
 let router = Router<Route>(
-  .route(.home, to: .get),
-  .route(.episode, to: .get </> "episodes" </> .int),
-  .route(.search, to: .get </> "search" <?> ("q", .string)),
-  .route(.signUp, to: .post(.json) </> "sign-up")
+  .match(.home, to: .get),
+  .match(.episode, to: .get </> "episodes" </> .int),
+  .match(.search, to: .get </> "search" <?> ("q", .string)),
+  .match(.signUp, to: .post(.json) </> "sign-up")
 )
 
-//let route: Syntax =
-//  .get </> "hello" </> "world" </> .int <?> ("x", .int) <% .end
-//
-//route.parse(.init(method: .get, path: ["hello", "world", "1"], query: [("x", "1")], body: nil))
-
+router.parse(.init(method: .get, path: [], query: [("ga", "1")], body: nil))
+router.parse(.init(method: .get, path: ["episodes", "1"], query: [("ga", "1")], body: nil))
+router.parse(.init(method: .get, path: ["search"], query: [("ga", "1"), ("q", "point-free")], body: nil))
+router.parse(.init(method: .post, path: ["sign-up"], query: [], body: Data("""
+{"email":"support@pointfree.co","password":"blob8108"}
+""".utf8)))

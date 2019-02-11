@@ -68,6 +68,15 @@ public func leftParanthesize<A, B, C>(_ tuple: (A, B, C)) -> ((A, B), C) {
   return ((tuple.0, tuple.1), tuple.2)
 }
 
+extension PartialIso where A == Void, B: Equatable {
+  public static func const(_ b: B) -> PartialIso {
+    return PartialIso(
+      apply: { .some(b) },
+      unapply: { b == $0 ? () : nil }
+    )
+  }
+}
+
 extension PartialIso where A == String, B == String {
 
   public static let string = id
@@ -77,12 +86,6 @@ extension PartialIso where A == String, B == String {
 extension PartialIso where A == String, B == Int {
 
   public static let int = PartialIso(apply: Int.init, unapply: String.init)
-
-}
-
-extension PartialIso where A == String, B == String {
-
-  public static let string = PartialIso(apply: String.init, unapply: String.init)
 
 }
 

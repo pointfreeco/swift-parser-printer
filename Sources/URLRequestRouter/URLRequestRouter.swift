@@ -7,10 +7,20 @@ infix operator </>: SyntaxOperator
 infix operator <?>: SyntaxOperator
 infix operator <&>: SyntaxOperator
 
+public typealias Router<A> = Syntax<A, RequestData>
+
 extension Syntax where M == RequestData {
 
-  init(parse: @escaping (inout RequestData) -> A?, print: @escaping (A) -> RequestData?) {
+  public init(parse: @escaping (inout RequestData) -> A?, print: @escaping (A) -> RequestData?) {
     self.init(monoid: .requestData, parse: parse, print: print)
+  }
+
+  public init(_ routes: Syntax...) {
+    self = routes.reduce(into: .init(.requestData)) { $0 = $0.or($1) }
+  }
+
+  public static func match<A0>(_ f: PartialIso<A0, A>, to syntax: Syntax<A0, M>) -> Syntax {
+    return (syntax <% .end).map(f)
   }
 
   public static func pathParam(_ iso: PartialIso<String, A>) -> Syntax<A, M> {
