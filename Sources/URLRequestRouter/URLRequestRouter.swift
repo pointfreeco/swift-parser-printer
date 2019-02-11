@@ -15,6 +15,14 @@ extension Syntax where M == RequestData {
     return self.route(requestData: RequestData(request: request))
   }
 
+  public func route(url: URL) -> A? {
+    return self.route(request: URLRequest(url: url))
+  }
+
+  public func route(urlString: String) -> A? {
+    return URL(string: urlString).flatMap(self.route(url:))
+  }
+
   /* public? */ func route(requestData: RequestData) -> A? {
     var requestData = requestData
     guard let match = (self <% .end)._parse(&requestData) else { return nil }
