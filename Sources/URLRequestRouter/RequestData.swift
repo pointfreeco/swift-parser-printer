@@ -90,14 +90,14 @@ extension RequestData {
       .split(separator: "/", omittingEmptySubsequences: true)
       .map(String.init)
 
-    // TODO: figure out base URL
-    guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
-      self = .init()
-      return
-    }
-
-    self.query = (components.queryItems ?? [])
+    self.query = (URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems ?? [])
       .map { item in (key: item.name, value: item.value) }
+
+    self.body = request.httpBody
+  }
+
+  public init(url: URL) {
+    self.init(request: URLRequest(url: url))
   }
 }
 

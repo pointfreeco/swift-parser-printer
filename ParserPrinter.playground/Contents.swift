@@ -62,9 +62,14 @@ let router = Router<Route>(
   .match(.signUp, to: .post(.json) </> "sign-up")
 )
 
-router.parse(.init(method: .get, path: [], query: [("ga", "1")], body: nil))
-router.parse(.init(method: .get, path: ["episodes", "1"], query: [("ga", "1")], body: nil))
-router.parse(.init(method: .get, path: ["search"], query: [("ga", "1"), ("q", "point-free")], body: nil))
-router.parse(.init(method: .post, path: ["sign-up"], query: [], body: Data("""
+router.parse(.init(url: URL(string: "/?ga=1")!))
+router.parse(.init(url: URL(string: "/episodes/1?ga=1")!))
+router.parse(.init(url: URL(string: "/search?q=point-free&ga=1")!))
+
+var req = URLRequest(url: URL(string: "/sign-up")!)
+req.httpMethod = "post"
+req.httpBody = Data("""
 {"email":"support@pointfree.co","password":"blob8108"}
-""".utf8)))
+""".utf8)
+
+router.parse(.init(request: req))
