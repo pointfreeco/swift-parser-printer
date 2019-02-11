@@ -18,7 +18,7 @@ extension PartialIso where A == Int, B == Route {
   static let episode = PartialIso(
     apply: Route.episode,
     unapply: {
-      guard case let .record(value) = $0 else { return nil }
+      guard case let .episode(value) = $0 else { return nil }
       return value
   }
   )
