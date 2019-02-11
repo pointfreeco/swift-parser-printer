@@ -11,16 +11,28 @@ public typealias Router<A> = Syntax<A, RequestData>
 
 extension Syntax where M == RequestData {
 
-  public func route(request: URLRequest) -> A? {
+  public func match(request: URLRequest) -> A? {
     return self.route(requestData: RequestData(request: request))
   }
 
-  public func route(url: URL) -> A? {
-    return self.route(request: URLRequest(url: url))
+  public func match(url: URL) -> A? {
+    return self.match(request: URLRequest(url: url))
   }
 
-  public func route(urlString: String) -> A? {
-    return URL(string: urlString).flatMap(self.route(url:))
+  public func match(urlString: String) -> A? {
+    return URL(string: urlString).flatMap(self.match(url:))
+  }
+
+  public func request(for a: A) -> URLRequest? {
+    return self._print(a).flatMap { $0.urlRequest }
+  }
+
+  public func url(for a: A) -> URL? {
+    return self._print(a).flatMap { $0.urlRequest?.url }
+  }
+
+  public func urlString(for a: A) -> String? {
+    return self._print(a).flatMap { $0.urlRequest?.url?.absoluteString }
   }
 
   /* public? */ func route(requestData: RequestData) -> A? {
@@ -99,7 +111,11 @@ extension Syntax where A == Void, M == RequestData {
   public static func method(_ method: Method) -> Syntax {
     return Syntax(
       parse: { request in
-        guard request.method == .some(method) else { return nil }
+        guard
+          let requestMethod = request.method,
+          requestMethod.rawValue.caseInsensitiveCompare(method.rawValue) == .orderedSame
+          else { return nil }
+        
         request.method = nil
         return ()
     }, print: { a in

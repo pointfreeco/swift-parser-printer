@@ -193,7 +193,6 @@
 		OBJ_19 /* URLRequestRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestRouterTests.swift; sourceTree = "<group>"; };
 		OBJ_21 /* SyntaxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxTests.swift; sourceTree = "<group>"; };
 		OBJ_22 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_23 /* PrinterParser.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = PrinterParser.xcworkspace; sourceTree = SOURCE_ROOT; };
 		OBJ_28 /* Folds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folds.swift; sourceTree = "<group>"; };
 		OBJ_29 /* Monoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monoid.swift; sourceTree = "<group>"; };
 		OBJ_30 /* Semigroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semigroup.swift; sourceTree = "<group>"; };
@@ -424,7 +423,6 @@
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_14 /* Tests */,
-				OBJ_23 /* PrinterParser.xcworkspace */,
 				OBJ_24 /* Dependencies */,
 				OBJ_47 /* Products */,
 			);

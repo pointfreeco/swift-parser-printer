@@ -79,7 +79,9 @@ extension RequestData {
     self.method = request.httpMethod.map(Method.init(rawValue:)) ?? .get
 
     guard let url = request.url else {
-      self = .init()
+      self.path = []
+      self.query = []
+      self.body = nil
       return
     }
 

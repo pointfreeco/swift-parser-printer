@@ -105,7 +105,7 @@ extension PartialIso where A == Data, B: Codable {
   }
 
   public static var json: PartialIso {
-    return self.json(B.self, decoder: .init(), encoder: .init())
+    return self.json(B.self)
   }
 
 }
