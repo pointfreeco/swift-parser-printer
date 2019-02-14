@@ -10,7 +10,7 @@ guard !arguments.isEmpty else {
   exit(EXIT_FAILURE)
 }
 
-var visitor = Visitor()
+let visitor = Visitor()
 try arguments.forEach { file in
   visitor.visit(try SyntaxTreeParser.parse(URL(fileURLWithPath: file)))
 }
