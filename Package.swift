@@ -14,6 +14,7 @@ let package = Package(
   dependencies: [
     .package(url: "https://github.com/apple/swift-syntax.git", .exact("0.40200.0")),
     .package(url: "https://github.com/pointfreeco/swift-algebras", .branch("monoid")),
+    .package(url: "https://github.com/pointfreeco/swift-snapshot-testing.git", from: "1.1.0"),
   ],
   targets: [
     .target(
@@ -24,7 +25,7 @@ let package = Package(
       dependencies: ["SwiftSyntax"]),
     .testTarget(
       name: "GeneratePartialIsosTests",
-      dependencies: ["GeneratePartialIsos"]),
+      dependencies: ["GeneratePartialIsos", "SnapshotTesting"]),
     .target(
       name: "PartialIso",
       dependencies: []),
