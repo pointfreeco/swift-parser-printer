@@ -26,6 +26,15 @@ extension PartialIso where A == (username: String, password: String), B == Route
   }
   )
 }
+extension PartialIso where A == (String, Category.Id), B == Routes {
+  static let search = PartialIso(
+    apply: Routes.search,
+    unapply: {
+      guard case let .search(value) = $0 else { return nil }
+      return value
+  }
+  )
+}
 extension PartialIso where A == (), B == Routes {
   static let pathological = PartialIso(
     apply: Routes.pathological,
