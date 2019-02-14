@@ -9,13 +9,14 @@
 /* Begin PBXAggregateTarget section */
 		"PrinterParser::PrinterParserPackageTests::ProductTarget" /* PrinterParserPackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_108 /* Build configuration list for PBXAggregateTarget "PrinterParserPackageTests" */;
+			buildConfigurationList = OBJ_169 /* Build configuration list for PBXAggregateTarget "PrinterParserPackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_111 /* PBXTargetDependency */,
-				OBJ_113 /* PBXTargetDependency */,
-				OBJ_114 /* PBXTargetDependency */,
+				OBJ_172 /* PBXTargetDependency */,
+				OBJ_173 /* PBXTargetDependency */,
+				OBJ_175 /* PBXTargetDependency */,
+				OBJ_177 /* PBXTargetDependency */,
 			);
 			name = PrinterParserPackageTests;
 			productName = PrinterParserPackageTests;
@@ -23,441 +24,667 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		CAE8571F2210D39600FD5088 /* URLRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8571E2210D39600FD5088 /* URLRequestRouter.swift */; };
-		CAE857212210DB9100FD5088 /* ExpressibleByStringLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE857202210DB9100FD5088 /* ExpressibleByStringLiteral.swift */; };
-		OBJ_106 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_121 /* Syntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Syntax.swift */; };
-		OBJ_123 /* Monoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Monoid::Monoid::Product" /* Monoid.framework */; };
-		OBJ_124 /* PartialIso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::PartialIso::Product" /* PartialIso.framework */; };
-		OBJ_131 /* SyntaxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* SyntaxTests.swift */; };
-		OBJ_132 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* XCTestManifests.swift */; };
-		OBJ_134 /* Syntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::Syntax::Product" /* Syntax.framework */; };
-		OBJ_135 /* Monoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Monoid::Monoid::Product" /* Monoid.framework */; };
-		OBJ_136 /* PartialIso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::PartialIso::Product" /* PartialIso.framework */; };
-		OBJ_145 /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* RequestData.swift */; };
-		OBJ_147 /* Syntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::Syntax::Product" /* Syntax.framework */; };
-		OBJ_148 /* Monoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Monoid::Monoid::Product" /* Monoid.framework */; };
-		OBJ_149 /* PartialIso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::PartialIso::Product" /* PartialIso.framework */; };
-		OBJ_157 /* URLRequestRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* URLRequestRouterTests.swift */; };
-		OBJ_159 /* URLRequestRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::URLRequestRouter::Product" /* URLRequestRouter.framework */; };
-		OBJ_160 /* Syntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::Syntax::Product" /* Syntax.framework */; };
-		OBJ_161 /* Monoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Monoid::Monoid::Product" /* Monoid.framework */; };
-		OBJ_162 /* PartialIso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::PartialIso::Product" /* PartialIso.framework */; };
-		OBJ_60 /* Folds.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Folds.swift */; };
-		OBJ_61 /* Monoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Monoid.swift */; };
-		OBJ_62 /* Semigroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* Semigroup.swift */; };
-		OBJ_63 /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* TODO.swift */; };
-		OBJ_64 /* Average.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* Average.swift */; };
-		OBJ_65 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* Bool.swift */; };
-		OBJ_66 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Comparable.swift */; };
-		OBJ_67 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Dictionary.swift */; };
-		OBJ_68 /* Endo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* Endo.swift */; };
-		OBJ_69 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Numeric.swift */; };
-		OBJ_70 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* Optional.swift */; };
-		OBJ_71 /* Pointwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Pointwise.swift */; };
-		OBJ_72 /* RangeReplaceableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* RangeReplaceableCollection.swift */; };
-		OBJ_73 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Set.swift */; };
-		OBJ_74 /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Tuple.swift */; };
-		OBJ_75 /* Variance.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Variance.swift */; };
-		OBJ_76 /* Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* Void.swift */; };
-		OBJ_83 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Package.swift */; };
-		OBJ_89 /* PartialIso.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* PartialIso.swift */; };
-		OBJ_96 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* XCTestManifests.swift */; };
-		OBJ_97 /* swift_parser_printerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* swift_parser_printerTests.swift */; };
-		OBJ_99 /* PartialIso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::PartialIso::Product" /* PartialIso.framework */; };
+		803F734422151B6F0091D778 /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803F734322151B6F0091D778 /* Fixture.swift */; };
+		OBJ_101 /* SwiftSyntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */; };
+		OBJ_109 /* GeneratePartialIsosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* GeneratePartialIsosTests.swift */; };
+		OBJ_111 /* GeneratePartialIsos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::GeneratePartialIsos::Product" /* GeneratePartialIsos.framework */; };
+		OBJ_112 /* SwiftSyntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */; };
+		OBJ_120 /* Folds.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Folds.swift */; };
+		OBJ_121 /* Monoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* Monoid.swift */; };
+		OBJ_122 /* Semigroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Semigroup.swift */; };
+		OBJ_123 /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* TODO.swift */; };
+		OBJ_124 /* Average.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* Average.swift */; };
+		OBJ_125 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Bool.swift */; };
+		OBJ_126 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Comparable.swift */; };
+		OBJ_127 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Dictionary.swift */; };
+		OBJ_128 /* Endo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* Endo.swift */; };
+		OBJ_129 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Numeric.swift */; };
+		OBJ_130 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Optional.swift */; };
+		OBJ_131 /* Pointwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Pointwise.swift */; };
+		OBJ_132 /* RangeReplaceableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* RangeReplaceableCollection.swift */; };
+		OBJ_133 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Set.swift */; };
+		OBJ_134 /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Tuple.swift */; };
+		OBJ_135 /* Variance.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* Variance.swift */; };
+		OBJ_136 /* Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Void.swift */; };
+		OBJ_143 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* Package.swift */; };
+		OBJ_149 /* ExpressibleByStringLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* ExpressibleByStringLiteral.swift */; };
+		OBJ_150 /* PartialIso.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* PartialIso.swift */; };
+		OBJ_157 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* XCTestManifests.swift */; };
+		OBJ_158 /* swift_parser_printerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* swift_parser_printerTests.swift */; };
+		OBJ_160 /* PartialIso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::PartialIso::Product" /* PartialIso.framework */; };
+		OBJ_167 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_182 /* AbsolutePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* AbsolutePosition.swift */; };
+		OBJ_183 /* AtomicCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* AtomicCache.swift */; };
+		OBJ_184 /* Diagnostic.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* Diagnostic.swift */; };
+		OBJ_185 /* DiagnosticConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* DiagnosticConsumer.swift */; };
+		OBJ_186 /* DiagnosticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* DiagnosticEngine.swift */; };
+		OBJ_187 /* JSONDiagnosticConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* JSONDiagnosticConsumer.swift */; };
+		OBJ_188 /* PrintingDiagnosticConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* PrintingDiagnosticConsumer.swift */; };
+		OBJ_189 /* RawSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* RawSyntax.swift */; };
+		OBJ_190 /* SourceLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* SourceLength.swift */; };
+		OBJ_191 /* SourcePresence.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* SourcePresence.swift */; };
+		OBJ_192 /* SwiftSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* SwiftSyntax.swift */; };
+		OBJ_193 /* SwiftcInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* SwiftcInvocation.swift */; };
+		OBJ_194 /* Syntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* Syntax.swift */; };
+		OBJ_195 /* SyntaxChildren.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* SyntaxChildren.swift */; };
+		OBJ_196 /* SyntaxData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* SyntaxData.swift */; };
+		OBJ_197 /* SyntaxBuilders.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* SyntaxBuilders.swift */; };
+		OBJ_198 /* SyntaxCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* SyntaxCollections.swift */; };
+		OBJ_199 /* SyntaxFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* SyntaxFactory.swift */; };
+		OBJ_200 /* SyntaxKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* SyntaxKind.swift */; };
+		OBJ_201 /* SyntaxNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* SyntaxNodes.swift */; };
+		OBJ_202 /* SyntaxRewriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* SyntaxRewriter.swift */; };
+		OBJ_203 /* TokenKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* TokenKind.swift */; };
+		OBJ_204 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* Trivia.swift */; };
+		OBJ_211 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* Package.swift */; };
+		OBJ_217 /* Syntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Syntax.swift */; };
+		OBJ_219 /* Monoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Monoid::Monoid::Product" /* Monoid.framework */; };
+		OBJ_220 /* PartialIso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::PartialIso::Product" /* PartialIso.framework */; };
+		OBJ_227 /* SyntaxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* SyntaxTests.swift */; };
+		OBJ_228 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* XCTestManifests.swift */; };
+		OBJ_230 /* Syntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::Syntax::Product" /* Syntax.framework */; };
+		OBJ_231 /* Monoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Monoid::Monoid::Product" /* Monoid.framework */; };
+		OBJ_232 /* PartialIso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::PartialIso::Product" /* PartialIso.framework */; };
+		OBJ_241 /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* RequestData.swift */; };
+		OBJ_242 /* URLRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* URLRequestRouter.swift */; };
+		OBJ_244 /* Syntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::Syntax::Product" /* Syntax.framework */; };
+		OBJ_245 /* Monoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Monoid::Monoid::Product" /* Monoid.framework */; };
+		OBJ_246 /* PartialIso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::PartialIso::Product" /* PartialIso.framework */; };
+		OBJ_254 /* URLRequestRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* URLRequestRouterTests.swift */; };
+		OBJ_256 /* URLRequestRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::URLRequestRouter::Product" /* URLRequestRouter.framework */; };
+		OBJ_257 /* Syntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::Syntax::Product" /* Syntax.framework */; };
+		OBJ_258 /* Monoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Monoid::Monoid::Product" /* Monoid.framework */; };
+		OBJ_259 /* PartialIso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::PartialIso::Product" /* PartialIso.framework */; };
+		OBJ_269 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* main.swift */; };
+		OBJ_271 /* GeneratePartialIsos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::GeneratePartialIsos::Product" /* GeneratePartialIsos.framework */; };
+		OBJ_272 /* SwiftSyntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */; };
+		OBJ_99 /* GeneratePartialIsos.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* GeneratePartialIsos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CAE855F82210CEF100FD5088 /* PBXContainerItemProxy */ = {
+		803F732722151A310091D778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PrinterParser::Syntax";
 			remoteInfo = Syntax;
 		};
-		CAE855F92210CEF100FD5088 /* PBXContainerItemProxy */ = {
+		803F732822151A310091D778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Monoid::Monoid";
 			remoteInfo = Monoid;
 		};
-		CAE855FA2210CEF100FD5088 /* PBXContainerItemProxy */ = {
+		803F732922151A310091D778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PrinterParser::PartialIso";
 			remoteInfo = PartialIso;
 		};
-		CAE855FB2210CEF100FD5088 /* PBXContainerItemProxy */ = {
+		803F732A22151A310091D778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Monoid::Monoid";
 			remoteInfo = Monoid;
 		};
-		CAE855FC2210CEF100FD5088 /* PBXContainerItemProxy */ = {
+		803F732B22151A310091D778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PrinterParser::PartialIso";
 			remoteInfo = PartialIso;
 		};
-		CAE855FD2210CEF100FD5088 /* PBXContainerItemProxy */ = {
+		803F732C22151A310091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::GeneratePartialIsos";
+			remoteInfo = GeneratePartialIsos;
+		};
+		803F732D22151A310091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftSyntax::SwiftSyntax";
+			remoteInfo = SwiftSyntax;
+		};
+		803F732E22151A310091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftSyntax::SwiftSyntax";
+			remoteInfo = SwiftSyntax;
+		};
+		803F732F22151A310091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::PartialIso";
+			remoteInfo = PartialIso;
+		};
+		803F733022151A310091D778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PrinterParser::Syntax";
 			remoteInfo = Syntax;
 		};
-		CAE855FE2210CEF100FD5088 /* PBXContainerItemProxy */ = {
+		803F733122151A310091D778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Monoid::Monoid";
 			remoteInfo = Monoid;
 		};
-		CAE855FF2210CEF100FD5088 /* PBXContainerItemProxy */ = {
+		803F733222151A310091D778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PrinterParser::PartialIso";
 			remoteInfo = PartialIso;
 		};
-		CAE856002210CEF100FD5088 /* PBXContainerItemProxy */ = {
+		803F733322151A310091D778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "PrinterParser::PartialIso";
-			remoteInfo = PartialIso;
+			remoteGlobalIDString = "PrinterParser::GeneratePartialIsos";
+			remoteInfo = GeneratePartialIsos;
 		};
-		CAE856012210CEF100FD5088 /* PBXContainerItemProxy */ = {
+		803F733422151A310091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftSyntax::SwiftSyntax";
+			remoteInfo = SwiftSyntax;
+		};
+		803F733522151A310091D778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PrinterParser::URLRequestRouter";
 			remoteInfo = URLRequestRouter;
 		};
-		CAE856022210CEF100FD5088 /* PBXContainerItemProxy */ = {
+		803F733622151A310091D778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PrinterParser::Syntax";
 			remoteInfo = Syntax;
 		};
-		CAE856032210CEF100FD5088 /* PBXContainerItemProxy */ = {
+		803F733722151A310091D778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Monoid::Monoid";
 			remoteInfo = Monoid;
 		};
-		CAE856042210CEF100FD5088 /* PBXContainerItemProxy */ = {
+		803F733822151A310091D778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PrinterParser::PartialIso";
 			remoteInfo = PartialIso;
 		};
-		CAE856052210CEF100FD5088 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "PrinterParser::URLRequestRouterTests";
-			remoteInfo = URLRequestRouterTests;
-		};
-		CAE856062210CEF100FD5088 /* PBXContainerItemProxy */ = {
+		803F733922151A330091D778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PrinterParser::PartialIsoTests";
 			remoteInfo = PartialIsoTests;
 		};
-		CAE856072210CEF100FD5088 /* PBXContainerItemProxy */ = {
+		803F733A22151A330091D778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "PrinterParser::SyntaxTests";
 			remoteInfo = SyntaxTests;
 		};
+		803F733B22151A330091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::URLRequestRouterTests";
+			remoteInfo = URLRequestRouterTests;
+		};
+		803F733C22151A330091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::GeneratePartialIsosTests";
+			remoteInfo = GeneratePartialIsosTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CAE8571E2210D39600FD5088 /* URLRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestRouter.swift; sourceTree = "<group>"; };
-		CAE857202210DB9100FD5088 /* ExpressibleByStringLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressibleByStringLiteral.swift; sourceTree = "<group>"; };
+		803F734322151B6F0091D778 /* Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
 		"Monoid::Monoid::Product" /* Monoid.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Monoid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_11 /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
-		OBJ_13 /* Syntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.swift; sourceTree = "<group>"; };
-		OBJ_16 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_17 /* swift_parser_printerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_parser_printerTests.swift; sourceTree = "<group>"; };
-		OBJ_19 /* URLRequestRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestRouterTests.swift; sourceTree = "<group>"; };
-		OBJ_21 /* SyntaxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxTests.swift; sourceTree = "<group>"; };
-		OBJ_22 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_28 /* Folds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folds.swift; sourceTree = "<group>"; };
-		OBJ_29 /* Monoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monoid.swift; sourceTree = "<group>"; };
-		OBJ_30 /* Semigroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semigroup.swift; sourceTree = "<group>"; };
-		OBJ_31 /* TODO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
-		OBJ_33 /* Average.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Average.swift; sourceTree = "<group>"; };
-		OBJ_34 /* Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
-		OBJ_35 /* Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
-		OBJ_36 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
-		OBJ_37 /* Endo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endo.swift; sourceTree = "<group>"; };
-		OBJ_38 /* Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
-		OBJ_39 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
-		OBJ_40 /* Pointwise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pointwise.swift; sourceTree = "<group>"; };
-		OBJ_41 /* RangeReplaceableCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeReplaceableCollection.swift; sourceTree = "<group>"; };
-		OBJ_42 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
-		OBJ_43 /* Tuple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tuple.swift; sourceTree = "<group>"; };
-		OBJ_44 /* Variance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variance.swift; sourceTree = "<group>"; };
-		OBJ_45 /* Void.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Void.swift; sourceTree = "<group>"; };
-		OBJ_46 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/brandon/projects/swift-parser-printer/.build/checkouts/swift-algebras--1345582510493575962/Package.swift"; sourceTree = "<group>"; };
+		OBJ_11 /* ExpressibleByStringLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressibleByStringLiteral.swift; sourceTree = "<group>"; };
+		OBJ_12 /* PartialIso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialIso.swift; sourceTree = "<group>"; };
+		OBJ_14 /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
+		OBJ_15 /* URLRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestRouter.swift; sourceTree = "<group>"; };
+		OBJ_17 /* Syntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.swift; sourceTree = "<group>"; };
+		OBJ_19 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_22 /* SyntaxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxTests.swift; sourceTree = "<group>"; };
+		OBJ_23 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_25 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_26 /* swift_parser_printerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_parser_printerTests.swift; sourceTree = "<group>"; };
+		OBJ_28 /* URLRequestRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestRouterTests.swift; sourceTree = "<group>"; };
+		OBJ_30 /* GeneratePartialIsosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePartialIsosTests.swift; sourceTree = "<group>"; };
+		OBJ_31 /* PrinterParser.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = PrinterParser.xcworkspace; sourceTree = SOURCE_ROOT; };
+		OBJ_36 /* Folds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folds.swift; sourceTree = "<group>"; };
+		OBJ_37 /* Monoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monoid.swift; sourceTree = "<group>"; };
+		OBJ_38 /* Semigroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semigroup.swift; sourceTree = "<group>"; };
+		OBJ_39 /* TODO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
+		OBJ_41 /* Average.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Average.swift; sourceTree = "<group>"; };
+		OBJ_42 /* Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
+		OBJ_43 /* Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
+		OBJ_44 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		OBJ_45 /* Endo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endo.swift; sourceTree = "<group>"; };
+		OBJ_46 /* Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
+		OBJ_47 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		OBJ_48 /* Pointwise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pointwise.swift; sourceTree = "<group>"; };
+		OBJ_49 /* RangeReplaceableCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeReplaceableCollection.swift; sourceTree = "<group>"; };
+		OBJ_50 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
+		OBJ_51 /* Tuple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tuple.swift; sourceTree = "<group>"; };
+		OBJ_52 /* Variance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variance.swift; sourceTree = "<group>"; };
+		OBJ_53 /* Void.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Void.swift; sourceTree = "<group>"; };
+		OBJ_54 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/stephencelis/Developer/pointfreeco/swift-parser-printer/.build/checkouts/swift-algebras-1501178186608326700/Package.swift"; sourceTree = "<group>"; };
+		OBJ_57 /* AbsolutePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsolutePosition.swift; sourceTree = "<group>"; };
+		OBJ_58 /* AtomicCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicCache.swift; sourceTree = "<group>"; };
+		OBJ_59 /* Diagnostic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnostic.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_9 /* PartialIso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialIso.swift; sourceTree = "<group>"; };
+		OBJ_60 /* DiagnosticConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticConsumer.swift; sourceTree = "<group>"; };
+		OBJ_61 /* DiagnosticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticEngine.swift; sourceTree = "<group>"; };
+		OBJ_62 /* JSONDiagnosticConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDiagnosticConsumer.swift; sourceTree = "<group>"; };
+		OBJ_63 /* PrintingDiagnosticConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintingDiagnosticConsumer.swift; sourceTree = "<group>"; };
+		OBJ_64 /* RawSyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawSyntax.swift; sourceTree = "<group>"; };
+		OBJ_65 /* SourceLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLength.swift; sourceTree = "<group>"; };
+		OBJ_66 /* SourcePresence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcePresence.swift; sourceTree = "<group>"; };
+		OBJ_67 /* SwiftSyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSyntax.swift; sourceTree = "<group>"; };
+		OBJ_68 /* SwiftcInvocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftcInvocation.swift; sourceTree = "<group>"; };
+		OBJ_69 /* Syntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.swift; sourceTree = "<group>"; };
+		OBJ_70 /* SyntaxChildren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxChildren.swift; sourceTree = "<group>"; };
+		OBJ_71 /* SyntaxData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxData.swift; sourceTree = "<group>"; };
+		OBJ_73 /* SyntaxBuilders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxBuilders.swift; sourceTree = "<group>"; };
+		OBJ_74 /* SyntaxCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxCollections.swift; sourceTree = "<group>"; };
+		OBJ_75 /* SyntaxFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxFactory.swift; sourceTree = "<group>"; };
+		OBJ_76 /* SyntaxKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxKind.swift; sourceTree = "<group>"; };
+		OBJ_77 /* SyntaxNodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxNodes.swift; sourceTree = "<group>"; };
+		OBJ_78 /* SyntaxRewriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxRewriter.swift; sourceTree = "<group>"; };
+		OBJ_79 /* TokenKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenKind.swift; sourceTree = "<group>"; };
+		OBJ_80 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
+		OBJ_81 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/stephencelis/Developer/pointfreeco/swift-parser-printer/.build/checkouts/swift-syntax.git-6551255410123428459/Package.swift"; sourceTree = "<group>"; };
+		OBJ_9 /* GeneratePartialIsos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePartialIsos.swift; sourceTree = "<group>"; };
+		"PrinterParser::GeneratePartialIsos::Product" /* GeneratePartialIsos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GeneratePartialIsos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PrinterParser::GeneratePartialIsosTests::Product" /* GeneratePartialIsosTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = GeneratePartialIsosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PrinterParser::PartialIso::Product" /* PartialIso.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PartialIso.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PrinterParser::PartialIsoTests::Product" /* PartialIsoTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = PartialIsoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PrinterParser::Syntax::Product" /* Syntax.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Syntax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PrinterParser::SyntaxTests::Product" /* SyntaxTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SyntaxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PrinterParser::URLRequestRouter::Product" /* URLRequestRouter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = URLRequestRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PrinterParser::URLRequestRouterTests::Product" /* URLRequestRouterTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = URLRequestRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PrinterParser::generate-partial-isos::Product" /* generate-partial-isos */ = {isa = PBXFileReference; lastKnownFileType = text; path = "generate-partial-isos"; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftSyntax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_122 /* Frameworks */ = {
+		OBJ_100 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_123 /* Monoid.framework in Frameworks */,
-				OBJ_124 /* PartialIso.framework in Frameworks */,
+				OBJ_101 /* SwiftSyntax.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_133 /* Frameworks */ = {
+		OBJ_110 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_134 /* Syntax.framework in Frameworks */,
-				OBJ_135 /* Monoid.framework in Frameworks */,
-				OBJ_136 /* PartialIso.framework in Frameworks */,
+				OBJ_111 /* GeneratePartialIsos.framework in Frameworks */,
+				OBJ_112 /* SwiftSyntax.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_146 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_147 /* Syntax.framework in Frameworks */,
-				OBJ_148 /* Monoid.framework in Frameworks */,
-				OBJ_149 /* PartialIso.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_158 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_159 /* URLRequestRouter.framework in Frameworks */,
-				OBJ_160 /* Syntax.framework in Frameworks */,
-				OBJ_161 /* Monoid.framework in Frameworks */,
-				OBJ_162 /* PartialIso.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_77 /* Frameworks */ = {
+		OBJ_137 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_90 /* Frameworks */ = {
+		OBJ_151 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_98 /* Frameworks */ = {
+		OBJ_159 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_99 /* PartialIso.framework in Frameworks */,
+				OBJ_160 /* PartialIso.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_205 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_218 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_219 /* Monoid.framework in Frameworks */,
+				OBJ_220 /* PartialIso.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_229 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_230 /* Syntax.framework in Frameworks */,
+				OBJ_231 /* Monoid.framework in Frameworks */,
+				OBJ_232 /* PartialIso.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_243 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_244 /* Syntax.framework in Frameworks */,
+				OBJ_245 /* Monoid.framework in Frameworks */,
+				OBJ_246 /* PartialIso.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_256 /* URLRequestRouter.framework in Frameworks */,
+				OBJ_257 /* Syntax.framework in Frameworks */,
+				OBJ_258 /* Monoid.framework in Frameworks */,
+				OBJ_259 /* PartialIso.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_270 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_271 /* GeneratePartialIsos.framework in Frameworks */,
+				OBJ_272 /* SwiftSyntax.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_10 /* URLRequestRouter */ = {
+		OBJ_10 /* PartialIso */ = {
 			isa = PBXGroup;
 			children = (
-				CAE8571E2210D39600FD5088 /* URLRequestRouter.swift */,
-				OBJ_11 /* RequestData.swift */,
+				OBJ_11 /* ExpressibleByStringLiteral.swift */,
+				OBJ_12 /* PartialIso.swift */,
+			);
+			name = PartialIso;
+			path = Sources/PartialIso;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_13 /* URLRequestRouter */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_14 /* RequestData.swift */,
+				OBJ_15 /* URLRequestRouter.swift */,
 			);
 			name = URLRequestRouter;
 			path = Sources/URLRequestRouter;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_12 /* Syntax */ = {
+		OBJ_16 /* Syntax */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_13 /* Syntax.swift */,
+				OBJ_17 /* Syntax.swift */,
 			);
 			name = Syntax;
 			path = Sources/Syntax;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_14 /* Tests */ = {
+		OBJ_18 /* generate-partial-isos */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_15 /* PartialIsoTests */,
-				OBJ_18 /* URLRequestRouterTests */,
-				OBJ_20 /* SyntaxTests */,
+				OBJ_19 /* main.swift */,
+			);
+			name = "generate-partial-isos";
+			path = "Sources/generate-partial-isos";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_20 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_21 /* SyntaxTests */,
+				OBJ_24 /* PartialIsoTests */,
+				OBJ_27 /* URLRequestRouterTests */,
+				OBJ_29 /* GeneratePartialIsosTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_15 /* PartialIsoTests */ = {
+		OBJ_21 /* SyntaxTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_16 /* XCTestManifests.swift */,
-				OBJ_17 /* swift_parser_printerTests.swift */,
-			);
-			name = PartialIsoTests;
-			path = Tests/PartialIsoTests;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_18 /* URLRequestRouterTests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_19 /* URLRequestRouterTests.swift */,
-			);
-			name = URLRequestRouterTests;
-			path = Tests/URLRequestRouterTests;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_20 /* SyntaxTests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_21 /* SyntaxTests.swift */,
-				OBJ_22 /* XCTestManifests.swift */,
+				OBJ_22 /* SyntaxTests.swift */,
+				OBJ_23 /* XCTestManifests.swift */,
 			);
 			name = SyntaxTests;
 			path = Tests/SyntaxTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_24 /* Dependencies */ = {
+		OBJ_24 /* PartialIsoTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_25 /* Monoid */,
+				OBJ_25 /* XCTestManifests.swift */,
+				OBJ_26 /* swift_parser_printerTests.swift */,
+			);
+			name = PartialIsoTests;
+			path = Tests/PartialIsoTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_27 /* URLRequestRouterTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_28 /* URLRequestRouterTests.swift */,
+			);
+			name = URLRequestRouterTests;
+			path = Tests/URLRequestRouterTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_29 /* GeneratePartialIsosTests */ = {
+			isa = PBXGroup;
+			children = (
+				803F734322151B6F0091D778 /* Fixture.swift */,
+				OBJ_30 /* GeneratePartialIsosTests.swift */,
+			);
+			name = GeneratePartialIsosTests;
+			path = Tests/GeneratePartialIsosTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_32 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_33 /* Monoid */,
+				OBJ_55 /* SwiftSyntax 0.40200.0 */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		OBJ_25 /* Monoid */ = {
+		OBJ_33 /* Monoid */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_26 /* Monoid */,
-				OBJ_46 /* Package.swift */,
+				OBJ_34 /* Monoid */,
+				OBJ_54 /* Package.swift */,
 			);
 			name = Monoid;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_26 /* Monoid */ = {
+		OBJ_34 /* Monoid */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_27 /* Algebras */,
-				OBJ_32 /* Instances */,
+				OBJ_35 /* Algebras */,
+				OBJ_40 /* Instances */,
 			);
 			name = Monoid;
-			path = ".build/checkouts/swift-algebras--1345582510493575962/Sources/Monoid";
+			path = ".build/checkouts/swift-algebras-1501178186608326700/Sources/Monoid";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_27 /* Algebras */ = {
+		OBJ_35 /* Algebras */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_28 /* Folds.swift */,
-				OBJ_29 /* Monoid.swift */,
-				OBJ_30 /* Semigroup.swift */,
-				OBJ_31 /* TODO.swift */,
+				OBJ_36 /* Folds.swift */,
+				OBJ_37 /* Monoid.swift */,
+				OBJ_38 /* Semigroup.swift */,
+				OBJ_39 /* TODO.swift */,
 			);
 			path = Algebras;
 			sourceTree = "<group>";
 		};
-		OBJ_32 /* Instances */ = {
+		OBJ_40 /* Instances */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_33 /* Average.swift */,
-				OBJ_34 /* Bool.swift */,
-				OBJ_35 /* Comparable.swift */,
-				OBJ_36 /* Dictionary.swift */,
-				OBJ_37 /* Endo.swift */,
-				OBJ_38 /* Numeric.swift */,
-				OBJ_39 /* Optional.swift */,
-				OBJ_40 /* Pointwise.swift */,
-				OBJ_41 /* RangeReplaceableCollection.swift */,
-				OBJ_42 /* Set.swift */,
-				OBJ_43 /* Tuple.swift */,
-				OBJ_44 /* Variance.swift */,
-				OBJ_45 /* Void.swift */,
+				OBJ_41 /* Average.swift */,
+				OBJ_42 /* Bool.swift */,
+				OBJ_43 /* Comparable.swift */,
+				OBJ_44 /* Dictionary.swift */,
+				OBJ_45 /* Endo.swift */,
+				OBJ_46 /* Numeric.swift */,
+				OBJ_47 /* Optional.swift */,
+				OBJ_48 /* Pointwise.swift */,
+				OBJ_49 /* RangeReplaceableCollection.swift */,
+				OBJ_50 /* Set.swift */,
+				OBJ_51 /* Tuple.swift */,
+				OBJ_52 /* Variance.swift */,
+				OBJ_53 /* Void.swift */,
 			);
 			path = Instances;
 			sourceTree = "<group>";
-		};
-		OBJ_47 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				"PrinterParser::URLRequestRouterTests::Product" /* URLRequestRouterTests.xctest */,
-				"PrinterParser::PartialIsoTests::Product" /* PartialIsoTests.xctest */,
-				"Monoid::Monoid::Product" /* Monoid.framework */,
-				"PrinterParser::SyntaxTests::Product" /* SyntaxTests.xctest */,
-				"PrinterParser::PartialIso::Product" /* PartialIso.framework */,
-				"PrinterParser::Syntax::Product" /* Syntax.framework */,
-				"PrinterParser::URLRequestRouter::Product" /* URLRequestRouter.framework */,
-			);
-			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_14 /* Tests */,
-				OBJ_24 /* Dependencies */,
-				OBJ_47 /* Products */,
+				OBJ_20 /* Tests */,
+				OBJ_31 /* PrinterParser.xcworkspace */,
+				OBJ_32 /* Dependencies */,
+				OBJ_82 /* Products */,
 			);
 			name = "";
 			sourceTree = "<group>";
 		};
+		OBJ_55 /* SwiftSyntax 0.40200.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_56 /* SwiftSyntax */,
+				OBJ_81 /* Package.swift */,
+			);
+			name = "SwiftSyntax 0.40200.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_56 /* SwiftSyntax */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_57 /* AbsolutePosition.swift */,
+				OBJ_58 /* AtomicCache.swift */,
+				OBJ_59 /* Diagnostic.swift */,
+				OBJ_60 /* DiagnosticConsumer.swift */,
+				OBJ_61 /* DiagnosticEngine.swift */,
+				OBJ_62 /* JSONDiagnosticConsumer.swift */,
+				OBJ_63 /* PrintingDiagnosticConsumer.swift */,
+				OBJ_64 /* RawSyntax.swift */,
+				OBJ_65 /* SourceLength.swift */,
+				OBJ_66 /* SourcePresence.swift */,
+				OBJ_67 /* SwiftSyntax.swift */,
+				OBJ_68 /* SwiftcInvocation.swift */,
+				OBJ_69 /* Syntax.swift */,
+				OBJ_70 /* SyntaxChildren.swift */,
+				OBJ_71 /* SyntaxData.swift */,
+				OBJ_72 /* gyb_generated */,
+			);
+			name = SwiftSyntax;
+			path = ".build/checkouts/swift-syntax.git-6551255410123428459/Sources/SwiftSyntax";
+			sourceTree = SOURCE_ROOT;
+		};
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* PartialIso */,
-				OBJ_10 /* URLRequestRouter */,
-				OBJ_12 /* Syntax */,
+				OBJ_8 /* GeneratePartialIsos */,
+				OBJ_10 /* PartialIso */,
+				OBJ_13 /* URLRequestRouter */,
+				OBJ_16 /* Syntax */,
+				OBJ_18 /* generate-partial-isos */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_8 /* PartialIso */ = {
+		OBJ_72 /* gyb_generated */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_9 /* PartialIso.swift */,
-				CAE857202210DB9100FD5088 /* ExpressibleByStringLiteral.swift */,
+				OBJ_73 /* SyntaxBuilders.swift */,
+				OBJ_74 /* SyntaxCollections.swift */,
+				OBJ_75 /* SyntaxFactory.swift */,
+				OBJ_76 /* SyntaxKind.swift */,
+				OBJ_77 /* SyntaxNodes.swift */,
+				OBJ_78 /* SyntaxRewriter.swift */,
+				OBJ_79 /* TokenKind.swift */,
+				OBJ_80 /* Trivia.swift */,
 			);
-			name = PartialIso;
-			path = Sources/PartialIso;
+			path = gyb_generated;
+			sourceTree = "<group>";
+		};
+		OBJ_8 /* GeneratePartialIsos */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* GeneratePartialIsos.swift */,
+			);
+			name = GeneratePartialIsos;
+			path = Sources/GeneratePartialIsos;
 			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"PrinterParser::URLRequestRouter::Product" /* URLRequestRouter.framework */,
+				"PrinterParser::GeneratePartialIsosTests::Product" /* GeneratePartialIsosTests.xctest */,
+				"PrinterParser::SyntaxTests::Product" /* SyntaxTests.xctest */,
+				"PrinterParser::Syntax::Product" /* Syntax.framework */,
+				"Monoid::Monoid::Product" /* Monoid.framework */,
+				"PrinterParser::PartialIso::Product" /* PartialIso.framework */,
+				"SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */,
+				"PrinterParser::generate-partial-isos::Product" /* generate-partial-isos */,
+				"PrinterParser::PartialIsoTests::Product" /* PartialIsoTests.xctest */,
+				"PrinterParser::GeneratePartialIsos::Product" /* GeneratePartialIsos.framework */,
+				"PrinterParser::URLRequestRouterTests::Product" /* URLRequestRouterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
 		"Monoid::Monoid" /* Monoid */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_56 /* Build configuration list for PBXNativeTarget "Monoid" */;
+			buildConfigurationList = OBJ_116 /* Build configuration list for PBXNativeTarget "Monoid" */;
 			buildPhases = (
-				OBJ_59 /* Sources */,
-				OBJ_77 /* Frameworks */,
+				OBJ_119 /* Sources */,
+				OBJ_137 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -470,9 +697,9 @@
 		};
 		"Monoid::SwiftPMPackageDescription" /* MonoidPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_79 /* Build configuration list for PBXNativeTarget "MonoidPackageDescription" */;
+			buildConfigurationList = OBJ_139 /* Build configuration list for PBXNativeTarget "MonoidPackageDescription" */;
 			buildPhases = (
-				OBJ_82 /* Sources */,
+				OBJ_142 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -482,12 +709,47 @@
 			productName = MonoidPackageDescription;
 			productType = "com.apple.product-type.framework";
 		};
+		"PrinterParser::GeneratePartialIsos" /* GeneratePartialIsos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_95 /* Build configuration list for PBXNativeTarget "GeneratePartialIsos" */;
+			buildPhases = (
+				OBJ_98 /* Sources */,
+				OBJ_100 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_102 /* PBXTargetDependency */,
+			);
+			name = GeneratePartialIsos;
+			productName = GeneratePartialIsos;
+			productReference = "PrinterParser::GeneratePartialIsos::Product" /* GeneratePartialIsos.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"PrinterParser::GeneratePartialIsosTests" /* GeneratePartialIsosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_105 /* Build configuration list for PBXNativeTarget "GeneratePartialIsosTests" */;
+			buildPhases = (
+				OBJ_108 /* Sources */,
+				OBJ_110 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_113 /* PBXTargetDependency */,
+				OBJ_114 /* PBXTargetDependency */,
+			);
+			name = GeneratePartialIsosTests;
+			productName = GeneratePartialIsosTests;
+			productReference = "PrinterParser::GeneratePartialIsosTests::Product" /* GeneratePartialIsosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		"PrinterParser::PartialIso" /* PartialIso */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_85 /* Build configuration list for PBXNativeTarget "PartialIso" */;
+			buildConfigurationList = OBJ_145 /* Build configuration list for PBXNativeTarget "PartialIso" */;
 			buildPhases = (
-				OBJ_88 /* Sources */,
-				OBJ_90 /* Frameworks */,
+				OBJ_148 /* Sources */,
+				OBJ_151 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -500,15 +762,15 @@
 		};
 		"PrinterParser::PartialIsoTests" /* PartialIsoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_92 /* Build configuration list for PBXNativeTarget "PartialIsoTests" */;
+			buildConfigurationList = OBJ_153 /* Build configuration list for PBXNativeTarget "PartialIsoTests" */;
 			buildPhases = (
-				OBJ_95 /* Sources */,
-				OBJ_98 /* Frameworks */,
+				OBJ_156 /* Sources */,
+				OBJ_159 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_100 /* PBXTargetDependency */,
+				OBJ_161 /* PBXTargetDependency */,
 			);
 			name = PartialIsoTests;
 			productName = PartialIsoTests;
@@ -517,9 +779,9 @@
 		};
 		"PrinterParser::SwiftPMPackageDescription" /* PrinterParserPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_102 /* Build configuration list for PBXNativeTarget "PrinterParserPackageDescription" */;
+			buildConfigurationList = OBJ_163 /* Build configuration list for PBXNativeTarget "PrinterParserPackageDescription" */;
 			buildPhases = (
-				OBJ_105 /* Sources */,
+				OBJ_166 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -531,16 +793,16 @@
 		};
 		"PrinterParser::Syntax" /* Syntax */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_117 /* Build configuration list for PBXNativeTarget "Syntax" */;
+			buildConfigurationList = OBJ_213 /* Build configuration list for PBXNativeTarget "Syntax" */;
 			buildPhases = (
-				OBJ_120 /* Sources */,
-				OBJ_122 /* Frameworks */,
+				OBJ_216 /* Sources */,
+				OBJ_218 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_125 /* PBXTargetDependency */,
-				OBJ_126 /* PBXTargetDependency */,
+				OBJ_221 /* PBXTargetDependency */,
+				OBJ_222 /* PBXTargetDependency */,
 			);
 			name = Syntax;
 			productName = Syntax;
@@ -549,17 +811,17 @@
 		};
 		"PrinterParser::SyntaxTests" /* SyntaxTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_127 /* Build configuration list for PBXNativeTarget "SyntaxTests" */;
+			buildConfigurationList = OBJ_223 /* Build configuration list for PBXNativeTarget "SyntaxTests" */;
 			buildPhases = (
-				OBJ_130 /* Sources */,
-				OBJ_133 /* Frameworks */,
+				OBJ_226 /* Sources */,
+				OBJ_229 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_137 /* PBXTargetDependency */,
-				OBJ_138 /* PBXTargetDependency */,
-				OBJ_139 /* PBXTargetDependency */,
+				OBJ_233 /* PBXTargetDependency */,
+				OBJ_234 /* PBXTargetDependency */,
+				OBJ_235 /* PBXTargetDependency */,
 			);
 			name = SyntaxTests;
 			productName = SyntaxTests;
@@ -568,17 +830,17 @@
 		};
 		"PrinterParser::URLRequestRouter" /* URLRequestRouter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_141 /* Build configuration list for PBXNativeTarget "URLRequestRouter" */;
+			buildConfigurationList = OBJ_237 /* Build configuration list for PBXNativeTarget "URLRequestRouter" */;
 			buildPhases = (
-				OBJ_144 /* Sources */,
-				OBJ_146 /* Frameworks */,
+				OBJ_240 /* Sources */,
+				OBJ_243 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_150 /* PBXTargetDependency */,
-				OBJ_151 /* PBXTargetDependency */,
-				OBJ_152 /* PBXTargetDependency */,
+				OBJ_247 /* PBXTargetDependency */,
+				OBJ_248 /* PBXTargetDependency */,
+				OBJ_249 /* PBXTargetDependency */,
 			);
 			name = URLRequestRouter;
 			productName = URLRequestRouter;
@@ -587,23 +849,71 @@
 		};
 		"PrinterParser::URLRequestRouterTests" /* URLRequestRouterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_153 /* Build configuration list for PBXNativeTarget "URLRequestRouterTests" */;
+			buildConfigurationList = OBJ_250 /* Build configuration list for PBXNativeTarget "URLRequestRouterTests" */;
 			buildPhases = (
-				OBJ_156 /* Sources */,
-				OBJ_158 /* Frameworks */,
+				OBJ_253 /* Sources */,
+				OBJ_255 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_163 /* PBXTargetDependency */,
-				OBJ_164 /* PBXTargetDependency */,
-				OBJ_165 /* PBXTargetDependency */,
-				OBJ_166 /* PBXTargetDependency */,
+				OBJ_260 /* PBXTargetDependency */,
+				OBJ_261 /* PBXTargetDependency */,
+				OBJ_262 /* PBXTargetDependency */,
+				OBJ_263 /* PBXTargetDependency */,
 			);
 			name = URLRequestRouterTests;
 			productName = URLRequestRouterTests;
 			productReference = "PrinterParser::URLRequestRouterTests::Product" /* URLRequestRouterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"PrinterParser::generate-partial-isos" /* generate-partial-isos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_265 /* Build configuration list for PBXNativeTarget "generate-partial-isos" */;
+			buildPhases = (
+				OBJ_268 /* Sources */,
+				OBJ_270 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_273 /* PBXTargetDependency */,
+				OBJ_274 /* PBXTargetDependency */,
+			);
+			name = "generate-partial-isos";
+			productName = generate_partial_isos;
+			productReference = "PrinterParser::generate-partial-isos::Product" /* generate-partial-isos */;
+			productType = "com.apple.product-type.tool";
+		};
+		"SwiftSyntax::SwiftPMPackageDescription" /* SwiftSyntaxPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_207 /* Build configuration list for PBXNativeTarget "SwiftSyntaxPackageDescription" */;
+			buildPhases = (
+				OBJ_210 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftSyntaxPackageDescription;
+			productName = SwiftSyntaxPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"SwiftSyntax::SwiftSyntax" /* SwiftSyntax */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_178 /* Build configuration list for PBXNativeTarget "SwiftSyntax" */;
+			buildPhases = (
+				OBJ_181 /* Sources */,
+				OBJ_205 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftSyntax;
+			productName = SwiftSyntax;
+			productReference = "SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -621,56 +931,77 @@
 				en,
 			);
 			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_47 /* Products */;
+			productRefGroup = OBJ_82 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				"PrinterParser::GeneratePartialIsos" /* GeneratePartialIsos */,
+				"PrinterParser::GeneratePartialIsosTests" /* GeneratePartialIsosTests */,
 				"Monoid::Monoid" /* Monoid */,
 				"Monoid::SwiftPMPackageDescription" /* MonoidPackageDescription */,
 				"PrinterParser::PartialIso" /* PartialIso */,
 				"PrinterParser::PartialIsoTests" /* PartialIsoTests */,
 				"PrinterParser::SwiftPMPackageDescription" /* PrinterParserPackageDescription */,
 				"PrinterParser::PrinterParserPackageTests::ProductTarget" /* PrinterParserPackageTests */,
+				"SwiftSyntax::SwiftSyntax" /* SwiftSyntax */,
+				"SwiftSyntax::SwiftPMPackageDescription" /* SwiftSyntaxPackageDescription */,
 				"PrinterParser::Syntax" /* Syntax */,
 				"PrinterParser::SyntaxTests" /* SyntaxTests */,
 				"PrinterParser::URLRequestRouter" /* URLRequestRouter */,
 				"PrinterParser::URLRequestRouterTests" /* URLRequestRouterTests */,
+				"PrinterParser::generate-partial-isos" /* generate-partial-isos */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_105 /* Sources */ = {
+		OBJ_108 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_106 /* Package.swift in Sources */,
+				803F734422151B6F0091D778 /* Fixture.swift in Sources */,
+				OBJ_109 /* GeneratePartialIsosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_120 /* Sources */ = {
+		OBJ_119 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_121 /* Syntax.swift in Sources */,
+				OBJ_120 /* Folds.swift in Sources */,
+				OBJ_121 /* Monoid.swift in Sources */,
+				OBJ_122 /* Semigroup.swift in Sources */,
+				OBJ_123 /* TODO.swift in Sources */,
+				OBJ_124 /* Average.swift in Sources */,
+				OBJ_125 /* Bool.swift in Sources */,
+				OBJ_126 /* Comparable.swift in Sources */,
+				OBJ_127 /* Dictionary.swift in Sources */,
+				OBJ_128 /* Endo.swift in Sources */,
+				OBJ_129 /* Numeric.swift in Sources */,
+				OBJ_130 /* Optional.swift in Sources */,
+				OBJ_131 /* Pointwise.swift in Sources */,
+				OBJ_132 /* RangeReplaceableCollection.swift in Sources */,
+				OBJ_133 /* Set.swift in Sources */,
+				OBJ_134 /* Tuple.swift in Sources */,
+				OBJ_135 /* Variance.swift in Sources */,
+				OBJ_136 /* Void.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_130 /* Sources */ = {
+		OBJ_142 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_131 /* SyntaxTests.swift in Sources */,
-				OBJ_132 /* XCTestManifests.swift in Sources */,
+				OBJ_143 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_144 /* Sources */ = {
+		OBJ_148 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				CAE8571F2210D39600FD5088 /* URLRequestRouter.swift in Sources */,
-				OBJ_145 /* RequestData.swift in Sources */,
+				OBJ_149 /* ExpressibleByStringLiteral.swift in Sources */,
+				OBJ_150 /* PartialIso.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,225 +1009,224 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_157 /* URLRequestRouterTests.swift in Sources */,
+				OBJ_157 /* XCTestManifests.swift in Sources */,
+				OBJ_158 /* swift_parser_printerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_59 /* Sources */ = {
+		OBJ_166 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_60 /* Folds.swift in Sources */,
-				OBJ_61 /* Monoid.swift in Sources */,
-				OBJ_62 /* Semigroup.swift in Sources */,
-				OBJ_63 /* TODO.swift in Sources */,
-				OBJ_64 /* Average.swift in Sources */,
-				OBJ_65 /* Bool.swift in Sources */,
-				OBJ_66 /* Comparable.swift in Sources */,
-				OBJ_67 /* Dictionary.swift in Sources */,
-				OBJ_68 /* Endo.swift in Sources */,
-				OBJ_69 /* Numeric.swift in Sources */,
-				OBJ_70 /* Optional.swift in Sources */,
-				OBJ_71 /* Pointwise.swift in Sources */,
-				OBJ_72 /* RangeReplaceableCollection.swift in Sources */,
-				OBJ_73 /* Set.swift in Sources */,
-				OBJ_74 /* Tuple.swift in Sources */,
-				OBJ_75 /* Variance.swift in Sources */,
-				OBJ_76 /* Void.swift in Sources */,
+				OBJ_167 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_82 /* Sources */ = {
+		OBJ_181 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_83 /* Package.swift in Sources */,
+				OBJ_182 /* AbsolutePosition.swift in Sources */,
+				OBJ_183 /* AtomicCache.swift in Sources */,
+				OBJ_184 /* Diagnostic.swift in Sources */,
+				OBJ_185 /* DiagnosticConsumer.swift in Sources */,
+				OBJ_186 /* DiagnosticEngine.swift in Sources */,
+				OBJ_187 /* JSONDiagnosticConsumer.swift in Sources */,
+				OBJ_188 /* PrintingDiagnosticConsumer.swift in Sources */,
+				OBJ_189 /* RawSyntax.swift in Sources */,
+				OBJ_190 /* SourceLength.swift in Sources */,
+				OBJ_191 /* SourcePresence.swift in Sources */,
+				OBJ_192 /* SwiftSyntax.swift in Sources */,
+				OBJ_193 /* SwiftcInvocation.swift in Sources */,
+				OBJ_194 /* Syntax.swift in Sources */,
+				OBJ_195 /* SyntaxChildren.swift in Sources */,
+				OBJ_196 /* SyntaxData.swift in Sources */,
+				OBJ_197 /* SyntaxBuilders.swift in Sources */,
+				OBJ_198 /* SyntaxCollections.swift in Sources */,
+				OBJ_199 /* SyntaxFactory.swift in Sources */,
+				OBJ_200 /* SyntaxKind.swift in Sources */,
+				OBJ_201 /* SyntaxNodes.swift in Sources */,
+				OBJ_202 /* SyntaxRewriter.swift in Sources */,
+				OBJ_203 /* TokenKind.swift in Sources */,
+				OBJ_204 /* Trivia.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_88 /* Sources */ = {
+		OBJ_210 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				CAE857212210DB9100FD5088 /* ExpressibleByStringLiteral.swift in Sources */,
-				OBJ_89 /* PartialIso.swift in Sources */,
+				OBJ_211 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_95 /* Sources */ = {
+		OBJ_216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_96 /* XCTestManifests.swift in Sources */,
-				OBJ_97 /* swift_parser_printerTests.swift in Sources */,
+				OBJ_217 /* Syntax.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_226 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_227 /* SyntaxTests.swift in Sources */,
+				OBJ_228 /* XCTestManifests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_240 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_241 /* RequestData.swift in Sources */,
+				OBJ_242 /* URLRequestRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_253 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_254 /* URLRequestRouterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_268 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_269 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_99 /* GeneratePartialIsos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_100 /* PBXTargetDependency */ = {
+		OBJ_102 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "PrinterParser::PartialIso" /* PartialIso */;
-			targetProxy = CAE856002210CEF100FD5088 /* PBXContainerItemProxy */;
-		};
-		OBJ_111 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "PrinterParser::URLRequestRouterTests" /* URLRequestRouterTests */;
-			targetProxy = CAE856052210CEF100FD5088 /* PBXContainerItemProxy */;
+			target = "SwiftSyntax::SwiftSyntax" /* SwiftSyntax */;
+			targetProxy = 803F732D22151A310091D778 /* PBXContainerItemProxy */;
 		};
 		OBJ_113 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "PrinterParser::PartialIsoTests" /* PartialIsoTests */;
-			targetProxy = CAE856062210CEF100FD5088 /* PBXContainerItemProxy */;
+			target = "PrinterParser::GeneratePartialIsos" /* GeneratePartialIsos */;
+			targetProxy = 803F733322151A310091D778 /* PBXContainerItemProxy */;
 		};
 		OBJ_114 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			target = "SwiftSyntax::SwiftSyntax" /* SwiftSyntax */;
+			targetProxy = 803F733422151A310091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_161 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::PartialIso" /* PartialIso */;
+			targetProxy = 803F732F22151A310091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_172 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::PartialIsoTests" /* PartialIsoTests */;
+			targetProxy = 803F733922151A330091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_173 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
 			target = "PrinterParser::SyntaxTests" /* SyntaxTests */;
-			targetProxy = CAE856072210CEF100FD5088 /* PBXContainerItemProxy */;
+			targetProxy = 803F733A22151A330091D778 /* PBXContainerItemProxy */;
 		};
-		OBJ_125 /* PBXTargetDependency */ = {
+		OBJ_175 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::URLRequestRouterTests" /* URLRequestRouterTests */;
+			targetProxy = 803F733B22151A330091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_177 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::GeneratePartialIsosTests" /* GeneratePartialIsosTests */;
+			targetProxy = 803F733C22151A330091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_221 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Monoid::Monoid" /* Monoid */;
-			targetProxy = CAE855F92210CEF100FD5088 /* PBXContainerItemProxy */;
+			targetProxy = 803F732822151A310091D778 /* PBXContainerItemProxy */;
 		};
-		OBJ_126 /* PBXTargetDependency */ = {
+		OBJ_222 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PrinterParser::PartialIso" /* PartialIso */;
-			targetProxy = CAE855FA2210CEF100FD5088 /* PBXContainerItemProxy */;
+			targetProxy = 803F732922151A310091D778 /* PBXContainerItemProxy */;
 		};
-		OBJ_137 /* PBXTargetDependency */ = {
+		OBJ_233 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PrinterParser::Syntax" /* Syntax */;
-			targetProxy = CAE855FD2210CEF100FD5088 /* PBXContainerItemProxy */;
+			targetProxy = 803F733022151A310091D778 /* PBXContainerItemProxy */;
 		};
-		OBJ_138 /* PBXTargetDependency */ = {
+		OBJ_234 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Monoid::Monoid" /* Monoid */;
-			targetProxy = CAE855FE2210CEF100FD5088 /* PBXContainerItemProxy */;
+			targetProxy = 803F733122151A310091D778 /* PBXContainerItemProxy */;
 		};
-		OBJ_139 /* PBXTargetDependency */ = {
+		OBJ_235 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PrinterParser::PartialIso" /* PartialIso */;
-			targetProxy = CAE855FF2210CEF100FD5088 /* PBXContainerItemProxy */;
+			targetProxy = 803F733222151A310091D778 /* PBXContainerItemProxy */;
 		};
-		OBJ_150 /* PBXTargetDependency */ = {
+		OBJ_247 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PrinterParser::Syntax" /* Syntax */;
-			targetProxy = CAE855F82210CEF100FD5088 /* PBXContainerItemProxy */;
+			targetProxy = 803F732722151A310091D778 /* PBXContainerItemProxy */;
 		};
-		OBJ_151 /* PBXTargetDependency */ = {
+		OBJ_248 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Monoid::Monoid" /* Monoid */;
-			targetProxy = CAE855FB2210CEF100FD5088 /* PBXContainerItemProxy */;
+			targetProxy = 803F732A22151A310091D778 /* PBXContainerItemProxy */;
 		};
-		OBJ_152 /* PBXTargetDependency */ = {
+		OBJ_249 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PrinterParser::PartialIso" /* PartialIso */;
-			targetProxy = CAE855FC2210CEF100FD5088 /* PBXContainerItemProxy */;
+			targetProxy = 803F732B22151A310091D778 /* PBXContainerItemProxy */;
 		};
-		OBJ_163 /* PBXTargetDependency */ = {
+		OBJ_260 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PrinterParser::URLRequestRouter" /* URLRequestRouter */;
-			targetProxy = CAE856012210CEF100FD5088 /* PBXContainerItemProxy */;
+			targetProxy = 803F733522151A310091D778 /* PBXContainerItemProxy */;
 		};
-		OBJ_164 /* PBXTargetDependency */ = {
+		OBJ_261 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PrinterParser::Syntax" /* Syntax */;
-			targetProxy = CAE856022210CEF100FD5088 /* PBXContainerItemProxy */;
+			targetProxy = 803F733622151A310091D778 /* PBXContainerItemProxy */;
 		};
-		OBJ_165 /* PBXTargetDependency */ = {
+		OBJ_262 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Monoid::Monoid" /* Monoid */;
-			targetProxy = CAE856032210CEF100FD5088 /* PBXContainerItemProxy */;
+			targetProxy = 803F733722151A310091D778 /* PBXContainerItemProxy */;
 		};
-		OBJ_166 /* PBXTargetDependency */ = {
+		OBJ_263 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "PrinterParser::PartialIso" /* PartialIso */;
-			targetProxy = CAE856042210CEF100FD5088 /* PBXContainerItemProxy */;
+			targetProxy = 803F733822151A310091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_273 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::GeneratePartialIsos" /* GeneratePartialIsos */;
+			targetProxy = 803F732C22151A310091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_274 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftSyntax::SwiftSyntax" /* SwiftSyntax */;
+			targetProxy = 803F732E22151A310091D778 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_103 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Debug;
-		};
-		OBJ_104 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		OBJ_109 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		OBJ_110 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Release;
-		};
-		OBJ_118 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PrinterParser.xcodeproj/Syntax_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Syntax;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Syntax;
-			};
-			name = Debug;
-		};
-		OBJ_119 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PrinterParser.xcodeproj/Syntax_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Syntax;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Syntax;
-			};
-			name = Release;
-		};
-		OBJ_128 /* Debug */ = {
+		OBJ_106 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -906,18 +1236,18 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PrinterParser.xcodeproj/SyntaxTests_Info.plist;
+				INFOPLIST_FILE = PrinterParser.xcodeproj/GeneratePartialIsosTests_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
-				TARGET_NAME = SyntaxTests;
+				TARGET_NAME = GeneratePartialIsosTests;
 			};
 			name = Debug;
 		};
-		OBJ_129 /* Release */ = {
+		OBJ_107 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -927,18 +1257,18 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PrinterParser.xcodeproj/SyntaxTests_Info.plist;
+				INFOPLIST_FILE = PrinterParser.xcodeproj/GeneratePartialIsosTests_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
-				TARGET_NAME = SyntaxTests;
+				TARGET_NAME = GeneratePartialIsosTests;
 			};
 			name = Release;
 		};
-		OBJ_142 /* Debug */ = {
+		OBJ_117 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -947,22 +1277,22 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PrinterParser.xcodeproj/URLRequestRouter_Info.plist;
+				INFOPLIST_FILE = PrinterParser.xcodeproj/Monoid_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = URLRequestRouter;
+				PRODUCT_BUNDLE_IDENTIFIER = Monoid;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
-				TARGET_NAME = URLRequestRouter;
+				TARGET_NAME = Monoid;
 			};
 			name = Debug;
 		};
-		OBJ_143 /* Release */ = {
+		OBJ_118 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -971,18 +1301,84 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PrinterParser.xcodeproj/URLRequestRouter_Info.plist;
+				INFOPLIST_FILE = PrinterParser.xcodeproj/Monoid_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = URLRequestRouter;
+				PRODUCT_BUNDLE_IDENTIFIER = Monoid;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
-				TARGET_NAME = URLRequestRouter;
+				TARGET_NAME = Monoid;
+			};
+			name = Release;
+		};
+		OBJ_140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_141 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_146 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/PartialIso_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = PartialIso;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = PartialIso;
+			};
+			name = Debug;
+		};
+		OBJ_147 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/PartialIso_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = PartialIso;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = PartialIso;
 			};
 			name = Release;
 		};
@@ -996,18 +1392,273 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PrinterParser.xcodeproj/URLRequestRouterTests_Info.plist;
+				INFOPLIST_FILE = PrinterParser.xcodeproj/PartialIsoTests_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
-				TARGET_NAME = URLRequestRouterTests;
+				TARGET_NAME = PartialIsoTests;
 			};
 			name = Debug;
 		};
 		OBJ_155 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/PartialIsoTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = PartialIsoTests;
+			};
+			name = Release;
+		};
+		OBJ_164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_165 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_170 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_171 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_179 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/SwiftSyntax_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftSyntax;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = SwiftSyntax;
+			};
+			name = Debug;
+		};
+		OBJ_180 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/SwiftSyntax_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftSyntax;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = SwiftSyntax;
+			};
+			name = Release;
+		};
+		OBJ_208 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_209 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_214 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/Syntax_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Syntax;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = Syntax;
+			};
+			name = Debug;
+		};
+		OBJ_215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/Syntax_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Syntax;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = Syntax;
+			};
+			name = Release;
+		};
+		OBJ_224 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/SyntaxTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = SyntaxTests;
+			};
+			name = Debug;
+		};
+		OBJ_225 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/SyntaxTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = SyntaxTests;
+			};
+			name = Release;
+		};
+		OBJ_238 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/URLRequestRouter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = URLRequestRouter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = URLRequestRouter;
+			};
+			name = Debug;
+		};
+		OBJ_239 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/URLRequestRouter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = URLRequestRouter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = URLRequestRouter;
+			};
+			name = Release;
+		};
+		OBJ_251 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -1025,6 +1676,69 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
 				TARGET_NAME = URLRequestRouterTests;
+			};
+			name = Debug;
+		};
+		OBJ_252 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/URLRequestRouterTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = URLRequestRouterTests;
+			};
+			name = Release;
+		};
+		OBJ_266 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/generate_partial_isos_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = "generate-partial-isos";
+			};
+			name = Debug;
+		};
+		OBJ_267 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/generate_partial_isos_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = "generate-partial-isos";
 			};
 			name = Release;
 		};
@@ -1074,7 +1788,7 @@
 			};
 			name = Release;
 		};
-		OBJ_57 /* Debug */ = {
+		OBJ_96 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1083,22 +1797,22 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PrinterParser.xcodeproj/Monoid_Info.plist;
+				INFOPLIST_FILE = PrinterParser.xcodeproj/GeneratePartialIsos_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Monoid;
+				PRODUCT_BUNDLE_IDENTIFIER = GeneratePartialIsos;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Monoid;
+				TARGET_NAME = GeneratePartialIsos;
 			};
 			name = Debug;
 		};
-		OBJ_58 /* Release */ = {
+		OBJ_97 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1107,182 +1821,92 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PrinterParser.xcodeproj/Monoid_Info.plist;
+				INFOPLIST_FILE = PrinterParser.xcodeproj/GeneratePartialIsos_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Monoid;
+				PRODUCT_BUNDLE_IDENTIFIER = GeneratePartialIsos;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Monoid;
-			};
-			name = Release;
-		};
-		OBJ_80 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Debug;
-		};
-		OBJ_81 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		OBJ_86 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PrinterParser.xcodeproj/PartialIso_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = PartialIso;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = PartialIso;
-			};
-			name = Debug;
-		};
-		OBJ_87 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PrinterParser.xcodeproj/PartialIso_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = PartialIso;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = PartialIso;
-			};
-			name = Release;
-		};
-		OBJ_93 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PrinterParser.xcodeproj/PartialIsoTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = PartialIsoTests;
-			};
-			name = Debug;
-		};
-		OBJ_94 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PrinterParser.xcodeproj/PartialIsoTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = PartialIsoTests;
+				TARGET_NAME = GeneratePartialIsos;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_102 /* Build configuration list for PBXNativeTarget "PrinterParserPackageDescription" */ = {
+		OBJ_105 /* Build configuration list for PBXNativeTarget "GeneratePartialIsosTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_103 /* Debug */,
-				OBJ_104 /* Release */,
+				OBJ_106 /* Debug */,
+				OBJ_107 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_108 /* Build configuration list for PBXAggregateTarget "PrinterParserPackageTests" */ = {
+		OBJ_116 /* Build configuration list for PBXNativeTarget "Monoid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_109 /* Debug */,
-				OBJ_110 /* Release */,
+				OBJ_117 /* Debug */,
+				OBJ_118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_117 /* Build configuration list for PBXNativeTarget "Syntax" */ = {
+		OBJ_139 /* Build configuration list for PBXNativeTarget "MonoidPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_118 /* Debug */,
-				OBJ_119 /* Release */,
+				OBJ_140 /* Debug */,
+				OBJ_141 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_127 /* Build configuration list for PBXNativeTarget "SyntaxTests" */ = {
+		OBJ_145 /* Build configuration list for PBXNativeTarget "PartialIso" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_128 /* Debug */,
-				OBJ_129 /* Release */,
+				OBJ_146 /* Debug */,
+				OBJ_147 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_141 /* Build configuration list for PBXNativeTarget "URLRequestRouter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_142 /* Debug */,
-				OBJ_143 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_153 /* Build configuration list for PBXNativeTarget "URLRequestRouterTests" */ = {
+		OBJ_153 /* Build configuration list for PBXNativeTarget "PartialIsoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_154 /* Debug */,
 				OBJ_155 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_163 /* Build configuration list for PBXNativeTarget "PrinterParserPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_164 /* Debug */,
+				OBJ_165 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_169 /* Build configuration list for PBXAggregateTarget "PrinterParserPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_170 /* Debug */,
+				OBJ_171 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_178 /* Build configuration list for PBXNativeTarget "SwiftSyntax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_179 /* Debug */,
+				OBJ_180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1296,38 +1920,65 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_56 /* Build configuration list for PBXNativeTarget "Monoid" */ = {
+		OBJ_207 /* Build configuration list for PBXNativeTarget "SwiftSyntaxPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_57 /* Debug */,
-				OBJ_58 /* Release */,
+				OBJ_208 /* Debug */,
+				OBJ_209 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_79 /* Build configuration list for PBXNativeTarget "MonoidPackageDescription" */ = {
+		OBJ_213 /* Build configuration list for PBXNativeTarget "Syntax" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_80 /* Debug */,
-				OBJ_81 /* Release */,
+				OBJ_214 /* Debug */,
+				OBJ_215 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_85 /* Build configuration list for PBXNativeTarget "PartialIso" */ = {
+		OBJ_223 /* Build configuration list for PBXNativeTarget "SyntaxTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_86 /* Debug */,
-				OBJ_87 /* Release */,
+				OBJ_224 /* Debug */,
+				OBJ_225 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_92 /* Build configuration list for PBXNativeTarget "PartialIsoTests" */ = {
+		OBJ_237 /* Build configuration list for PBXNativeTarget "URLRequestRouter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_93 /* Debug */,
-				OBJ_94 /* Release */,
+				OBJ_238 /* Debug */,
+				OBJ_239 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_250 /* Build configuration list for PBXNativeTarget "URLRequestRouterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_251 /* Debug */,
+				OBJ_252 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_265 /* Build configuration list for PBXNativeTarget "generate-partial-isos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_266 /* Debug */,
+				OBJ_267 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_95 /* Build configuration list for PBXNativeTarget "GeneratePartialIsos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_96 /* Debug */,
+				OBJ_97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

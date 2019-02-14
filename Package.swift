@@ -5,14 +5,32 @@ import PackageDescription
 let package = Package(
   name: "PrinterParser",
   products: [
+    .executable(name: "generate-partial-isos", targets: ["generate-partial-isos"]),
+    .library(name: "GeneratePartialIsos", targets: ["GeneratePartialIsos"]),
+    .library(name: "PartialIso", targets: ["PartialIso"]),
     .library(name: "Syntax", targets: ["Syntax"]),
     .library(name: "URLRequestRouter", targets: ["URLRequestRouter"]),
-    .library(name: "PartialIso", targets: ["PartialIso"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/pointfreeco/swift-algebras", .branch("monoid"))
+    .package(url: "https://github.com/apple/swift-syntax.git", .exact("0.40200.0")),
+    .package(url: "https://github.com/pointfreeco/swift-algebras", .branch("monoid")),
   ],
   targets: [
+    .target(
+      name: "generate-partial-isos",
+      dependencies: ["GeneratePartialIsos"]),
+    .target(
+      name: "GeneratePartialIsos",
+      dependencies: ["SwiftSyntax"]),
+    .testTarget(
+      name: "GeneratePartialIsosTests",
+      dependencies: ["GeneratePartialIsos"]),
+    .target(
+      name: "PartialIso",
+      dependencies: []),
+    .testTarget(
+      name: "PartialIsoTests",
+      dependencies: ["PartialIso"]),
     .target(
       name: "Syntax",
       dependencies: ["Monoid", "PartialIso"]),
@@ -25,11 +43,5 @@ let package = Package(
     .testTarget(
       name: "URLRequestRouterTests",
       dependencies: ["URLRequestRouter"]),
-    .target(
-      name: "PartialIso",
-      dependencies: []),
-    .testTarget(
-      name: "PartialIsoTests",
-      dependencies: ["PartialIso"]),
     ]
 )
