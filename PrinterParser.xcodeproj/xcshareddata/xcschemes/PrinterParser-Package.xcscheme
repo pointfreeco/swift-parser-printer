@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "PrinterParser::GeneratePartialIsos"
-               BuildableName = "GeneratePartialIsos.framework"
-               BlueprintName = "GeneratePartialIsos"
+               BlueprintIdentifier = "PrinterParser::URLRequestRouter"
+               BuildableName = "URLRequestRouter.framework"
+               BlueprintName = "URLRequestRouter"
                ReferencedContainer = "container:PrinterParser.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "PrinterParser::Syntax"
-               BuildableName = "Syntax.framework"
-               BlueprintName = "Syntax"
+               BlueprintIdentifier = "PrinterParser::generate-partial-isos"
+               BuildableName = "generate-partial-isos"
+               BlueprintName = "generate-partial-isos"
+               ReferencedContainer = "container:PrinterParser.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "PrinterParser::GeneratePartialIsos"
+               BuildableName = "GeneratePartialIsos.framework"
+               BlueprintName = "GeneratePartialIsos"
                ReferencedContainer = "container:PrinterParser.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -56,23 +70,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "PrinterParser::URLRequestRouter"
-               BuildableName = "URLRequestRouter.framework"
-               BlueprintName = "URLRequestRouter"
-               ReferencedContainer = "container:PrinterParser.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "PrinterParser::generate-partial-isos"
-               BuildableName = "generate-partial-isos"
-               BlueprintName = "generate-partial-isos"
+               BlueprintIdentifier = "PrinterParser::Syntax"
+               BuildableName = "Syntax.framework"
+               BlueprintName = "Syntax"
                ReferencedContainer = "container:PrinterParser.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -84,26 +84,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "PrinterParser::PartialIsoTests"
-               BuildableName = "PartialIsoTests.xctest"
-               BlueprintName = "PartialIsoTests"
-               ReferencedContainer = "container:PrinterParser.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "PrinterParser::GeneratePartialIsosTests"
-               BuildableName = "GeneratePartialIsosTests.xctest"
-               BlueprintName = "GeneratePartialIsosTests"
-               ReferencedContainer = "container:PrinterParser.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
@@ -124,6 +104,26 @@
                ReferencedContainer = "container:PrinterParser.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "PrinterParser::PartialIsoTests"
+               BuildableName = "PartialIsoTests.xctest"
+               BlueprintName = "PartialIsoTests"
+               ReferencedContainer = "container:PrinterParser.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "PrinterParser::GeneratePartialIsosTests"
+               BuildableName = "GeneratePartialIsosTests.xctest"
+               BlueprintName = "GeneratePartialIsosTests"
+               ReferencedContainer = "container:PrinterParser.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <AdditionalOptions>
       </AdditionalOptions>
@@ -141,9 +141,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "PrinterParser::GeneratePartialIsos"
-            BuildableName = "GeneratePartialIsos.framework"
-            BlueprintName = "GeneratePartialIsos"
+            BlueprintIdentifier = "PrinterParser::URLRequestRouter"
+            BuildableName = "URLRequestRouter.framework"
+            BlueprintName = "URLRequestRouter"
             ReferencedContainer = "container:PrinterParser.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

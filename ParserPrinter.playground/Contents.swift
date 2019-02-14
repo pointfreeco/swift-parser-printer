@@ -65,6 +65,8 @@ let router = Router<Route>(
 router.match(urlString: "/?ga=1")
 router.match(urlString: "/episodes/1?ga=1")
 router.match(urlString: "/search?q=point-free&ga=1")
+router.match(urlString: "/search")
+router.match(urlString: "/search?q=")
 
 var req = URLRequest(url: URL(string: "/sign-up")!)
 req.httpMethod = "post"
@@ -76,3 +78,5 @@ router.match(request: req)
 
 router.request(for: Route.search("blob"))
 router.request(for: Route.search(nil))
+router.request(for: Route.episode(42))
+router.request(for: Route.episode(nil))

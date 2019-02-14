@@ -61,6 +61,13 @@ extension PartialIso where B == A? {
   }
 }
 
+public func optional<A, B>(_ iso: PartialIso<A, B>) -> PartialIso<A?, B?> {
+  return PartialIso<A?, B?>(
+    apply: { $0.flatMap(iso.apply) },
+    unapply: { $0.flatMap(iso.unapply) }
+  )
+}
+
 extension PartialIso where A == B {
   /// The identity partial isomorphism.
   public static var id: PartialIso {
