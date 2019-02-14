@@ -224,7 +224,7 @@ extension PartialIso where A == String, B == Data {
 }
 
 extension PartialIso where A == String, B == String {
-  public static func addingPercentEncoding(withAllowedCharacters characters: CharacterSet) -> PartialIso {
+  public static func percentEncoding(withAllowedCharacters characters: CharacterSet) -> PartialIso {
     return PartialIso(
       apply: { $0.addingPercentEncoding(withAllowedCharacters: characters) },
       unapply: { $0.removingPercentEncoding }
