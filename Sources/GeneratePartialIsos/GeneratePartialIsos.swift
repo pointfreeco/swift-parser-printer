@@ -2,7 +2,7 @@ import SwiftSyntax
 
 public final class Visitor: SyntaxVisitor {
   private var `enum` = ""
-  public private(set) var out = ""
+  public private(set) var out = "import PartialIso\n"
 
   override public func visit(_ node: EnumDeclSyntax) {
     self.enum = node.identifier.text

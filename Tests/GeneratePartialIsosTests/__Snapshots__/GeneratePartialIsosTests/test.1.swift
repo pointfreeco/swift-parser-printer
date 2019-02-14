@@ -1,3 +1,4 @@
+import PartialIso
 extension PartialIso where A == Void, B == Routes {
   static let home = PartialIso(
     apply: { .home },
@@ -21,6 +22,15 @@ extension PartialIso where A == (username: String, password: String), B == Route
     apply: Routes.login,
     unapply: {
       guard case let .login(value) = $0 else { return nil }
+      return value
+  }
+  )
+}
+extension PartialIso where A == (), B == Routes {
+  static let pathological = PartialIso(
+    apply: Routes.pathological,
+    unapply: {
+      guard case let .pathological(value) = $0 else { return nil }
       return value
   }
   )

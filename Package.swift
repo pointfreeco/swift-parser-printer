@@ -25,7 +25,7 @@ let package = Package(
       dependencies: ["SwiftSyntax"]),
     .testTarget(
       name: "GeneratePartialIsosTests",
-      dependencies: ["GeneratePartialIsos", "SnapshotTesting"]),
+      dependencies: ["GeneratePartialIsos", "PartialIso", "SnapshotTesting"]),
     .target(
       name: "PartialIso",
       dependencies: []),
