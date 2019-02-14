@@ -50,6 +50,15 @@ extension PartialIso where B == A {
   }
 }
 
+extension PartialIso where A == Void, B: Equatable {
+  public static func const(_ b: B) -> PartialIso {
+    return PartialIso(
+      apply: { b },
+      unapply: { b == $0 ? () : nil }
+    )
+  }
+}
+
 extension PartialIso where B == (A, ()) {
   /// An isomorphism between `A` and `(A, Unit)`.
   public static var unit: PartialIso {
@@ -64,39 +73,94 @@ public func leftFlatten<A, B, C>(_ tuple: ((A, B), C)) -> (A, B, C) {
   return (tuple.0.0, tuple.0.1, tuple.1)
 }
 
-public func leftParanthesize<A, B, C>(_ tuple: (A, B, C)) -> ((A, B), C) {
+public func leftParenthesize<A, B, C>(_ tuple: (A, B, C)) -> ((A, B), C) {
   return ((tuple.0, tuple.1), tuple.2)
 }
 
-extension PartialIso where A == Void, B: Equatable {
-  public static func const(_ b: B) -> PartialIso {
+extension PartialIso where A == String, B == String {
+  public static let string = id
+}
+
+extension PartialIso where A == String, B: LosslessStringConvertible {
+  public static var losslessStringConvertible: PartialIso {
     return PartialIso(
-      apply: { .some(b) },
-      unapply: { b == $0 ? () : nil }
+      apply: B.init,
+      unapply: String.init
     )
   }
 }
 
-extension PartialIso where A == String, B == String {
+extension PartialIso where B: RawRepresentable, B.RawValue == A {
+  public static var rawRepresentable: PartialIso {
+    return PartialIso(
+      apply: B.init(rawValue:),
+      unapply: { $0.rawValue }
+    )
+  }
+}
 
-  public static let string = id
-
+extension PartialIso where A == String, B == Bool {
+  public static let bool = losslessStringConvertible
 }
 
 extension PartialIso where A == String, B == Int {
+  public static let int = losslessStringConvertible
+}
 
-  public static let int = PartialIso(apply: Int.init, unapply: String.init)
+extension PartialIso where A == String, B == Int64 {
+  public static let int64 = losslessStringConvertible
+}
 
+extension PartialIso where A == String, B == Int32 {
+  public static let int32 = losslessStringConvertible
+}
+
+extension PartialIso where A == String, B == Int16 {
+  public static let int16 = losslessStringConvertible
+}
+
+extension PartialIso where A == String, B == Int8 {
+  public static let int32 = losslessStringConvertible
+}
+
+extension PartialIso where A == String, B == UInt64 {
+  public static let uint64 = losslessStringConvertible
+}
+
+extension PartialIso where A == String, B == UInt32 {
+  public static let uint32 = losslessStringConvertible
+}
+
+extension PartialIso where A == String, B == UInt16 {
+  public static let uint16 = losslessStringConvertible
+}
+
+extension PartialIso where A == String, B == UInt8 {
+  public static let uint32 = losslessStringConvertible
 }
 
 extension PartialIso where A == String, B == Double {
+  public static let double = losslessStringConvertible
+}
 
-  public static let float = PartialIso(apply: Double.init, unapply: String.init)
+extension PartialIso where A == String, B == Float {
+  public static let float = losslessStringConvertible
+}
 
+extension PartialIso where A == String, B == Float80 {
+  public static let float80 = losslessStringConvertible
+}
+
+extension PartialIso where A == String, B == UUID {
+  public static var uuid: PartialIso<String, UUID> {
+    return PartialIso(
+      apply: UUID.init(uuidString:),
+      unapply: { $0.uuidString }
+    )
+  }
 }
 
 extension PartialIso where A == Data, B: Codable {
-
   public static func json(_ type: B.Type, decoder: JSONDecoder = .init(), encoder: JSONEncoder = .init()) -> PartialIso {
     return PartialIso(
       apply: { try? decoder.decode(B.self, from: $0) },
@@ -107,5 +171,4 @@ extension PartialIso where A == Data, B: Codable {
   public static var json: PartialIso {
     return self.json(B.self)
   }
-
 }
