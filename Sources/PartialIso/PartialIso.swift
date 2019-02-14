@@ -8,7 +8,9 @@ public struct PartialIso<A, B> {
     self.apply = apply
     self.unapply = unapply
   }
+}
 
+extension PartialIso {
   /// Inverts the partial isomorphism.
   public var inverted: PartialIso<B, A> {
     return .init(apply: self.unapply, unapply: self.apply)
@@ -22,8 +24,8 @@ public struct PartialIso<A, B> {
     )
   }
 
-  public static func pipe<C>(_ lhs: PartialIso<A, B>, _ rhs: PartialIso<B, C>) -> PartialIso<A, C> {
-    return PartialIso<A, C>(
+  public static func pipe<AB>(_ lhs: PartialIso<A, AB>, _ rhs: PartialIso<AB, B>) -> PartialIso {
+    return PartialIso(
       apply: { a in
         lhs.apply(a).flatMap(rhs.apply)
     },
@@ -32,8 +34,8 @@ public struct PartialIso<A, B> {
     })
   }
 
-  public static func compose<C>(_ lhs: PartialIso<B, C>, _ rhs: PartialIso<A, B>) -> PartialIso<A, C> {
-    return PartialIso<A, C>(
+  public static func compose<AB>(_ lhs: PartialIso<AB, B>, _ rhs: PartialIso<A, AB>) -> PartialIso {
+    return PartialIso(
       apply: { a in
         rhs.apply(a).flatMap(lhs.apply)
     },
@@ -41,20 +43,36 @@ public struct PartialIso<A, B> {
         lhs.unapply(c).flatMap(rhs.unapply)
     })
   }
+
+  public static func ?? (lhs: PartialIso, rhs: PartialIso) -> PartialIso {
+    return PartialIso(
+      apply: { return lhs.apply($0) ?? rhs.apply($0) },
+      unapply: { return rhs.unapply($0) ?? lhs.unapply($0) }
+    )
+  }
 }
 
-extension PartialIso where B == A {
+extension PartialIso where B == A? {
+  public static var some: PartialIso {
+    return PartialIso(
+      apply: Optional.some,
+      unapply: { $0 }
+    )
+  }
+}
+
+extension PartialIso where A == B {
   /// The identity partial isomorphism.
   public static var id: PartialIso {
     return .init(apply: { $0 }, unapply: { $0 })
   }
 }
 
-extension PartialIso where A == Void, B: Equatable {
+extension PartialIso {
   public static func const(_ b: B) -> PartialIso {
     return PartialIso(
-      apply: { b },
-      unapply: { b == $0 ? () : nil }
+      apply: { _ in b },
+      unapply: { _ in nil }
     )
   }
 }
@@ -170,5 +188,46 @@ extension PartialIso where A == Data, B: Codable {
 
   public static var json: PartialIso {
     return self.json(B.self)
+  }
+}
+
+extension PartialIso {
+  public static func filter<A>(_ isIncluded: @escaping (A) -> Bool) -> PartialIso<[A], [A]> {
+    return PartialIso<[A], [A]>(
+      apply: { $0.filter(isIncluded) },
+      unapply: { $0 }
+    )
+  }
+
+  public static func first<A>(where predicate: @escaping (A) -> Bool) -> PartialIso<[A], A> {
+    return PartialIso<[A], A>(
+      apply: { $0.first(where: predicate) },
+      unapply: { [$0] }
+    )
+  }
+
+  public static func key<K, V>(_ key: K) -> PartialIso<[K: V], V> {
+    return PartialIso<[K: V], V>(
+      apply: { $0[key] },
+      unapply: { [key: $0] }
+    )
+  }
+}
+
+extension PartialIso where A == String, B == Data {
+  public static func data(_ encoding: String.Encoding) -> PartialIso {
+    return PartialIso(
+      apply: { $0.data(using: encoding) },
+      unapply: { String(data: $0, encoding: encoding) }
+    )
+  }
+}
+
+extension PartialIso where A == String, B == String {
+  public static func addingPercentEncoding(withAllowedCharacters characters: CharacterSet) -> PartialIso {
+    return PartialIso(
+      apply: { $0.addingPercentEncoding(withAllowedCharacters: characters) },
+      unapply: { $0.removingPercentEncoding }
+    )
   }
 }

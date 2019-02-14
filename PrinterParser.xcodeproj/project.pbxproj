@@ -1,3147 +1,2319 @@
 // !$*UTF8*$!
 {
-   archiveVersion = "1";
-   objectVersion = "46";
-   objects = {
-      "Monoid::Monoid" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_160";
-         buildPhases = (
-            "OBJ_163",
-            "OBJ_181"
-         );
-         dependencies = (
-         );
-         name = "Monoid";
-         productName = "Monoid";
-         productReference = "Monoid::Monoid::Product";
-         productType = "com.apple.product-type.framework";
-      };
-      "Monoid::Monoid::Product" = {
-         isa = "PBXFileReference";
-         path = "Monoid.framework";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "Monoid::SwiftPMPackageDescription" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_183";
-         buildPhases = (
-            "OBJ_186"
-         );
-         dependencies = (
-         );
-         name = "MonoidPackageDescription";
-         productName = "MonoidPackageDescription";
-         productType = "com.apple.product-type.framework";
-      };
-      "OBJ_1" = {
-         isa = "PBXProject";
-         attributes = {
-            LastUpgradeCheck = "9999";
-         };
-         buildConfigurationList = "OBJ_2";
-         compatibilityVersion = "Xcode 3.2";
-         developmentRegion = "English";
-         hasScannedForEncodings = "0";
-         knownRegions = (
-            "en"
-         );
-         mainGroup = "OBJ_5";
-         productRefGroup = "OBJ_117";
-         projectDirPath = ".";
-         targets = (
-            "PrinterParser::GeneratePartialIsos",
-            "PrinterParser::GeneratePartialIsosTests",
-            "Monoid::Monoid",
-            "Monoid::SwiftPMPackageDescription",
-            "PrinterParser::PartialIso",
-            "PrinterParser::PartialIsoTests",
-            "PrinterParser::SwiftPMPackageDescription",
-            "PrinterParser::PrinterParserPackageTests::ProductTarget",
-            "SnapshotTesting::SnapshotTesting",
-            "SnapshotTesting::SwiftPMPackageDescription",
-            "SwiftSyntax::SwiftSyntax",
-            "SwiftSyntax::SwiftPMPackageDescription",
-            "PrinterParser::Syntax",
-            "PrinterParser::SyntaxTests",
-            "PrinterParser::URLRequestRouter",
-            "PrinterParser::URLRequestRouterTests",
-            "PrinterParser::generate-partial-isos"
-         );
-      };
-      "OBJ_10" = {
-         isa = "PBXFileReference";
-         path = "URLRequestRouter.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_100" = {
-         isa = "PBXFileReference";
-         path = "SourceLength.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_101" = {
-         isa = "PBXFileReference";
-         path = "SourcePresence.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_102" = {
-         isa = "PBXFileReference";
-         path = "SwiftSyntax.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_103" = {
-         isa = "PBXFileReference";
-         path = "SwiftcInvocation.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_104" = {
-         isa = "PBXFileReference";
-         path = "Syntax.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_105" = {
-         isa = "PBXFileReference";
-         path = "SyntaxChildren.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_106" = {
-         isa = "PBXFileReference";
-         path = "SyntaxData.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_107" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_108",
-            "OBJ_109",
-            "OBJ_110",
-            "OBJ_111",
-            "OBJ_112",
-            "OBJ_113",
-            "OBJ_114",
-            "OBJ_115"
-         );
-         name = "gyb_generated";
-         path = "gyb_generated";
-         sourceTree = "<group>";
-      };
-      "OBJ_108" = {
-         isa = "PBXFileReference";
-         path = "SyntaxBuilders.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_109" = {
-         isa = "PBXFileReference";
-         path = "SyntaxCollections.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_11" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_12"
-         );
-         name = "GeneratePartialIsos";
-         path = "Sources/GeneratePartialIsos";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_110" = {
-         isa = "PBXFileReference";
-         path = "SyntaxFactory.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_111" = {
-         isa = "PBXFileReference";
-         path = "SyntaxKind.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_112" = {
-         isa = "PBXFileReference";
-         path = "SyntaxNodes.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_113" = {
-         isa = "PBXFileReference";
-         path = "SyntaxRewriter.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_114" = {
-         isa = "PBXFileReference";
-         path = "TokenKind.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_115" = {
-         isa = "PBXFileReference";
-         path = "Trivia.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_116" = {
-         isa = "PBXFileReference";
-         explicitFileType = "sourcecode.swift";
-         name = "Package.swift";
-         path = "/Users/stephencelis/Developer/pointfreeco/swift-parser-printer/.build/checkouts/swift-syntax.git-6551255410123428459/Package.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_117" = {
-         isa = "PBXGroup";
-         children = (
-            "PrinterParser::PartialIsoTests::Product",
-            "PrinterParser::GeneratePartialIsos::Product",
-            "Monoid::Monoid::Product",
-            "PrinterParser::SyntaxTests::Product",
-            "PrinterParser::URLRequestRouter::Product",
-            "PrinterParser::GeneratePartialIsosTests::Product",
-            "SwiftSyntax::SwiftSyntax::Product",
-            "PrinterParser::generate-partial-isos::Product",
-            "PrinterParser::Syntax::Product",
-            "SnapshotTesting::SnapshotTesting::Product",
-            "PrinterParser::URLRequestRouterTests::Product",
-            "PrinterParser::PartialIso::Product"
-         );
-         name = "Products";
-         path = "";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "OBJ_12" = {
-         isa = "PBXFileReference";
-         path = "GeneratePartialIsos.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_13" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_14"
-         );
-         name = "Syntax";
-         path = "Sources/Syntax";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_131" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_132",
-            "OBJ_133"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_132" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/GeneratePartialIsos_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "GeneratePartialIsos";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "GeneratePartialIsos";
-         };
-         name = "Debug";
-      };
-      "OBJ_133" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/GeneratePartialIsos_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "GeneratePartialIsos";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "GeneratePartialIsos";
-         };
-         name = "Release";
-      };
-      "OBJ_134" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_135"
-         );
-      };
-      "OBJ_135" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_12";
-      };
-      "OBJ_136" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_137"
-         );
-      };
-      "OBJ_137" = {
-         isa = "PBXBuildFile";
-         fileRef = "SwiftSyntax::SwiftSyntax::Product";
-      };
-      "OBJ_138" = {
-         isa = "PBXTargetDependency";
-         target = "SwiftSyntax::SwiftSyntax";
-      };
-      "OBJ_14" = {
-         isa = "PBXFileReference";
-         path = "Syntax.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_141" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_142",
-            "OBJ_143"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_142" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_MODULES = "YES";
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/GeneratePartialIsosTests_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "GeneratePartialIsosTests";
-         };
-         name = "Debug";
-      };
-      "OBJ_143" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_MODULES = "YES";
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/GeneratePartialIsosTests_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "GeneratePartialIsosTests";
-         };
-         name = "Release";
-      };
-      "OBJ_144" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_145",
-            "OBJ_146",
-            "OBJ_147"
-         );
-      };
-      "OBJ_145" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_25";
-      };
-      "OBJ_146" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_26";
-      };
-      "OBJ_147" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_29";
-      };
-      "OBJ_148" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_149",
-            "OBJ_150",
-            "OBJ_151",
-            "OBJ_152"
-         );
-      };
-      "OBJ_149" = {
-         isa = "PBXBuildFile";
-         fileRef = "SnapshotTesting::SnapshotTesting::Product";
-      };
-      "OBJ_15" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_16"
-         );
-         name = "generate-partial-isos";
-         path = "Sources/generate-partial-isos";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_150" = {
-         isa = "PBXBuildFile";
-         fileRef = "PrinterParser::PartialIso::Product";
-      };
-      "OBJ_151" = {
-         isa = "PBXBuildFile";
-         fileRef = "PrinterParser::GeneratePartialIsos::Product";
-      };
-      "OBJ_152" = {
-         isa = "PBXBuildFile";
-         fileRef = "SwiftSyntax::SwiftSyntax::Product";
-      };
-      "OBJ_153" = {
-         isa = "PBXTargetDependency";
-         target = "SnapshotTesting::SnapshotTesting";
-      };
-      "OBJ_155" = {
-         isa = "PBXTargetDependency";
-         target = "PrinterParser::PartialIso";
-      };
-      "OBJ_157" = {
-         isa = "PBXTargetDependency";
-         target = "PrinterParser::GeneratePartialIsos";
-      };
-      "OBJ_158" = {
-         isa = "PBXTargetDependency";
-         target = "SwiftSyntax::SwiftSyntax";
-      };
-      "OBJ_16" = {
-         isa = "PBXFileReference";
-         path = "main.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_160" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_161",
-            "OBJ_162"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_161" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/Monoid_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "Monoid";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "Monoid";
-         };
-         name = "Debug";
-      };
-      "OBJ_162" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/Monoid_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "Monoid";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "Monoid";
-         };
-         name = "Release";
-      };
-      "OBJ_163" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_164",
-            "OBJ_165",
-            "OBJ_166",
-            "OBJ_167",
-            "OBJ_168",
-            "OBJ_169",
-            "OBJ_170",
-            "OBJ_171",
-            "OBJ_172",
-            "OBJ_173",
-            "OBJ_174",
-            "OBJ_175",
-            "OBJ_176",
-            "OBJ_177",
-            "OBJ_178",
-            "OBJ_179",
-            "OBJ_180"
-         );
-      };
-      "OBJ_164" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_71";
-      };
-      "OBJ_165" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_72";
-      };
-      "OBJ_166" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_73";
-      };
-      "OBJ_167" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_74";
-      };
-      "OBJ_168" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_76";
-      };
-      "OBJ_169" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_77";
-      };
-      "OBJ_17" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_18",
-            "OBJ_19"
-         );
-         name = "PartialIso";
-         path = "Sources/PartialIso";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_170" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_78";
-      };
-      "OBJ_171" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_79";
-      };
-      "OBJ_172" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_80";
-      };
-      "OBJ_173" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_81";
-      };
-      "OBJ_174" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_82";
-      };
-      "OBJ_175" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_83";
-      };
-      "OBJ_176" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_84";
-      };
-      "OBJ_177" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_85";
-      };
-      "OBJ_178" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_86";
-      };
-      "OBJ_179" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_87";
-      };
-      "OBJ_18" = {
-         isa = "PBXFileReference";
-         path = "ExpressibleByStringLiteral.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_180" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_88";
-      };
-      "OBJ_181" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-         );
-      };
-      "OBJ_183" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_184",
-            "OBJ_185"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_184" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4.2",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.2";
-         };
-         name = "Debug";
-      };
-      "OBJ_185" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4.2",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.2";
-         };
-         name = "Release";
-      };
-      "OBJ_186" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_187"
-         );
-      };
-      "OBJ_187" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_89";
-      };
-      "OBJ_188" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_189",
-            "OBJ_190"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_189" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/PartialIso_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "PartialIso";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "PartialIso";
-         };
-         name = "Debug";
-      };
-      "OBJ_19" = {
-         isa = "PBXFileReference";
-         path = "PartialIso.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_190" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/PartialIso_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "PartialIso";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "PartialIso";
-         };
-         name = "Release";
-      };
-      "OBJ_191" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_192",
-            "OBJ_193"
-         );
-      };
-      "OBJ_192" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_18";
-      };
-      "OBJ_193" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_19";
-      };
-      "OBJ_194" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-         );
-      };
-      "OBJ_196" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_197",
-            "OBJ_198"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_197" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_MODULES = "YES";
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/PartialIsoTests_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "PartialIsoTests";
-         };
-         name = "Debug";
-      };
-      "OBJ_198" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_MODULES = "YES";
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/PartialIsoTests_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "PartialIsoTests";
-         };
-         name = "Release";
-      };
-      "OBJ_199" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_200",
-            "OBJ_201"
-         );
-      };
-      "OBJ_2" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_3",
-            "OBJ_4"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_20" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_21",
-            "OBJ_24",
-            "OBJ_30",
-            "OBJ_32"
-         );
-         name = "Tests";
-         path = "";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_200" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_22";
-      };
-      "OBJ_201" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_23";
-      };
-      "OBJ_202" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_203"
-         );
-      };
-      "OBJ_203" = {
-         isa = "PBXBuildFile";
-         fileRef = "PrinterParser::PartialIso::Product";
-      };
-      "OBJ_204" = {
-         isa = "PBXTargetDependency";
-         target = "PrinterParser::PartialIso";
-      };
-      "OBJ_206" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_207",
-            "OBJ_208"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_207" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4.2",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.2";
-         };
-         name = "Debug";
-      };
-      "OBJ_208" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4.2",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.2";
-         };
-         name = "Release";
-      };
-      "OBJ_209" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_210"
-         );
-      };
-      "OBJ_21" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_22",
-            "OBJ_23"
-         );
-         name = "PartialIsoTests";
-         path = "Tests/PartialIsoTests";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_210" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_6";
-      };
-      "OBJ_212" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_213",
-            "OBJ_214"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_213" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-         };
-         name = "Debug";
-      };
-      "OBJ_214" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-         };
-         name = "Release";
-      };
-      "OBJ_215" = {
-         isa = "PBXTargetDependency";
-         target = "PrinterParser::URLRequestRouterTests";
-      };
-      "OBJ_217" = {
-         isa = "PBXTargetDependency";
-         target = "PrinterParser::PartialIsoTests";
-      };
-      "OBJ_218" = {
-         isa = "PBXTargetDependency";
-         target = "PrinterParser::GeneratePartialIsosTests";
-      };
-      "OBJ_219" = {
-         isa = "PBXTargetDependency";
-         target = "PrinterParser::SyntaxTests";
-      };
-      "OBJ_22" = {
-         isa = "PBXFileReference";
-         path = "XCTestManifests.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_221" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_222",
-            "OBJ_223"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_222" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/SnapshotTesting_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "SnapshotTesting";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "SnapshotTesting";
-         };
-         name = "Debug";
-      };
-      "OBJ_223" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/SnapshotTesting_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "SnapshotTesting";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "SnapshotTesting";
-         };
-         name = "Release";
-      };
-      "OBJ_224" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_225",
-            "OBJ_226",
-            "OBJ_227",
-            "OBJ_228",
-            "OBJ_229",
-            "OBJ_230",
-            "OBJ_231",
-            "OBJ_232",
-            "OBJ_233",
-            "OBJ_234",
-            "OBJ_235",
-            "OBJ_236",
-            "OBJ_237",
-            "OBJ_238",
-            "OBJ_239",
-            "OBJ_240",
-            "OBJ_241",
-            "OBJ_242",
-            "OBJ_243",
-            "OBJ_244",
-            "OBJ_245",
-            "OBJ_246",
-            "OBJ_247",
-            "OBJ_248",
-            "OBJ_249",
-            "OBJ_250"
-         );
-      };
-      "OBJ_225" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_39";
-      };
-      "OBJ_226" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_40";
-      };
-      "OBJ_227" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_42";
-      };
-      "OBJ_228" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_43";
-      };
-      "OBJ_229" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_44";
-      };
-      "OBJ_23" = {
-         isa = "PBXFileReference";
-         path = "swift_parser_printerTests.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_230" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_45";
-      };
-      "OBJ_231" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_46";
-      };
-      "OBJ_232" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_47";
-      };
-      "OBJ_233" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_48";
-      };
-      "OBJ_234" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_49";
-      };
-      "OBJ_235" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_51";
-      };
-      "OBJ_236" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_52";
-      };
-      "OBJ_237" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_53";
-      };
-      "OBJ_238" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_54";
-      };
-      "OBJ_239" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_55";
-      };
-      "OBJ_24" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_25",
-            "OBJ_26",
-            "OBJ_27"
-         );
-         name = "GeneratePartialIsosTests";
-         path = "Tests/GeneratePartialIsosTests";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_240" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_56";
-      };
-      "OBJ_241" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_57";
-      };
-      "OBJ_242" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_58";
-      };
-      "OBJ_243" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_59";
-      };
-      "OBJ_244" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_60";
-      };
-      "OBJ_245" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_61";
-      };
-      "OBJ_246" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_62";
-      };
-      "OBJ_247" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_63";
-      };
-      "OBJ_248" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_64";
-      };
-      "OBJ_249" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_65";
-      };
-      "OBJ_25" = {
-         isa = "PBXFileReference";
-         path = "Fixture.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_250" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_66";
-      };
-      "OBJ_251" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-         );
-      };
-      "OBJ_253" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_254",
-            "OBJ_255"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_254" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4.2",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.2";
-         };
-         name = "Debug";
-      };
-      "OBJ_255" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4.2",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.2";
-         };
-         name = "Release";
-      };
-      "OBJ_256" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_257"
-         );
-      };
-      "OBJ_257" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_67";
-      };
-      "OBJ_258" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_259",
-            "OBJ_260"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_259" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/SwiftSyntax_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "SwiftSyntax";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "SwiftSyntax";
-         };
-         name = "Debug";
-      };
-      "OBJ_26" = {
-         isa = "PBXFileReference";
-         path = "GeneratePartialIsosTests.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_260" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/SwiftSyntax_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "SwiftSyntax";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "SwiftSyntax";
-         };
-         name = "Release";
-      };
-      "OBJ_261" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_262",
-            "OBJ_263",
-            "OBJ_264",
-            "OBJ_265",
-            "OBJ_266",
-            "OBJ_267",
-            "OBJ_268",
-            "OBJ_269",
-            "OBJ_270",
-            "OBJ_271",
-            "OBJ_272",
-            "OBJ_273",
-            "OBJ_274",
-            "OBJ_275",
-            "OBJ_276",
-            "OBJ_277",
-            "OBJ_278",
-            "OBJ_279",
-            "OBJ_280",
-            "OBJ_281",
-            "OBJ_282",
-            "OBJ_283",
-            "OBJ_284"
-         );
-      };
-      "OBJ_262" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_92";
-      };
-      "OBJ_263" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_93";
-      };
-      "OBJ_264" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_94";
-      };
-      "OBJ_265" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_95";
-      };
-      "OBJ_266" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_96";
-      };
-      "OBJ_267" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_97";
-      };
-      "OBJ_268" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_98";
-      };
-      "OBJ_269" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_99";
-      };
-      "OBJ_27" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_28"
-         );
-         name = "__Snapshots__";
-         path = "__Snapshots__";
-         sourceTree = "<group>";
-      };
-      "OBJ_270" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_100";
-      };
-      "OBJ_271" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_101";
-      };
-      "OBJ_272" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_102";
-      };
-      "OBJ_273" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_103";
-      };
-      "OBJ_274" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_104";
-      };
-      "OBJ_275" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_105";
-      };
-      "OBJ_276" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_106";
-      };
-      "OBJ_277" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_108";
-      };
-      "OBJ_278" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_109";
-      };
-      "OBJ_279" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_110";
-      };
-      "OBJ_28" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_29"
-         );
-         name = "GeneratePartialIsosTests";
-         path = "GeneratePartialIsosTests";
-         sourceTree = "<group>";
-      };
-      "OBJ_280" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_111";
-      };
-      "OBJ_281" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_112";
-      };
-      "OBJ_282" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_113";
-      };
-      "OBJ_283" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_114";
-      };
-      "OBJ_284" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_115";
-      };
-      "OBJ_285" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-         );
-      };
-      "OBJ_287" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_288",
-            "OBJ_289"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_288" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4.2",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.2";
-         };
-         name = "Debug";
-      };
-      "OBJ_289" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4.2",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.2";
-         };
-         name = "Release";
-      };
-      "OBJ_29" = {
-         isa = "PBXFileReference";
-         path = "test.1.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_290" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_291"
-         );
-      };
-      "OBJ_291" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_116";
-      };
-      "OBJ_293" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_294",
-            "OBJ_295"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_294" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/Syntax_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "Syntax";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "Syntax";
-         };
-         name = "Debug";
-      };
-      "OBJ_295" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/Syntax_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "Syntax";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "Syntax";
-         };
-         name = "Release";
-      };
-      "OBJ_296" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_297"
-         );
-      };
-      "OBJ_297" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_14";
-      };
-      "OBJ_298" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_299",
-            "OBJ_300"
-         );
-      };
-      "OBJ_299" = {
-         isa = "PBXBuildFile";
-         fileRef = "Monoid::Monoid::Product";
-      };
-      "OBJ_3" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_OBJC_ARC = "YES";
-            COMBINE_HIDPI_IMAGES = "YES";
-            COPY_PHASE_STRIP = "NO";
-            DEBUG_INFORMATION_FORMAT = "dwarf";
-            DYLIB_INSTALL_NAME_BASE = "@rpath";
-            ENABLE_NS_ASSERTIONS = "YES";
-            GCC_OPTIMIZATION_LEVEL = "0";
-            GCC_PREPROCESSOR_DEFINITIONS = (
-               "DEBUG=1",
-               "$(inherited)"
-            );
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
-            ONLY_ACTIVE_ARCH = "YES";
-            OTHER_SWIFT_FLAGS = (
-               "-DXcode"
-            );
-            PRODUCT_NAME = "$(TARGET_NAME)";
-            SDKROOT = "macosx";
-            SUPPORTED_PLATFORMS = (
-               "macosx",
-               "iphoneos",
-               "iphonesimulator",
-               "appletvos",
-               "appletvsimulator",
-               "watchos",
-               "watchsimulator"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "SWIFT_PACKAGE",
-               "DEBUG"
-            );
-            SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-            USE_HEADERMAP = "NO";
-         };
-         name = "Debug";
-      };
-      "OBJ_30" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_31"
-         );
-         name = "URLRequestRouterTests";
-         path = "Tests/URLRequestRouterTests";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_300" = {
-         isa = "PBXBuildFile";
-         fileRef = "PrinterParser::PartialIso::Product";
-      };
-      "OBJ_301" = {
-         isa = "PBXTargetDependency";
-         target = "Monoid::Monoid";
-      };
-      "OBJ_302" = {
-         isa = "PBXTargetDependency";
-         target = "PrinterParser::PartialIso";
-      };
-      "OBJ_303" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_304",
-            "OBJ_305"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_304" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_MODULES = "YES";
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/SyntaxTests_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "SyntaxTests";
-         };
-         name = "Debug";
-      };
-      "OBJ_305" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_MODULES = "YES";
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/SyntaxTests_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "SyntaxTests";
-         };
-         name = "Release";
-      };
-      "OBJ_306" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_307",
-            "OBJ_308"
-         );
-      };
-      "OBJ_307" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_33";
-      };
-      "OBJ_308" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_34";
-      };
-      "OBJ_309" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_310",
-            "OBJ_311",
-            "OBJ_312"
-         );
-      };
-      "OBJ_31" = {
-         isa = "PBXFileReference";
-         path = "URLRequestRouterTests.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_310" = {
-         isa = "PBXBuildFile";
-         fileRef = "PrinterParser::Syntax::Product";
-      };
-      "OBJ_311" = {
-         isa = "PBXBuildFile";
-         fileRef = "Monoid::Monoid::Product";
-      };
-      "OBJ_312" = {
-         isa = "PBXBuildFile";
-         fileRef = "PrinterParser::PartialIso::Product";
-      };
-      "OBJ_313" = {
-         isa = "PBXTargetDependency";
-         target = "PrinterParser::Syntax";
-      };
-      "OBJ_314" = {
-         isa = "PBXTargetDependency";
-         target = "Monoid::Monoid";
-      };
-      "OBJ_315" = {
-         isa = "PBXTargetDependency";
-         target = "PrinterParser::PartialIso";
-      };
-      "OBJ_317" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_318",
-            "OBJ_319"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_318" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/URLRequestRouter_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "URLRequestRouter";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "URLRequestRouter";
-         };
-         name = "Debug";
-      };
-      "OBJ_319" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/URLRequestRouter_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "URLRequestRouter";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "URLRequestRouter";
-         };
-         name = "Release";
-      };
-      "OBJ_32" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_33",
-            "OBJ_34"
-         );
-         name = "SyntaxTests";
-         path = "Tests/SyntaxTests";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_320" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_321",
-            "OBJ_322"
-         );
-      };
-      "OBJ_321" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_9";
-      };
-      "OBJ_322" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_10";
-      };
-      "OBJ_323" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_324",
-            "OBJ_325",
-            "OBJ_326"
-         );
-      };
-      "OBJ_324" = {
-         isa = "PBXBuildFile";
-         fileRef = "PrinterParser::Syntax::Product";
-      };
-      "OBJ_325" = {
-         isa = "PBXBuildFile";
-         fileRef = "Monoid::Monoid::Product";
-      };
-      "OBJ_326" = {
-         isa = "PBXBuildFile";
-         fileRef = "PrinterParser::PartialIso::Product";
-      };
-      "OBJ_327" = {
-         isa = "PBXTargetDependency";
-         target = "PrinterParser::Syntax";
-      };
-      "OBJ_328" = {
-         isa = "PBXTargetDependency";
-         target = "Monoid::Monoid";
-      };
-      "OBJ_329" = {
-         isa = "PBXTargetDependency";
-         target = "PrinterParser::PartialIso";
-      };
-      "OBJ_33" = {
-         isa = "PBXFileReference";
-         path = "SyntaxTests.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_330" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_331",
-            "OBJ_332"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_331" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_MODULES = "YES";
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/URLRequestRouterTests_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "URLRequestRouterTests";
-         };
-         name = "Debug";
-      };
-      "OBJ_332" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_MODULES = "YES";
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/URLRequestRouterTests_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "URLRequestRouterTests";
-         };
-         name = "Release";
-      };
-      "OBJ_333" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_334"
-         );
-      };
-      "OBJ_334" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_31";
-      };
-      "OBJ_335" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_336",
-            "OBJ_337",
-            "OBJ_338",
-            "OBJ_339"
-         );
-      };
-      "OBJ_336" = {
-         isa = "PBXBuildFile";
-         fileRef = "PrinterParser::URLRequestRouter::Product";
-      };
-      "OBJ_337" = {
-         isa = "PBXBuildFile";
-         fileRef = "PrinterParser::Syntax::Product";
-      };
-      "OBJ_338" = {
-         isa = "PBXBuildFile";
-         fileRef = "Monoid::Monoid::Product";
-      };
-      "OBJ_339" = {
-         isa = "PBXBuildFile";
-         fileRef = "PrinterParser::PartialIso::Product";
-      };
-      "OBJ_34" = {
-         isa = "PBXFileReference";
-         path = "XCTestManifests.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_340" = {
-         isa = "PBXTargetDependency";
-         target = "PrinterParser::URLRequestRouter";
-      };
-      "OBJ_341" = {
-         isa = "PBXTargetDependency";
-         target = "PrinterParser::Syntax";
-      };
-      "OBJ_342" = {
-         isa = "PBXTargetDependency";
-         target = "Monoid::Monoid";
-      };
-      "OBJ_343" = {
-         isa = "PBXTargetDependency";
-         target = "PrinterParser::PartialIso";
-      };
-      "OBJ_345" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_346",
-            "OBJ_347"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_346" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/generate_partial_isos_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-               "@executable_path"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
-            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "generate-partial-isos";
-         };
-         name = "Debug";
-      };
-      "OBJ_347" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "PrinterParser.xcodeproj/generate_partial_isos_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-               "@executable_path"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
-            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "generate-partial-isos";
-         };
-         name = "Release";
-      };
-      "OBJ_348" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_349"
-         );
-      };
-      "OBJ_349" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_16";
-      };
-      "OBJ_35" = {
-         isa = "PBXFileReference";
-         path = "PrinterParser.xcworkspace";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_350" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_351",
-            "OBJ_352"
-         );
-      };
-      "OBJ_351" = {
-         isa = "PBXBuildFile";
-         fileRef = "PrinterParser::GeneratePartialIsos::Product";
-      };
-      "OBJ_352" = {
-         isa = "PBXBuildFile";
-         fileRef = "SwiftSyntax::SwiftSyntax::Product";
-      };
-      "OBJ_353" = {
-         isa = "PBXTargetDependency";
-         target = "PrinterParser::GeneratePartialIsos";
-      };
-      "OBJ_354" = {
-         isa = "PBXTargetDependency";
-         target = "SwiftSyntax::SwiftSyntax";
-      };
-      "OBJ_36" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_37",
-            "OBJ_68",
-            "OBJ_90"
-         );
-         name = "Dependencies";
-         path = "";
-         sourceTree = "<group>";
-      };
-      "OBJ_37" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_38",
-            "OBJ_67"
-         );
-         name = "SnapshotTesting 1.1.0";
-         path = "";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_38" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_39",
-            "OBJ_40",
-            "OBJ_41",
-            "OBJ_46",
-            "OBJ_47",
-            "OBJ_48",
-            "OBJ_49",
-            "OBJ_50"
-         );
-         name = "SnapshotTesting";
-         path = ".build/checkouts/swift-snapshot-testing.git--5120405597536721154/Sources/SnapshotTesting";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_39" = {
-         isa = "PBXFileReference";
-         path = "AssertSnapshot.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_4" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_OBJC_ARC = "YES";
-            COMBINE_HIDPI_IMAGES = "YES";
-            COPY_PHASE_STRIP = "YES";
-            DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-            DYLIB_INSTALL_NAME_BASE = "@rpath";
-            GCC_OPTIMIZATION_LEVEL = "s";
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
-            OTHER_SWIFT_FLAGS = (
-               "-DXcode"
-            );
-            PRODUCT_NAME = "$(TARGET_NAME)";
-            SDKROOT = "macosx";
-            SUPPORTED_PLATFORMS = (
-               "macosx",
-               "iphoneos",
-               "iphonesimulator",
-               "appletvos",
-               "appletvsimulator",
-               "watchos",
-               "watchsimulator"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "SWIFT_PACKAGE"
-            );
-            SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-            USE_HEADERMAP = "NO";
-         };
-         name = "Release";
-      };
-      "OBJ_40" = {
-         isa = "PBXFileReference";
-         path = "Async.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_41" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_42",
-            "OBJ_43",
-            "OBJ_44",
-            "OBJ_45"
-         );
-         name = "Common";
-         path = "Common";
-         sourceTree = "<group>";
-      };
-      "OBJ_42" = {
-         isa = "PBXFileReference";
-         path = "Internal.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_43" = {
-         isa = "PBXFileReference";
-         path = "PlistEncoder.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_44" = {
-         isa = "PBXFileReference";
-         path = "View.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_45" = {
-         isa = "PBXFileReference";
-         path = "XCTAttachment.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_46" = {
-         isa = "PBXFileReference";
-         path = "Diff.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_47" = {
-         isa = "PBXFileReference";
-         path = "Diffing.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_48" = {
-         isa = "PBXFileReference";
-         path = "SnapshotTestCase.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_49" = {
-         isa = "PBXFileReference";
-         path = "Snapshotting.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_5" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_6",
-            "OBJ_7",
-            "OBJ_20",
-            "OBJ_35",
-            "OBJ_36",
-            "OBJ_117"
-         );
-         path = "";
-         sourceTree = "<group>";
-      };
-      "OBJ_50" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_51",
-            "OBJ_52",
-            "OBJ_53",
-            "OBJ_54",
-            "OBJ_55",
-            "OBJ_56",
-            "OBJ_57",
-            "OBJ_58",
-            "OBJ_59",
-            "OBJ_60",
-            "OBJ_61",
-            "OBJ_62",
-            "OBJ_63",
-            "OBJ_64",
-            "OBJ_65",
-            "OBJ_66"
-         );
-         name = "Snapshotting";
-         path = "Snapshotting";
-         sourceTree = "<group>";
-      };
-      "OBJ_51" = {
-         isa = "PBXFileReference";
-         path = "Any.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_52" = {
-         isa = "PBXFileReference";
-         path = "CALayer.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_53" = {
-         isa = "PBXFileReference";
-         path = "CaseIterable.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_54" = {
-         isa = "PBXFileReference";
-         path = "Codable.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_55" = {
-         isa = "PBXFileReference";
-         path = "Data.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_56" = {
-         isa = "PBXFileReference";
-         path = "Description.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_57" = {
-         isa = "PBXFileReference";
-         path = "NSImage.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_58" = {
-         isa = "PBXFileReference";
-         path = "NSView.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_59" = {
-         isa = "PBXFileReference";
-         path = "NSViewController.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_6" = {
-         isa = "PBXFileReference";
-         explicitFileType = "sourcecode.swift";
-         path = "Package.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_60" = {
-         isa = "PBXFileReference";
-         path = "SceneKit.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_61" = {
-         isa = "PBXFileReference";
-         path = "SpriteKit.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_62" = {
-         isa = "PBXFileReference";
-         path = "String.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_63" = {
-         isa = "PBXFileReference";
-         path = "UIImage.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_64" = {
-         isa = "PBXFileReference";
-         path = "UIView.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_65" = {
-         isa = "PBXFileReference";
-         path = "UIViewController.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_66" = {
-         isa = "PBXFileReference";
-         path = "URLRequest.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_67" = {
-         isa = "PBXFileReference";
-         explicitFileType = "sourcecode.swift";
-         name = "Package.swift";
-         path = "/Users/stephencelis/Developer/pointfreeco/swift-parser-printer/.build/checkouts/swift-snapshot-testing.git--5120405597536721154/Package.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_68" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_69",
-            "OBJ_89"
-         );
-         name = "Monoid";
-         path = "";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_69" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_70",
-            "OBJ_75"
-         );
-         name = "Monoid";
-         path = ".build/checkouts/swift-algebras-1501178186608326700/Sources/Monoid";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_7" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_8",
-            "OBJ_11",
-            "OBJ_13",
-            "OBJ_15",
-            "OBJ_17"
-         );
-         name = "Sources";
-         path = "";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_70" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_71",
-            "OBJ_72",
-            "OBJ_73",
-            "OBJ_74"
-         );
-         name = "Algebras";
-         path = "Algebras";
-         sourceTree = "<group>";
-      };
-      "OBJ_71" = {
-         isa = "PBXFileReference";
-         path = "Folds.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_72" = {
-         isa = "PBXFileReference";
-         path = "Monoid.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_73" = {
-         isa = "PBXFileReference";
-         path = "Semigroup.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_74" = {
-         isa = "PBXFileReference";
-         path = "TODO.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_75" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_76",
-            "OBJ_77",
-            "OBJ_78",
-            "OBJ_79",
-            "OBJ_80",
-            "OBJ_81",
-            "OBJ_82",
-            "OBJ_83",
-            "OBJ_84",
-            "OBJ_85",
-            "OBJ_86",
-            "OBJ_87",
-            "OBJ_88"
-         );
-         name = "Instances";
-         path = "Instances";
-         sourceTree = "<group>";
-      };
-      "OBJ_76" = {
-         isa = "PBXFileReference";
-         path = "Average.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_77" = {
-         isa = "PBXFileReference";
-         path = "Bool.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_78" = {
-         isa = "PBXFileReference";
-         path = "Comparable.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_79" = {
-         isa = "PBXFileReference";
-         path = "Dictionary.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_8" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_9",
-            "OBJ_10"
-         );
-         name = "URLRequestRouter";
-         path = "Sources/URLRequestRouter";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_80" = {
-         isa = "PBXFileReference";
-         path = "Endo.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_81" = {
-         isa = "PBXFileReference";
-         path = "Numeric.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_82" = {
-         isa = "PBXFileReference";
-         path = "Optional.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_83" = {
-         isa = "PBXFileReference";
-         path = "Pointwise.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_84" = {
-         isa = "PBXFileReference";
-         path = "RangeReplaceableCollection.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_85" = {
-         isa = "PBXFileReference";
-         path = "Set.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_86" = {
-         isa = "PBXFileReference";
-         path = "Tuple.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_87" = {
-         isa = "PBXFileReference";
-         path = "Variance.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_88" = {
-         isa = "PBXFileReference";
-         path = "Void.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_89" = {
-         isa = "PBXFileReference";
-         explicitFileType = "sourcecode.swift";
-         name = "Package.swift";
-         path = "/Users/stephencelis/Developer/pointfreeco/swift-parser-printer/.build/checkouts/swift-algebras-1501178186608326700/Package.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_9" = {
-         isa = "PBXFileReference";
-         path = "RequestData.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_90" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_91",
-            "OBJ_116"
-         );
-         name = "SwiftSyntax 0.40200.0";
-         path = "";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_91" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_92",
-            "OBJ_93",
-            "OBJ_94",
-            "OBJ_95",
-            "OBJ_96",
-            "OBJ_97",
-            "OBJ_98",
-            "OBJ_99",
-            "OBJ_100",
-            "OBJ_101",
-            "OBJ_102",
-            "OBJ_103",
-            "OBJ_104",
-            "OBJ_105",
-            "OBJ_106",
-            "OBJ_107"
-         );
-         name = "SwiftSyntax";
-         path = ".build/checkouts/swift-syntax.git-6551255410123428459/Sources/SwiftSyntax";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_92" = {
-         isa = "PBXFileReference";
-         path = "AbsolutePosition.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_93" = {
-         isa = "PBXFileReference";
-         path = "AtomicCache.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_94" = {
-         isa = "PBXFileReference";
-         path = "Diagnostic.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_95" = {
-         isa = "PBXFileReference";
-         path = "DiagnosticConsumer.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_96" = {
-         isa = "PBXFileReference";
-         path = "DiagnosticEngine.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_97" = {
-         isa = "PBXFileReference";
-         path = "JSONDiagnosticConsumer.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_98" = {
-         isa = "PBXFileReference";
-         path = "PrintingDiagnosticConsumer.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_99" = {
-         isa = "PBXFileReference";
-         path = "RawSyntax.swift";
-         sourceTree = "<group>";
-      };
-      "PrinterParser::GeneratePartialIsos" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_131";
-         buildPhases = (
-            "OBJ_134",
-            "OBJ_136"
-         );
-         dependencies = (
-            "OBJ_138"
-         );
-         name = "GeneratePartialIsos";
-         productName = "GeneratePartialIsos";
-         productReference = "PrinterParser::GeneratePartialIsos::Product";
-         productType = "com.apple.product-type.framework";
-      };
-      "PrinterParser::GeneratePartialIsos::Product" = {
-         isa = "PBXFileReference";
-         path = "GeneratePartialIsos.framework";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "PrinterParser::GeneratePartialIsosTests" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_141";
-         buildPhases = (
-            "OBJ_144",
-            "OBJ_148"
-         );
-         dependencies = (
-            "OBJ_153",
-            "OBJ_155",
-            "OBJ_157",
-            "OBJ_158"
-         );
-         name = "GeneratePartialIsosTests";
-         productName = "GeneratePartialIsosTests";
-         productReference = "PrinterParser::GeneratePartialIsosTests::Product";
-         productType = "com.apple.product-type.bundle.unit-test";
-      };
-      "PrinterParser::GeneratePartialIsosTests::Product" = {
-         isa = "PBXFileReference";
-         path = "GeneratePartialIsosTests.xctest";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "PrinterParser::PartialIso" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_188";
-         buildPhases = (
-            "OBJ_191",
-            "OBJ_194"
-         );
-         dependencies = (
-         );
-         name = "PartialIso";
-         productName = "PartialIso";
-         productReference = "PrinterParser::PartialIso::Product";
-         productType = "com.apple.product-type.framework";
-      };
-      "PrinterParser::PartialIso::Product" = {
-         isa = "PBXFileReference";
-         path = "PartialIso.framework";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "PrinterParser::PartialIsoTests" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_196";
-         buildPhases = (
-            "OBJ_199",
-            "OBJ_202"
-         );
-         dependencies = (
-            "OBJ_204"
-         );
-         name = "PartialIsoTests";
-         productName = "PartialIsoTests";
-         productReference = "PrinterParser::PartialIsoTests::Product";
-         productType = "com.apple.product-type.bundle.unit-test";
-      };
-      "PrinterParser::PartialIsoTests::Product" = {
-         isa = "PBXFileReference";
-         path = "PartialIsoTests.xctest";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "PrinterParser::PrinterParserPackageTests::ProductTarget" = {
-         isa = "PBXAggregateTarget";
-         buildConfigurationList = "OBJ_212";
-         buildPhases = (
-         );
-         dependencies = (
-            "OBJ_215",
-            "OBJ_217",
-            "OBJ_218",
-            "OBJ_219"
-         );
-         name = "PrinterParserPackageTests";
-         productName = "PrinterParserPackageTests";
-      };
-      "PrinterParser::SwiftPMPackageDescription" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_206";
-         buildPhases = (
-            "OBJ_209"
-         );
-         dependencies = (
-         );
-         name = "PrinterParserPackageDescription";
-         productName = "PrinterParserPackageDescription";
-         productType = "com.apple.product-type.framework";
-      };
-      "PrinterParser::Syntax" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_293";
-         buildPhases = (
-            "OBJ_296",
-            "OBJ_298"
-         );
-         dependencies = (
-            "OBJ_301",
-            "OBJ_302"
-         );
-         name = "Syntax";
-         productName = "Syntax";
-         productReference = "PrinterParser::Syntax::Product";
-         productType = "com.apple.product-type.framework";
-      };
-      "PrinterParser::Syntax::Product" = {
-         isa = "PBXFileReference";
-         path = "Syntax.framework";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "PrinterParser::SyntaxTests" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_303";
-         buildPhases = (
-            "OBJ_306",
-            "OBJ_309"
-         );
-         dependencies = (
-            "OBJ_313",
-            "OBJ_314",
-            "OBJ_315"
-         );
-         name = "SyntaxTests";
-         productName = "SyntaxTests";
-         productReference = "PrinterParser::SyntaxTests::Product";
-         productType = "com.apple.product-type.bundle.unit-test";
-      };
-      "PrinterParser::SyntaxTests::Product" = {
-         isa = "PBXFileReference";
-         path = "SyntaxTests.xctest";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "PrinterParser::URLRequestRouter" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_317";
-         buildPhases = (
-            "OBJ_320",
-            "OBJ_323"
-         );
-         dependencies = (
-            "OBJ_327",
-            "OBJ_328",
-            "OBJ_329"
-         );
-         name = "URLRequestRouter";
-         productName = "URLRequestRouter";
-         productReference = "PrinterParser::URLRequestRouter::Product";
-         productType = "com.apple.product-type.framework";
-      };
-      "PrinterParser::URLRequestRouter::Product" = {
-         isa = "PBXFileReference";
-         path = "URLRequestRouter.framework";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "PrinterParser::URLRequestRouterTests" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_330";
-         buildPhases = (
-            "OBJ_333",
-            "OBJ_335"
-         );
-         dependencies = (
-            "OBJ_340",
-            "OBJ_341",
-            "OBJ_342",
-            "OBJ_343"
-         );
-         name = "URLRequestRouterTests";
-         productName = "URLRequestRouterTests";
-         productReference = "PrinterParser::URLRequestRouterTests::Product";
-         productType = "com.apple.product-type.bundle.unit-test";
-      };
-      "PrinterParser::URLRequestRouterTests::Product" = {
-         isa = "PBXFileReference";
-         path = "URLRequestRouterTests.xctest";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "PrinterParser::generate-partial-isos" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_345";
-         buildPhases = (
-            "OBJ_348",
-            "OBJ_350"
-         );
-         dependencies = (
-            "OBJ_353",
-            "OBJ_354"
-         );
-         name = "generate-partial-isos";
-         productName = "generate_partial_isos";
-         productReference = "PrinterParser::generate-partial-isos::Product";
-         productType = "com.apple.product-type.tool";
-      };
-      "PrinterParser::generate-partial-isos::Product" = {
-         isa = "PBXFileReference";
-         path = "generate-partial-isos";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "SnapshotTesting::SnapshotTesting" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_221";
-         buildPhases = (
-            "OBJ_224",
-            "OBJ_251"
-         );
-         dependencies = (
-         );
-         name = "SnapshotTesting";
-         productName = "SnapshotTesting";
-         productReference = "SnapshotTesting::SnapshotTesting::Product";
-         productType = "com.apple.product-type.framework";
-      };
-      "SnapshotTesting::SnapshotTesting::Product" = {
-         isa = "PBXFileReference";
-         path = "SnapshotTesting.framework";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "SnapshotTesting::SwiftPMPackageDescription" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_253";
-         buildPhases = (
-            "OBJ_256"
-         );
-         dependencies = (
-         );
-         name = "SnapshotTestingPackageDescription";
-         productName = "SnapshotTestingPackageDescription";
-         productType = "com.apple.product-type.framework";
-      };
-      "SwiftSyntax::SwiftPMPackageDescription" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_287";
-         buildPhases = (
-            "OBJ_290"
-         );
-         dependencies = (
-         );
-         name = "SwiftSyntaxPackageDescription";
-         productName = "SwiftSyntaxPackageDescription";
-         productType = "com.apple.product-type.framework";
-      };
-      "SwiftSyntax::SwiftSyntax" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_258";
-         buildPhases = (
-            "OBJ_261",
-            "OBJ_285"
-         );
-         dependencies = (
-         );
-         name = "SwiftSyntax";
-         productName = "SwiftSyntax";
-         productReference = "SwiftSyntax::SwiftSyntax::Product";
-         productType = "com.apple.product-type.framework";
-      };
-      "SwiftSyntax::SwiftSyntax::Product" = {
-         isa = "PBXFileReference";
-         path = "SwiftSyntax.framework";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-   };
-   rootObject = "OBJ_1";
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"PrinterParser::PrinterParserPackageTests::ProductTarget" /* PrinterParserPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_212 /* Build configuration list for PBXAggregateTarget "PrinterParserPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_215 /* PBXTargetDependency */,
+				OBJ_217 /* PBXTargetDependency */,
+				OBJ_218 /* PBXTargetDependency */,
+				OBJ_219 /* PBXTargetDependency */,
+			);
+			name = PrinterParserPackageTests;
+			productName = PrinterParserPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		OBJ_135 /* GeneratePartialIsos.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* GeneratePartialIsos.swift */; };
+		OBJ_137 /* SwiftSyntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */; };
+		OBJ_145 /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Fixture.swift */; };
+		OBJ_146 /* GeneratePartialIsosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* GeneratePartialIsosTests.swift */; };
+		OBJ_147 /* test.1.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* test.1.swift */; };
+		OBJ_149 /* SnapshotTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SnapshotTesting::SnapshotTesting::Product" /* SnapshotTesting.framework */; };
+		OBJ_150 /* PartialIso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::PartialIso::Product" /* PartialIso.framework */; };
+		OBJ_151 /* GeneratePartialIsos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::GeneratePartialIsos::Product" /* GeneratePartialIsos.framework */; };
+		OBJ_152 /* SwiftSyntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */; };
+		OBJ_164 /* Folds.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* Folds.swift */; };
+		OBJ_165 /* Monoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* Monoid.swift */; };
+		OBJ_166 /* Semigroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* Semigroup.swift */; };
+		OBJ_167 /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* TODO.swift */; };
+		OBJ_168 /* Average.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* Average.swift */; };
+		OBJ_169 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* Bool.swift */; };
+		OBJ_170 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* Comparable.swift */; };
+		OBJ_171 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* Dictionary.swift */; };
+		OBJ_172 /* Endo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* Endo.swift */; };
+		OBJ_173 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* Numeric.swift */; };
+		OBJ_174 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* Optional.swift */; };
+		OBJ_175 /* Pointwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* Pointwise.swift */; };
+		OBJ_176 /* RangeReplaceableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* RangeReplaceableCollection.swift */; };
+		OBJ_177 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* Set.swift */; };
+		OBJ_178 /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* Tuple.swift */; };
+		OBJ_179 /* Variance.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* Variance.swift */; };
+		OBJ_180 /* Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* Void.swift */; };
+		OBJ_187 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* Package.swift */; };
+		OBJ_192 /* ExpressibleByStringLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* ExpressibleByStringLiteral.swift */; };
+		OBJ_193 /* PartialIso.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* PartialIso.swift */; };
+		OBJ_200 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* XCTestManifests.swift */; };
+		OBJ_201 /* PartialIsoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* PartialIsoTests.swift */; };
+		OBJ_203 /* PartialIso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::PartialIso::Product" /* PartialIso.framework */; };
+		OBJ_210 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_225 /* AssertSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* AssertSnapshot.swift */; };
+		OBJ_226 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Async.swift */; };
+		OBJ_227 /* Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Internal.swift */; };
+		OBJ_228 /* PlistEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* PlistEncoder.swift */; };
+		OBJ_229 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* View.swift */; };
+		OBJ_230 /* XCTAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* XCTAttachment.swift */; };
+		OBJ_231 /* Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Diff.swift */; };
+		OBJ_232 /* Diffing.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Diffing.swift */; };
+		OBJ_233 /* SnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* SnapshotTestCase.swift */; };
+		OBJ_234 /* Snapshotting.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Snapshotting.swift */; };
+		OBJ_235 /* Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Any.swift */; };
+		OBJ_236 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* CALayer.swift */; };
+		OBJ_237 /* CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* CaseIterable.swift */; };
+		OBJ_238 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* Codable.swift */; };
+		OBJ_239 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Data.swift */; };
+		OBJ_240 /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Description.swift */; };
+		OBJ_241 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* NSImage.swift */; };
+		OBJ_242 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* NSView.swift */; };
+		OBJ_243 /* NSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* NSViewController.swift */; };
+		OBJ_244 /* SceneKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* SceneKit.swift */; };
+		OBJ_245 /* SpriteKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* SpriteKit.swift */; };
+		OBJ_246 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* String.swift */; };
+		OBJ_247 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* UIImage.swift */; };
+		OBJ_248 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* UIView.swift */; };
+		OBJ_249 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* UIViewController.swift */; };
+		OBJ_250 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* URLRequest.swift */; };
+		OBJ_257 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* Package.swift */; };
+		OBJ_262 /* AbsolutePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_92 /* AbsolutePosition.swift */; };
+		OBJ_263 /* AtomicCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_93 /* AtomicCache.swift */; };
+		OBJ_264 /* Diagnostic.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* Diagnostic.swift */; };
+		OBJ_265 /* DiagnosticConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_95 /* DiagnosticConsumer.swift */; };
+		OBJ_266 /* DiagnosticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* DiagnosticEngine.swift */; };
+		OBJ_267 /* JSONDiagnosticConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_97 /* JSONDiagnosticConsumer.swift */; };
+		OBJ_268 /* PrintingDiagnosticConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* PrintingDiagnosticConsumer.swift */; };
+		OBJ_269 /* RawSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_99 /* RawSyntax.swift */; };
+		OBJ_270 /* SourceLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* SourceLength.swift */; };
+		OBJ_271 /* SourcePresence.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* SourcePresence.swift */; };
+		OBJ_272 /* SwiftSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* SwiftSyntax.swift */; };
+		OBJ_273 /* SwiftcInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* SwiftcInvocation.swift */; };
+		OBJ_274 /* Syntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_104 /* Syntax.swift */; };
+		OBJ_275 /* SyntaxChildren.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_105 /* SyntaxChildren.swift */; };
+		OBJ_276 /* SyntaxData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* SyntaxData.swift */; };
+		OBJ_277 /* SyntaxBuilders.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_108 /* SyntaxBuilders.swift */; };
+		OBJ_278 /* SyntaxCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* SyntaxCollections.swift */; };
+		OBJ_279 /* SyntaxFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* SyntaxFactory.swift */; };
+		OBJ_280 /* SyntaxKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* SyntaxKind.swift */; };
+		OBJ_281 /* SyntaxNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_112 /* SyntaxNodes.swift */; };
+		OBJ_282 /* SyntaxRewriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* SyntaxRewriter.swift */; };
+		OBJ_283 /* TokenKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* TokenKind.swift */; };
+		OBJ_284 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_115 /* Trivia.swift */; };
+		OBJ_291 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* Package.swift */; };
+		OBJ_297 /* Syntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Syntax.swift */; };
+		OBJ_299 /* Monoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Monoid::Monoid::Product" /* Monoid.framework */; };
+		OBJ_300 /* PartialIso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::PartialIso::Product" /* PartialIso.framework */; };
+		OBJ_307 /* SyntaxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* SyntaxTests.swift */; };
+		OBJ_308 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* XCTestManifests.swift */; };
+		OBJ_310 /* Syntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::Syntax::Product" /* Syntax.framework */; };
+		OBJ_311 /* Monoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Monoid::Monoid::Product" /* Monoid.framework */; };
+		OBJ_312 /* PartialIso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::PartialIso::Product" /* PartialIso.framework */; };
+		OBJ_321 /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* RequestData.swift */; };
+		OBJ_322 /* URLRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* URLRequestRouter.swift */; };
+		OBJ_324 /* Syntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::Syntax::Product" /* Syntax.framework */; };
+		OBJ_325 /* Monoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Monoid::Monoid::Product" /* Monoid.framework */; };
+		OBJ_326 /* PartialIso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::PartialIso::Product" /* PartialIso.framework */; };
+		OBJ_334 /* URLRequestRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* URLRequestRouterTests.swift */; };
+		OBJ_336 /* URLRequestRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::URLRequestRouter::Product" /* URLRequestRouter.framework */; };
+		OBJ_337 /* Syntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::Syntax::Product" /* Syntax.framework */; };
+		OBJ_338 /* Monoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Monoid::Monoid::Product" /* Monoid.framework */; };
+		OBJ_339 /* PartialIso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::PartialIso::Product" /* PartialIso.framework */; };
+		OBJ_349 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* main.swift */; };
+		OBJ_351 /* GeneratePartialIsos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PrinterParser::GeneratePartialIsos::Product" /* GeneratePartialIsos.framework */; };
+		OBJ_352 /* SwiftSyntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		803F738B22152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftSyntax::SwiftSyntax";
+			remoteInfo = SwiftSyntax;
+		};
+		803F738C22152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Monoid::Monoid";
+			remoteInfo = Monoid;
+		};
+		803F738D22152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::PartialIso";
+			remoteInfo = PartialIso;
+		};
+		803F738E22152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::Syntax";
+			remoteInfo = Syntax;
+		};
+		803F738F22152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Monoid::Monoid";
+			remoteInfo = Monoid;
+		};
+		803F739022152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::PartialIso";
+			remoteInfo = PartialIso;
+		};
+		803F739122152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::GeneratePartialIsos";
+			remoteInfo = GeneratePartialIsos;
+		};
+		803F739222152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftSyntax::SwiftSyntax";
+			remoteInfo = SwiftSyntax;
+		};
+		803F739322152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SnapshotTesting::SnapshotTesting";
+			remoteInfo = SnapshotTesting;
+		};
+		803F739422152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::PartialIso";
+			remoteInfo = PartialIso;
+		};
+		803F739522152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::GeneratePartialIsos";
+			remoteInfo = GeneratePartialIsos;
+		};
+		803F739622152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftSyntax::SwiftSyntax";
+			remoteInfo = SwiftSyntax;
+		};
+		803F739722152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::PartialIso";
+			remoteInfo = PartialIso;
+		};
+		803F739822152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::URLRequestRouterTests";
+			remoteInfo = URLRequestRouterTests;
+		};
+		803F739922152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::PartialIsoTests";
+			remoteInfo = PartialIsoTests;
+		};
+		803F739A22152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::GeneratePartialIsosTests";
+			remoteInfo = GeneratePartialIsosTests;
+		};
+		803F739B22152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::SyntaxTests";
+			remoteInfo = SyntaxTests;
+		};
+		803F739C22152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::Syntax";
+			remoteInfo = Syntax;
+		};
+		803F739D22152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Monoid::Monoid";
+			remoteInfo = Monoid;
+		};
+		803F739E22152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::PartialIso";
+			remoteInfo = PartialIso;
+		};
+		803F739F22152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::URLRequestRouter";
+			remoteInfo = URLRequestRouter;
+		};
+		803F73A022152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::Syntax";
+			remoteInfo = Syntax;
+		};
+		803F73A122152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Monoid::Monoid";
+			remoteInfo = Monoid;
+		};
+		803F73A222152C8C0091D778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PrinterParser::PartialIso";
+			remoteInfo = PartialIso;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		"Monoid::Monoid::Product" /* Monoid.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Monoid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* URLRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestRouter.swift; sourceTree = "<group>"; };
+		OBJ_100 /* SourceLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLength.swift; sourceTree = "<group>"; };
+		OBJ_101 /* SourcePresence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcePresence.swift; sourceTree = "<group>"; };
+		OBJ_102 /* SwiftSyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSyntax.swift; sourceTree = "<group>"; };
+		OBJ_103 /* SwiftcInvocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftcInvocation.swift; sourceTree = "<group>"; };
+		OBJ_104 /* Syntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.swift; sourceTree = "<group>"; };
+		OBJ_105 /* SyntaxChildren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxChildren.swift; sourceTree = "<group>"; };
+		OBJ_106 /* SyntaxData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxData.swift; sourceTree = "<group>"; };
+		OBJ_108 /* SyntaxBuilders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxBuilders.swift; sourceTree = "<group>"; };
+		OBJ_109 /* SyntaxCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxCollections.swift; sourceTree = "<group>"; };
+		OBJ_110 /* SyntaxFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxFactory.swift; sourceTree = "<group>"; };
+		OBJ_111 /* SyntaxKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxKind.swift; sourceTree = "<group>"; };
+		OBJ_112 /* SyntaxNodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxNodes.swift; sourceTree = "<group>"; };
+		OBJ_113 /* SyntaxRewriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxRewriter.swift; sourceTree = "<group>"; };
+		OBJ_114 /* TokenKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenKind.swift; sourceTree = "<group>"; };
+		OBJ_115 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
+		OBJ_116 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/stephencelis/Developer/pointfreeco/swift-parser-printer/.build/checkouts/swift-syntax.git-6551255410123428459/Package.swift"; sourceTree = "<group>"; };
+		OBJ_12 /* GeneratePartialIsos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePartialIsos.swift; sourceTree = "<group>"; };
+		OBJ_14 /* Syntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.swift; sourceTree = "<group>"; };
+		OBJ_16 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_18 /* ExpressibleByStringLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressibleByStringLiteral.swift; sourceTree = "<group>"; };
+		OBJ_19 /* PartialIso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialIso.swift; sourceTree = "<group>"; };
+		OBJ_22 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_23 /* PartialIsoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialIsoTests.swift; sourceTree = "<group>"; };
+		OBJ_25 /* Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
+		OBJ_26 /* GeneratePartialIsosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratePartialIsosTests.swift; sourceTree = "<group>"; };
+		OBJ_29 /* test.1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.1.swift; sourceTree = "<group>"; };
+		OBJ_31 /* URLRequestRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestRouterTests.swift; sourceTree = "<group>"; };
+		OBJ_33 /* SyntaxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxTests.swift; sourceTree = "<group>"; };
+		OBJ_34 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_35 /* PrinterParser.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = PrinterParser.xcworkspace; sourceTree = SOURCE_ROOT; };
+		OBJ_39 /* AssertSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertSnapshot.swift; sourceTree = "<group>"; };
+		OBJ_40 /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
+		OBJ_42 /* Internal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internal.swift; sourceTree = "<group>"; };
+		OBJ_43 /* PlistEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistEncoder.swift; sourceTree = "<group>"; };
+		OBJ_44 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		OBJ_45 /* XCTAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTAttachment.swift; sourceTree = "<group>"; };
+		OBJ_46 /* Diff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diff.swift; sourceTree = "<group>"; };
+		OBJ_47 /* Diffing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diffing.swift; sourceTree = "<group>"; };
+		OBJ_48 /* SnapshotTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestCase.swift; sourceTree = "<group>"; };
+		OBJ_49 /* Snapshotting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshotting.swift; sourceTree = "<group>"; };
+		OBJ_51 /* Any.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Any.swift; sourceTree = "<group>"; };
+		OBJ_52 /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		OBJ_53 /* CaseIterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseIterable.swift; sourceTree = "<group>"; };
+		OBJ_54 /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
+		OBJ_55 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		OBJ_56 /* Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
+		OBJ_57 /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
+		OBJ_58 /* NSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSView.swift; sourceTree = "<group>"; };
+		OBJ_59 /* NSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSViewController.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_60 /* SceneKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKit.swift; sourceTree = "<group>"; };
+		OBJ_61 /* SpriteKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKit.swift; sourceTree = "<group>"; };
+		OBJ_62 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		OBJ_63 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		OBJ_64 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		OBJ_65 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		OBJ_66 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
+		OBJ_67 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/stephencelis/Developer/pointfreeco/swift-parser-printer/.build/checkouts/swift-snapshot-testing.git--5120405597536721154/Package.swift"; sourceTree = "<group>"; };
+		OBJ_71 /* Folds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folds.swift; sourceTree = "<group>"; };
+		OBJ_72 /* Monoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monoid.swift; sourceTree = "<group>"; };
+		OBJ_73 /* Semigroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semigroup.swift; sourceTree = "<group>"; };
+		OBJ_74 /* TODO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
+		OBJ_76 /* Average.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Average.swift; sourceTree = "<group>"; };
+		OBJ_77 /* Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
+		OBJ_78 /* Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
+		OBJ_79 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		OBJ_80 /* Endo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endo.swift; sourceTree = "<group>"; };
+		OBJ_81 /* Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
+		OBJ_82 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		OBJ_83 /* Pointwise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pointwise.swift; sourceTree = "<group>"; };
+		OBJ_84 /* RangeReplaceableCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeReplaceableCollection.swift; sourceTree = "<group>"; };
+		OBJ_85 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
+		OBJ_86 /* Tuple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tuple.swift; sourceTree = "<group>"; };
+		OBJ_87 /* Variance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variance.swift; sourceTree = "<group>"; };
+		OBJ_88 /* Void.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Void.swift; sourceTree = "<group>"; };
+		OBJ_89 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/stephencelis/Developer/pointfreeco/swift-parser-printer/.build/checkouts/swift-algebras-1501178186608326700/Package.swift"; sourceTree = "<group>"; };
+		OBJ_9 /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
+		OBJ_92 /* AbsolutePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsolutePosition.swift; sourceTree = "<group>"; };
+		OBJ_93 /* AtomicCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicCache.swift; sourceTree = "<group>"; };
+		OBJ_94 /* Diagnostic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnostic.swift; sourceTree = "<group>"; };
+		OBJ_95 /* DiagnosticConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticConsumer.swift; sourceTree = "<group>"; };
+		OBJ_96 /* DiagnosticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticEngine.swift; sourceTree = "<group>"; };
+		OBJ_97 /* JSONDiagnosticConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDiagnosticConsumer.swift; sourceTree = "<group>"; };
+		OBJ_98 /* PrintingDiagnosticConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintingDiagnosticConsumer.swift; sourceTree = "<group>"; };
+		OBJ_99 /* RawSyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawSyntax.swift; sourceTree = "<group>"; };
+		"PrinterParser::GeneratePartialIsos::Product" /* GeneratePartialIsos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GeneratePartialIsos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PrinterParser::GeneratePartialIsosTests::Product" /* GeneratePartialIsosTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = GeneratePartialIsosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PrinterParser::PartialIso::Product" /* PartialIso.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PartialIso.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PrinterParser::PartialIsoTests::Product" /* PartialIsoTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = PartialIsoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PrinterParser::Syntax::Product" /* Syntax.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Syntax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PrinterParser::SyntaxTests::Product" /* SyntaxTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SyntaxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PrinterParser::URLRequestRouter::Product" /* URLRequestRouter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = URLRequestRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PrinterParser::URLRequestRouterTests::Product" /* URLRequestRouterTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = URLRequestRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PrinterParser::generate-partial-isos::Product" /* generate-partial-isos */ = {isa = PBXFileReference; lastKnownFileType = text; path = "generate-partial-isos"; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SnapshotTesting::SnapshotTesting::Product" /* SnapshotTesting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapshotTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftSyntax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_136 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_137 /* SwiftSyntax.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_148 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_149 /* SnapshotTesting.framework in Frameworks */,
+				OBJ_150 /* PartialIso.framework in Frameworks */,
+				OBJ_151 /* GeneratePartialIsos.framework in Frameworks */,
+				OBJ_152 /* SwiftSyntax.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_181 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_194 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_202 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_203 /* PartialIso.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_251 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_285 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_298 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_299 /* Monoid.framework in Frameworks */,
+				OBJ_300 /* PartialIso.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_310 /* Syntax.framework in Frameworks */,
+				OBJ_311 /* Monoid.framework in Frameworks */,
+				OBJ_312 /* PartialIso.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_323 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_324 /* Syntax.framework in Frameworks */,
+				OBJ_325 /* Monoid.framework in Frameworks */,
+				OBJ_326 /* PartialIso.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_335 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_336 /* URLRequestRouter.framework in Frameworks */,
+				OBJ_337 /* Syntax.framework in Frameworks */,
+				OBJ_338 /* Monoid.framework in Frameworks */,
+				OBJ_339 /* PartialIso.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_350 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_351 /* GeneratePartialIsos.framework in Frameworks */,
+				OBJ_352 /* SwiftSyntax.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_107 /* gyb_generated */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_108 /* SyntaxBuilders.swift */,
+				OBJ_109 /* SyntaxCollections.swift */,
+				OBJ_110 /* SyntaxFactory.swift */,
+				OBJ_111 /* SyntaxKind.swift */,
+				OBJ_112 /* SyntaxNodes.swift */,
+				OBJ_113 /* SyntaxRewriter.swift */,
+				OBJ_114 /* TokenKind.swift */,
+				OBJ_115 /* Trivia.swift */,
+			);
+			path = gyb_generated;
+			sourceTree = "<group>";
+		};
+		OBJ_11 /* GeneratePartialIsos */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_12 /* GeneratePartialIsos.swift */,
+			);
+			name = GeneratePartialIsos;
+			path = Sources/GeneratePartialIsos;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_117 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"PrinterParser::PartialIsoTests::Product" /* PartialIsoTests.xctest */,
+				"PrinterParser::GeneratePartialIsos::Product" /* GeneratePartialIsos.framework */,
+				"Monoid::Monoid::Product" /* Monoid.framework */,
+				"PrinterParser::SyntaxTests::Product" /* SyntaxTests.xctest */,
+				"PrinterParser::URLRequestRouter::Product" /* URLRequestRouter.framework */,
+				"PrinterParser::GeneratePartialIsosTests::Product" /* GeneratePartialIsosTests.xctest */,
+				"SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */,
+				"PrinterParser::generate-partial-isos::Product" /* generate-partial-isos */,
+				"PrinterParser::Syntax::Product" /* Syntax.framework */,
+				"SnapshotTesting::SnapshotTesting::Product" /* SnapshotTesting.framework */,
+				"PrinterParser::URLRequestRouterTests::Product" /* URLRequestRouterTests.xctest */,
+				"PrinterParser::PartialIso::Product" /* PartialIso.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_13 /* Syntax */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_14 /* Syntax.swift */,
+			);
+			name = Syntax;
+			path = Sources/Syntax;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_15 /* generate-partial-isos */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_16 /* main.swift */,
+			);
+			name = "generate-partial-isos";
+			path = "Sources/generate-partial-isos";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_17 /* PartialIso */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_18 /* ExpressibleByStringLiteral.swift */,
+				OBJ_19 /* PartialIso.swift */,
+			);
+			name = PartialIso;
+			path = Sources/PartialIso;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_20 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_21 /* PartialIsoTests */,
+				OBJ_24 /* GeneratePartialIsosTests */,
+				OBJ_30 /* URLRequestRouterTests */,
+				OBJ_32 /* SyntaxTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_21 /* PartialIsoTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_22 /* XCTestManifests.swift */,
+				OBJ_23 /* PartialIsoTests.swift */,
+			);
+			name = PartialIsoTests;
+			path = Tests/PartialIsoTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_24 /* GeneratePartialIsosTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_25 /* Fixture.swift */,
+				OBJ_26 /* GeneratePartialIsosTests.swift */,
+				OBJ_27 /* __Snapshots__ */,
+			);
+			name = GeneratePartialIsosTests;
+			path = Tests/GeneratePartialIsosTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_27 /* __Snapshots__ */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_28 /* GeneratePartialIsosTests */,
+			);
+			path = __Snapshots__;
+			sourceTree = "<group>";
+		};
+		OBJ_28 /* GeneratePartialIsosTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_29 /* test.1.swift */,
+			);
+			path = GeneratePartialIsosTests;
+			sourceTree = "<group>";
+		};
+		OBJ_30 /* URLRequestRouterTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_31 /* URLRequestRouterTests.swift */,
+			);
+			name = URLRequestRouterTests;
+			path = Tests/URLRequestRouterTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_32 /* SyntaxTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_33 /* SyntaxTests.swift */,
+				OBJ_34 /* XCTestManifests.swift */,
+			);
+			name = SyntaxTests;
+			path = Tests/SyntaxTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_36 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_37 /* SnapshotTesting 1.1.0 */,
+				OBJ_68 /* Monoid */,
+				OBJ_90 /* SwiftSyntax 0.40200.0 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_37 /* SnapshotTesting 1.1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_38 /* SnapshotTesting */,
+				OBJ_67 /* Package.swift */,
+			);
+			name = "SnapshotTesting 1.1.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_38 /* SnapshotTesting */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_39 /* AssertSnapshot.swift */,
+				OBJ_40 /* Async.swift */,
+				OBJ_41 /* Common */,
+				OBJ_46 /* Diff.swift */,
+				OBJ_47 /* Diffing.swift */,
+				OBJ_48 /* SnapshotTestCase.swift */,
+				OBJ_49 /* Snapshotting.swift */,
+				OBJ_50 /* Snapshotting */,
+			);
+			name = SnapshotTesting;
+			path = ".build/checkouts/swift-snapshot-testing.git--5120405597536721154/Sources/SnapshotTesting";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_41 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_42 /* Internal.swift */,
+				OBJ_43 /* PlistEncoder.swift */,
+				OBJ_44 /* View.swift */,
+				OBJ_45 /* XCTAttachment.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_20 /* Tests */,
+				OBJ_35 /* PrinterParser.xcworkspace */,
+				OBJ_36 /* Dependencies */,
+				OBJ_117 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_50 /* Snapshotting */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_51 /* Any.swift */,
+				OBJ_52 /* CALayer.swift */,
+				OBJ_53 /* CaseIterable.swift */,
+				OBJ_54 /* Codable.swift */,
+				OBJ_55 /* Data.swift */,
+				OBJ_56 /* Description.swift */,
+				OBJ_57 /* NSImage.swift */,
+				OBJ_58 /* NSView.swift */,
+				OBJ_59 /* NSViewController.swift */,
+				OBJ_60 /* SceneKit.swift */,
+				OBJ_61 /* SpriteKit.swift */,
+				OBJ_62 /* String.swift */,
+				OBJ_63 /* UIImage.swift */,
+				OBJ_64 /* UIView.swift */,
+				OBJ_65 /* UIViewController.swift */,
+				OBJ_66 /* URLRequest.swift */,
+			);
+			path = Snapshotting;
+			sourceTree = "<group>";
+		};
+		OBJ_68 /* Monoid */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_69 /* Monoid */,
+				OBJ_89 /* Package.swift */,
+			);
+			name = Monoid;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_69 /* Monoid */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_70 /* Algebras */,
+				OBJ_75 /* Instances */,
+			);
+			name = Monoid;
+			path = ".build/checkouts/swift-algebras-1501178186608326700/Sources/Monoid";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* URLRequestRouter */,
+				OBJ_11 /* GeneratePartialIsos */,
+				OBJ_13 /* Syntax */,
+				OBJ_15 /* generate-partial-isos */,
+				OBJ_17 /* PartialIso */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_70 /* Algebras */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_71 /* Folds.swift */,
+				OBJ_72 /* Monoid.swift */,
+				OBJ_73 /* Semigroup.swift */,
+				OBJ_74 /* TODO.swift */,
+			);
+			path = Algebras;
+			sourceTree = "<group>";
+		};
+		OBJ_75 /* Instances */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_76 /* Average.swift */,
+				OBJ_77 /* Bool.swift */,
+				OBJ_78 /* Comparable.swift */,
+				OBJ_79 /* Dictionary.swift */,
+				OBJ_80 /* Endo.swift */,
+				OBJ_81 /* Numeric.swift */,
+				OBJ_82 /* Optional.swift */,
+				OBJ_83 /* Pointwise.swift */,
+				OBJ_84 /* RangeReplaceableCollection.swift */,
+				OBJ_85 /* Set.swift */,
+				OBJ_86 /* Tuple.swift */,
+				OBJ_87 /* Variance.swift */,
+				OBJ_88 /* Void.swift */,
+			);
+			path = Instances;
+			sourceTree = "<group>";
+		};
+		OBJ_8 /* URLRequestRouter */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* RequestData.swift */,
+				OBJ_10 /* URLRequestRouter.swift */,
+			);
+			name = URLRequestRouter;
+			path = Sources/URLRequestRouter;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_90 /* SwiftSyntax 0.40200.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_91 /* SwiftSyntax */,
+				OBJ_116 /* Package.swift */,
+			);
+			name = "SwiftSyntax 0.40200.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_91 /* SwiftSyntax */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_92 /* AbsolutePosition.swift */,
+				OBJ_93 /* AtomicCache.swift */,
+				OBJ_94 /* Diagnostic.swift */,
+				OBJ_95 /* DiagnosticConsumer.swift */,
+				OBJ_96 /* DiagnosticEngine.swift */,
+				OBJ_97 /* JSONDiagnosticConsumer.swift */,
+				OBJ_98 /* PrintingDiagnosticConsumer.swift */,
+				OBJ_99 /* RawSyntax.swift */,
+				OBJ_100 /* SourceLength.swift */,
+				OBJ_101 /* SourcePresence.swift */,
+				OBJ_102 /* SwiftSyntax.swift */,
+				OBJ_103 /* SwiftcInvocation.swift */,
+				OBJ_104 /* Syntax.swift */,
+				OBJ_105 /* SyntaxChildren.swift */,
+				OBJ_106 /* SyntaxData.swift */,
+				OBJ_107 /* gyb_generated */,
+			);
+			name = SwiftSyntax;
+			path = ".build/checkouts/swift-syntax.git-6551255410123428459/Sources/SwiftSyntax";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"Monoid::Monoid" /* Monoid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_160 /* Build configuration list for PBXNativeTarget "Monoid" */;
+			buildPhases = (
+				OBJ_163 /* Sources */,
+				OBJ_181 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Monoid;
+			productName = Monoid;
+			productReference = "Monoid::Monoid::Product" /* Monoid.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Monoid::SwiftPMPackageDescription" /* MonoidPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_183 /* Build configuration list for PBXNativeTarget "MonoidPackageDescription" */;
+			buildPhases = (
+				OBJ_186 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MonoidPackageDescription;
+			productName = MonoidPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"PrinterParser::GeneratePartialIsos" /* GeneratePartialIsos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_131 /* Build configuration list for PBXNativeTarget "GeneratePartialIsos" */;
+			buildPhases = (
+				OBJ_134 /* Sources */,
+				OBJ_136 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_138 /* PBXTargetDependency */,
+			);
+			name = GeneratePartialIsos;
+			productName = GeneratePartialIsos;
+			productReference = "PrinterParser::GeneratePartialIsos::Product" /* GeneratePartialIsos.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"PrinterParser::GeneratePartialIsosTests" /* GeneratePartialIsosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_141 /* Build configuration list for PBXNativeTarget "GeneratePartialIsosTests" */;
+			buildPhases = (
+				OBJ_144 /* Sources */,
+				OBJ_148 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_153 /* PBXTargetDependency */,
+				OBJ_155 /* PBXTargetDependency */,
+				OBJ_157 /* PBXTargetDependency */,
+				OBJ_158 /* PBXTargetDependency */,
+			);
+			name = GeneratePartialIsosTests;
+			productName = GeneratePartialIsosTests;
+			productReference = "PrinterParser::GeneratePartialIsosTests::Product" /* GeneratePartialIsosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"PrinterParser::PartialIso" /* PartialIso */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_188 /* Build configuration list for PBXNativeTarget "PartialIso" */;
+			buildPhases = (
+				OBJ_191 /* Sources */,
+				OBJ_194 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PartialIso;
+			productName = PartialIso;
+			productReference = "PrinterParser::PartialIso::Product" /* PartialIso.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"PrinterParser::PartialIsoTests" /* PartialIsoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_196 /* Build configuration list for PBXNativeTarget "PartialIsoTests" */;
+			buildPhases = (
+				OBJ_199 /* Sources */,
+				OBJ_202 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_204 /* PBXTargetDependency */,
+			);
+			name = PartialIsoTests;
+			productName = PartialIsoTests;
+			productReference = "PrinterParser::PartialIsoTests::Product" /* PartialIsoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"PrinterParser::SwiftPMPackageDescription" /* PrinterParserPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_206 /* Build configuration list for PBXNativeTarget "PrinterParserPackageDescription" */;
+			buildPhases = (
+				OBJ_209 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrinterParserPackageDescription;
+			productName = PrinterParserPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"PrinterParser::Syntax" /* Syntax */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_293 /* Build configuration list for PBXNativeTarget "Syntax" */;
+			buildPhases = (
+				OBJ_296 /* Sources */,
+				OBJ_298 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_301 /* PBXTargetDependency */,
+				OBJ_302 /* PBXTargetDependency */,
+			);
+			name = Syntax;
+			productName = Syntax;
+			productReference = "PrinterParser::Syntax::Product" /* Syntax.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"PrinterParser::SyntaxTests" /* SyntaxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_303 /* Build configuration list for PBXNativeTarget "SyntaxTests" */;
+			buildPhases = (
+				OBJ_306 /* Sources */,
+				OBJ_309 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_313 /* PBXTargetDependency */,
+				OBJ_314 /* PBXTargetDependency */,
+				OBJ_315 /* PBXTargetDependency */,
+			);
+			name = SyntaxTests;
+			productName = SyntaxTests;
+			productReference = "PrinterParser::SyntaxTests::Product" /* SyntaxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"PrinterParser::URLRequestRouter" /* URLRequestRouter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_317 /* Build configuration list for PBXNativeTarget "URLRequestRouter" */;
+			buildPhases = (
+				OBJ_320 /* Sources */,
+				OBJ_323 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_327 /* PBXTargetDependency */,
+				OBJ_328 /* PBXTargetDependency */,
+				OBJ_329 /* PBXTargetDependency */,
+			);
+			name = URLRequestRouter;
+			productName = URLRequestRouter;
+			productReference = "PrinterParser::URLRequestRouter::Product" /* URLRequestRouter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"PrinterParser::URLRequestRouterTests" /* URLRequestRouterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_330 /* Build configuration list for PBXNativeTarget "URLRequestRouterTests" */;
+			buildPhases = (
+				OBJ_333 /* Sources */,
+				OBJ_335 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_340 /* PBXTargetDependency */,
+				OBJ_341 /* PBXTargetDependency */,
+				OBJ_342 /* PBXTargetDependency */,
+				OBJ_343 /* PBXTargetDependency */,
+			);
+			name = URLRequestRouterTests;
+			productName = URLRequestRouterTests;
+			productReference = "PrinterParser::URLRequestRouterTests::Product" /* URLRequestRouterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"PrinterParser::generate-partial-isos" /* generate-partial-isos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_345 /* Build configuration list for PBXNativeTarget "generate-partial-isos" */;
+			buildPhases = (
+				OBJ_348 /* Sources */,
+				OBJ_350 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_353 /* PBXTargetDependency */,
+				OBJ_354 /* PBXTargetDependency */,
+			);
+			name = "generate-partial-isos";
+			productName = generate_partial_isos;
+			productReference = "PrinterParser::generate-partial-isos::Product" /* generate-partial-isos */;
+			productType = "com.apple.product-type.tool";
+		};
+		"SnapshotTesting::SnapshotTesting" /* SnapshotTesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_221 /* Build configuration list for PBXNativeTarget "SnapshotTesting" */;
+			buildPhases = (
+				OBJ_224 /* Sources */,
+				OBJ_251 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SnapshotTesting;
+			productName = SnapshotTesting;
+			productReference = "SnapshotTesting::SnapshotTesting::Product" /* SnapshotTesting.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"SnapshotTesting::SwiftPMPackageDescription" /* SnapshotTestingPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_253 /* Build configuration list for PBXNativeTarget "SnapshotTestingPackageDescription" */;
+			buildPhases = (
+				OBJ_256 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SnapshotTestingPackageDescription;
+			productName = SnapshotTestingPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"SwiftSyntax::SwiftPMPackageDescription" /* SwiftSyntaxPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_287 /* Build configuration list for PBXNativeTarget "SwiftSyntaxPackageDescription" */;
+			buildPhases = (
+				OBJ_290 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftSyntaxPackageDescription;
+			productName = SwiftSyntaxPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"SwiftSyntax::SwiftSyntax" /* SwiftSyntax */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_258 /* Build configuration list for PBXNativeTarget "SwiftSyntax" */;
+			buildPhases = (
+				OBJ_261 /* Sources */,
+				OBJ_285 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftSyntax;
+			productName = SwiftSyntax;
+			productReference = "SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "PrinterParser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_117 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"PrinterParser::GeneratePartialIsos" /* GeneratePartialIsos */,
+				"PrinterParser::GeneratePartialIsosTests" /* GeneratePartialIsosTests */,
+				"Monoid::Monoid" /* Monoid */,
+				"Monoid::SwiftPMPackageDescription" /* MonoidPackageDescription */,
+				"PrinterParser::PartialIso" /* PartialIso */,
+				"PrinterParser::PartialIsoTests" /* PartialIsoTests */,
+				"PrinterParser::SwiftPMPackageDescription" /* PrinterParserPackageDescription */,
+				"PrinterParser::PrinterParserPackageTests::ProductTarget" /* PrinterParserPackageTests */,
+				"SnapshotTesting::SnapshotTesting" /* SnapshotTesting */,
+				"SnapshotTesting::SwiftPMPackageDescription" /* SnapshotTestingPackageDescription */,
+				"SwiftSyntax::SwiftSyntax" /* SwiftSyntax */,
+				"SwiftSyntax::SwiftPMPackageDescription" /* SwiftSyntaxPackageDescription */,
+				"PrinterParser::Syntax" /* Syntax */,
+				"PrinterParser::SyntaxTests" /* SyntaxTests */,
+				"PrinterParser::URLRequestRouter" /* URLRequestRouter */,
+				"PrinterParser::URLRequestRouterTests" /* URLRequestRouterTests */,
+				"PrinterParser::generate-partial-isos" /* generate-partial-isos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_134 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_135 /* GeneratePartialIsos.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_145 /* Fixture.swift in Sources */,
+				OBJ_146 /* GeneratePartialIsosTests.swift in Sources */,
+				OBJ_147 /* test.1.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_163 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_164 /* Folds.swift in Sources */,
+				OBJ_165 /* Monoid.swift in Sources */,
+				OBJ_166 /* Semigroup.swift in Sources */,
+				OBJ_167 /* TODO.swift in Sources */,
+				OBJ_168 /* Average.swift in Sources */,
+				OBJ_169 /* Bool.swift in Sources */,
+				OBJ_170 /* Comparable.swift in Sources */,
+				OBJ_171 /* Dictionary.swift in Sources */,
+				OBJ_172 /* Endo.swift in Sources */,
+				OBJ_173 /* Numeric.swift in Sources */,
+				OBJ_174 /* Optional.swift in Sources */,
+				OBJ_175 /* Pointwise.swift in Sources */,
+				OBJ_176 /* RangeReplaceableCollection.swift in Sources */,
+				OBJ_177 /* Set.swift in Sources */,
+				OBJ_178 /* Tuple.swift in Sources */,
+				OBJ_179 /* Variance.swift in Sources */,
+				OBJ_180 /* Void.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_186 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_187 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_191 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_192 /* ExpressibleByStringLiteral.swift in Sources */,
+				OBJ_193 /* PartialIso.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_200 /* XCTestManifests.swift in Sources */,
+				OBJ_201 /* PartialIsoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_209 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_210 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_224 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_225 /* AssertSnapshot.swift in Sources */,
+				OBJ_226 /* Async.swift in Sources */,
+				OBJ_227 /* Internal.swift in Sources */,
+				OBJ_228 /* PlistEncoder.swift in Sources */,
+				OBJ_229 /* View.swift in Sources */,
+				OBJ_230 /* XCTAttachment.swift in Sources */,
+				OBJ_231 /* Diff.swift in Sources */,
+				OBJ_232 /* Diffing.swift in Sources */,
+				OBJ_233 /* SnapshotTestCase.swift in Sources */,
+				OBJ_234 /* Snapshotting.swift in Sources */,
+				OBJ_235 /* Any.swift in Sources */,
+				OBJ_236 /* CALayer.swift in Sources */,
+				OBJ_237 /* CaseIterable.swift in Sources */,
+				OBJ_238 /* Codable.swift in Sources */,
+				OBJ_239 /* Data.swift in Sources */,
+				OBJ_240 /* Description.swift in Sources */,
+				OBJ_241 /* NSImage.swift in Sources */,
+				OBJ_242 /* NSView.swift in Sources */,
+				OBJ_243 /* NSViewController.swift in Sources */,
+				OBJ_244 /* SceneKit.swift in Sources */,
+				OBJ_245 /* SpriteKit.swift in Sources */,
+				OBJ_246 /* String.swift in Sources */,
+				OBJ_247 /* UIImage.swift in Sources */,
+				OBJ_248 /* UIView.swift in Sources */,
+				OBJ_249 /* UIViewController.swift in Sources */,
+				OBJ_250 /* URLRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_256 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_257 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_261 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_262 /* AbsolutePosition.swift in Sources */,
+				OBJ_263 /* AtomicCache.swift in Sources */,
+				OBJ_264 /* Diagnostic.swift in Sources */,
+				OBJ_265 /* DiagnosticConsumer.swift in Sources */,
+				OBJ_266 /* DiagnosticEngine.swift in Sources */,
+				OBJ_267 /* JSONDiagnosticConsumer.swift in Sources */,
+				OBJ_268 /* PrintingDiagnosticConsumer.swift in Sources */,
+				OBJ_269 /* RawSyntax.swift in Sources */,
+				OBJ_270 /* SourceLength.swift in Sources */,
+				OBJ_271 /* SourcePresence.swift in Sources */,
+				OBJ_272 /* SwiftSyntax.swift in Sources */,
+				OBJ_273 /* SwiftcInvocation.swift in Sources */,
+				OBJ_274 /* Syntax.swift in Sources */,
+				OBJ_275 /* SyntaxChildren.swift in Sources */,
+				OBJ_276 /* SyntaxData.swift in Sources */,
+				OBJ_277 /* SyntaxBuilders.swift in Sources */,
+				OBJ_278 /* SyntaxCollections.swift in Sources */,
+				OBJ_279 /* SyntaxFactory.swift in Sources */,
+				OBJ_280 /* SyntaxKind.swift in Sources */,
+				OBJ_281 /* SyntaxNodes.swift in Sources */,
+				OBJ_282 /* SyntaxRewriter.swift in Sources */,
+				OBJ_283 /* TokenKind.swift in Sources */,
+				OBJ_284 /* Trivia.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_290 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_291 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_296 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_297 /* Syntax.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_307 /* SyntaxTests.swift in Sources */,
+				OBJ_308 /* XCTestManifests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_320 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_321 /* RequestData.swift in Sources */,
+				OBJ_322 /* URLRequestRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_333 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_334 /* URLRequestRouterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_348 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_349 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_138 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftSyntax::SwiftSyntax" /* SwiftSyntax */;
+			targetProxy = 803F738B22152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_153 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SnapshotTesting::SnapshotTesting" /* SnapshotTesting */;
+			targetProxy = 803F739322152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_155 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::PartialIso" /* PartialIso */;
+			targetProxy = 803F739422152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_157 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::GeneratePartialIsos" /* GeneratePartialIsos */;
+			targetProxy = 803F739522152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_158 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftSyntax::SwiftSyntax" /* SwiftSyntax */;
+			targetProxy = 803F739622152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_204 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::PartialIso" /* PartialIso */;
+			targetProxy = 803F739722152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_215 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::URLRequestRouterTests" /* URLRequestRouterTests */;
+			targetProxy = 803F739822152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_217 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::PartialIsoTests" /* PartialIsoTests */;
+			targetProxy = 803F739922152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_218 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::GeneratePartialIsosTests" /* GeneratePartialIsosTests */;
+			targetProxy = 803F739A22152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_219 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::SyntaxTests" /* SyntaxTests */;
+			targetProxy = 803F739B22152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_301 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Monoid::Monoid" /* Monoid */;
+			targetProxy = 803F738C22152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_302 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::PartialIso" /* PartialIso */;
+			targetProxy = 803F738D22152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_313 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::Syntax" /* Syntax */;
+			targetProxy = 803F739C22152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_314 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Monoid::Monoid" /* Monoid */;
+			targetProxy = 803F739D22152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_315 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::PartialIso" /* PartialIso */;
+			targetProxy = 803F739E22152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_327 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::Syntax" /* Syntax */;
+			targetProxy = 803F738E22152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_328 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Monoid::Monoid" /* Monoid */;
+			targetProxy = 803F738F22152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_329 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::PartialIso" /* PartialIso */;
+			targetProxy = 803F739022152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_340 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::URLRequestRouter" /* URLRequestRouter */;
+			targetProxy = 803F739F22152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_341 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::Syntax" /* Syntax */;
+			targetProxy = 803F73A022152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_342 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Monoid::Monoid" /* Monoid */;
+			targetProxy = 803F73A122152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_343 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::PartialIso" /* PartialIso */;
+			targetProxy = 803F73A222152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_353 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PrinterParser::GeneratePartialIsos" /* GeneratePartialIsos */;
+			targetProxy = 803F739122152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+		OBJ_354 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftSyntax::SwiftSyntax" /* SwiftSyntax */;
+			targetProxy = 803F739222152C8C0091D778 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/GeneratePartialIsos_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = GeneratePartialIsos;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = GeneratePartialIsos;
+			};
+			name = Debug;
+		};
+		OBJ_133 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/GeneratePartialIsos_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = GeneratePartialIsos;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = GeneratePartialIsos;
+			};
+			name = Release;
+		};
+		OBJ_142 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/GeneratePartialIsosTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = GeneratePartialIsosTests;
+			};
+			name = Debug;
+		};
+		OBJ_143 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/GeneratePartialIsosTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = GeneratePartialIsosTests;
+			};
+			name = Release;
+		};
+		OBJ_161 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/Monoid_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Monoid;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = Monoid;
+			};
+			name = Debug;
+		};
+		OBJ_162 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/Monoid_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Monoid;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = Monoid;
+			};
+			name = Release;
+		};
+		OBJ_184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_185 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_189 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/PartialIso_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = PartialIso;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = PartialIso;
+			};
+			name = Debug;
+		};
+		OBJ_190 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/PartialIso_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = PartialIso;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = PartialIso;
+			};
+			name = Release;
+		};
+		OBJ_197 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/PartialIsoTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = PartialIsoTests;
+			};
+			name = Debug;
+		};
+		OBJ_198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/PartialIsoTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = PartialIsoTests;
+			};
+			name = Release;
+		};
+		OBJ_207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_208 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_213 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_222 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/SnapshotTesting_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SnapshotTesting;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = SnapshotTesting;
+			};
+			name = Debug;
+		};
+		OBJ_223 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/SnapshotTesting_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SnapshotTesting;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = SnapshotTesting;
+			};
+			name = Release;
+		};
+		OBJ_254 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/SwiftSyntax_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftSyntax;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = SwiftSyntax;
+			};
+			name = Debug;
+		};
+		OBJ_260 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/SwiftSyntax_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftSyntax;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = SwiftSyntax;
+			};
+			name = Release;
+		};
+		OBJ_288 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_289 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_294 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/Syntax_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Syntax;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = Syntax;
+			};
+			name = Debug;
+		};
+		OBJ_295 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/Syntax_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Syntax;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = Syntax;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/SyntaxTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = SyntaxTests;
+			};
+			name = Debug;
+		};
+		OBJ_305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/SyntaxTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = SyntaxTests;
+			};
+			name = Release;
+		};
+		OBJ_318 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/URLRequestRouter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = URLRequestRouter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = URLRequestRouter;
+			};
+			name = Debug;
+		};
+		OBJ_319 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/URLRequestRouter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = URLRequestRouter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = URLRequestRouter;
+			};
+			name = Release;
+		};
+		OBJ_331 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/URLRequestRouterTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = URLRequestRouterTests;
+			};
+			name = Debug;
+		};
+		OBJ_332 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/URLRequestRouterTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = URLRequestRouterTests;
+			};
+			name = Release;
+		};
+		OBJ_346 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/generate_partial_isos_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = "generate-partial-isos";
+			};
+			name = Debug;
+		};
+		OBJ_347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = PrinterParser.xcodeproj/generate_partial_isos_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = "generate-partial-isos";
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_131 /* Build configuration list for PBXNativeTarget "GeneratePartialIsos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_132 /* Debug */,
+				OBJ_133 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_141 /* Build configuration list for PBXNativeTarget "GeneratePartialIsosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_142 /* Debug */,
+				OBJ_143 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_160 /* Build configuration list for PBXNativeTarget "Monoid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_161 /* Debug */,
+				OBJ_162 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_183 /* Build configuration list for PBXNativeTarget "MonoidPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_184 /* Debug */,
+				OBJ_185 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_188 /* Build configuration list for PBXNativeTarget "PartialIso" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_189 /* Debug */,
+				OBJ_190 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_196 /* Build configuration list for PBXNativeTarget "PartialIsoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_197 /* Debug */,
+				OBJ_198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "PrinterParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_206 /* Build configuration list for PBXNativeTarget "PrinterParserPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_207 /* Debug */,
+				OBJ_208 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_212 /* Build configuration list for PBXAggregateTarget "PrinterParserPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_213 /* Debug */,
+				OBJ_214 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_221 /* Build configuration list for PBXNativeTarget "SnapshotTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_222 /* Debug */,
+				OBJ_223 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_253 /* Build configuration list for PBXNativeTarget "SnapshotTestingPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_254 /* Debug */,
+				OBJ_255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_258 /* Build configuration list for PBXNativeTarget "SwiftSyntax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_259 /* Debug */,
+				OBJ_260 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_287 /* Build configuration list for PBXNativeTarget "SwiftSyntaxPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_288 /* Debug */,
+				OBJ_289 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_293 /* Build configuration list for PBXNativeTarget "Syntax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_294 /* Debug */,
+				OBJ_295 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_303 /* Build configuration list for PBXNativeTarget "SyntaxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_304 /* Debug */,
+				OBJ_305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_317 /* Build configuration list for PBXNativeTarget "URLRequestRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_318 /* Debug */,
+				OBJ_319 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_330 /* Build configuration list for PBXNativeTarget "URLRequestRouterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_331 /* Debug */,
+				OBJ_332 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_345 /* Build configuration list for PBXNativeTarget "generate-partial-isos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_346 /* Debug */,
+				OBJ_347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
 }

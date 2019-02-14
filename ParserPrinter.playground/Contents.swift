@@ -10,8 +10,8 @@ struct User: Codable {
 
 enum Route {
   case home
-  case episode(Int)
-  case search(String)
+  case episode(Int?)
+  case search(String?)
   case signUp(User)
 }
 
@@ -25,7 +25,7 @@ extension PartialIso where A == Void, B == Route {
   )
 }
 
-extension PartialIso where A == Int, B == Route {
+extension PartialIso where A == Int?, B == Route {
   static let episode = PartialIso(
     apply: Route.episode,
     unapply: {
@@ -35,7 +35,7 @@ extension PartialIso where A == Int, B == Route {
   )
 }
 
-extension PartialIso where A == String, B == Route {
+extension PartialIso where A == String?, B == Route {
   static let search = PartialIso(
     apply: Route.search,
     unapply: {
@@ -57,8 +57,8 @@ extension PartialIso where A == User, B == Route {
 
 let router = Router<Route>(
   .match(.home, to: .get),
-  .match(.episode, to: .get </> "episodes" </> .int),
-  .match(.search, to: .get </> "search" <?> ("q", .string)),
+  .match(.episode, to: .get </> "episodes" </> .compose(.some, .int)),
+  .match(.search, to: .get </> "search" <?> ("q", .some)),
   .match(.signUp, to: .post(.json) </> "sign-up")
 )
 
@@ -75,3 +75,4 @@ req.httpBody = Data("""
 router.match(request: req)
 
 router.request(for: Route.search("blob"))
+router.request(for: Route.search(nil))
