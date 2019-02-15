@@ -61,11 +61,13 @@ extension PartialIso where B == A? {
   }
 }
 
-public func optional<A, B>(_ iso: PartialIso<A, B>) -> PartialIso<A?, B?> {
-  return PartialIso<A?, B?>(
-    apply: { .some($0.flatMap(iso.apply)) },
-    unapply: { .some($0.flatMap(iso.unapply)) }
-  )
+extension PartialIso {
+  public static func optional<A0, B0>(_ iso: PartialIso<A0, B0>) -> PartialIso where A == A0?, B == B0? {
+    return PartialIso(
+      apply: { .some($0.flatMap(iso.apply)) },
+      unapply: { .some($0.flatMap(iso.unapply)) }
+    )
+  }
 }
 
 extension PartialIso where A == B {
