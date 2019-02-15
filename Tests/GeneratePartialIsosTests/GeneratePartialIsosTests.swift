@@ -15,7 +15,7 @@ extension Snapshotting where Value == URL, Format == String {
   }
 }
 
-final class GeneratePartialIsosTests: XCTestCase {
+final class GeneratePartialIsosTests: SnapshotTestCase {
   func test() throws {
     assertSnapshot(
       matching: URL(fileURLWithPath: #file)
