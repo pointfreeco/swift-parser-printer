@@ -1,7 +1,14 @@
 import XCTest
 
-import swift_parser_printerTests
+import GeneratePartialIsosTests
+import PartialIsoTests
+import URLRequestRouterTests
+import SyntaxTests
 
 var tests = [XCTestCaseEntry]()
-tests += swift_parser_printerTests.allTests()
+tests += GeneratePartialIsosTests.__allTests()
+tests += PartialIsoTests.__allTests()
+tests += URLRequestRouterTests.__allTests()
+tests += SyntaxTests.__allTests()
+
 XCTMain(tests)

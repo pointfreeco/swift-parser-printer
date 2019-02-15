@@ -14,7 +14,7 @@ let package = Package(
   dependencies: [
     .package(url: "https://github.com/apple/swift-syntax.git", .exact("0.40200.0")),
     .package(url: "https://github.com/pointfreeco/swift-algebras", .branch("monoid")),
-    .package(url: "https://github.com/pointfreeco/swift-snapshot-testing.git", from: "1.1.0"),
+    .package(url: "https://github.com/pointfreeco/swift-snapshot-testing.git", .revision("0ea1b40")),
   ],
   targets: [
     .target(
