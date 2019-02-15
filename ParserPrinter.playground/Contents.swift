@@ -10,7 +10,7 @@ struct User: Codable {
 
 enum Route {
   case home
-  case episode(Int?)
+  case episode(Int)
   case search(String?)
   case signUp(User)
 }
@@ -25,7 +25,7 @@ extension PartialIso where A == Void, B == Route {
   )
 }
 
-extension PartialIso where A == Int?, B == Route {
+extension PartialIso where A == Int, B == Route {
   static let episode = PartialIso(
     apply: Route.episode,
     unapply: {
@@ -57,13 +57,14 @@ extension PartialIso where A == User, B == Route {
 
 let router = Router<Route>(
   .match(.home, to: .get),
-  .match(.episode, to: .get </> "episodes" </> .compose(.some, .int)),
-  .match(.search, to: .get </> "search" <?> ("q", .some)),
+  .match(.episode, to: .get </> "episodes" </> .int),
+  .match(.search, to: .get </> "search" <?> ("q", optional(.string))),
   .match(.signUp, to: .post(.json) </> "sign-up")
 )
 
 router.match(urlString: "/?ga=1")
 router.match(urlString: "/episodes/1?ga=1")
+router.match(urlString: "/search?ga=1")
 router.match(urlString: "/search?q=point-free&ga=1")
 router.match(urlString: "/search")
 router.match(urlString: "/search?q=")
@@ -77,6 +78,6 @@ req.httpBody = Data("""
 router.match(request: req)
 
 router.request(for: Route.search("blob"))
+router.request(for: Route.search(""))
 router.request(for: Route.search(nil))
 router.request(for: Route.episode(42))
-router.request(for: Route.episode(nil))

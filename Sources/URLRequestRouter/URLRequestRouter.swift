@@ -102,9 +102,8 @@ extension Syntax where M == RequestData {
     ) -> Syntax<(A, B), M> {
 
     return lhs <%> .queryParam(rhs.key, rhs.iso)
-        }
-
-    }
+  }
+}
 
 extension Syntax where A == Void, M == RequestData {
 
