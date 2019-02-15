@@ -208,7 +208,7 @@ extension PartialIso {
 
 extension Syntax {
   func flatten<B, C, D>() -> Syntax<(B, C, D), M> where A == ((B, C), D) {
-    return self.map(leftFlatten, leftParanthesize)
+    return self.map(leftFlatten, leftParenthesize)
   }
 }
 

@@ -67,10 +67,10 @@ extension Syntax where M == RequestData {
     })
   }
 
-  public static func queryParam(_ key: String, _ iso: PartialIso<String, A>) -> Syntax<A, M> {
+  public static func queryParam(_ key: String, _ iso: PartialIso<String?, A>) -> Syntax<A, M> {
     return Syntax(
       parse: { request in
-        request.query.first(where: { $0.key == key })?.value.flatMap(iso.apply)
+        iso.apply(request.query.first(where: { $0.key == key })?.value)
     },
       print: { a in
         RequestData(
@@ -90,7 +90,7 @@ extension Syntax where M == RequestData {
 
   public static func <?> <B>(
     lhs: Syntax<A, M>,
-    rhs: (key: String, iso: PartialIso<String, B>)
+    rhs: (key: String, iso: PartialIso<String?, B>)
     ) -> Syntax<(A, B), M> {
 
     return lhs <%> .queryParam(rhs.key, rhs.iso)
@@ -98,13 +98,13 @@ extension Syntax where M == RequestData {
 
   public static func <&> <B>(
     lhs: Syntax<A, M>,
-    rhs: (key: String, iso: PartialIso<String, B>)
+    rhs: (key: String, iso: PartialIso<String?, B>)
     ) -> Syntax<(A, B), M> {
 
     return lhs <%> .queryParam(rhs.key, rhs.iso)
-        }
+  }
 
-    }
+}
 
 extension Syntax where A == Void, M == RequestData {
 
@@ -134,7 +134,7 @@ extension Syntax where A == Void, M == RequestData {
 
   public static func <?> <B>(
     lhs: Syntax,
-    rhs: (key: String, iso: PartialIso<String, B>)
+    rhs: (key: String, iso: PartialIso<String?, B>)
     ) -> Syntax<B, M> {
 
     return lhs %> .queryParam(rhs.key, rhs.iso)
