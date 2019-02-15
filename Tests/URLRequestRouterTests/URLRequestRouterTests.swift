@@ -19,4 +19,13 @@ final class URLRequestRouterTests: XCTestCase {
     XCTAssertEqual(42, tuple?.0)
     XCTAssertEqual("pointfreeco", tuple?.1)
   }
+
+  func testOptionalRouteParam() {
+//    let route = .get </> "search" <?> ("q", optional(.string))
+
+//    XCTAssertEqual(
+//      RequestData(method: .get, path: ["search"], query: [], body: nil),
+//      route.print(<#T##a: String?##String?#>)
+//    )
+  }
 }
