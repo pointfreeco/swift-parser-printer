@@ -6,7 +6,7 @@ import URLRequestRouter
 final class URLRequestRouterTests: XCTestCase {
 
   func test() {
-    let route = .get </> "users" </> .int <?> ("ref", require(.string)) <%> .end
+    let route = .get </> "users" </> .int <?> ("ref", .require(.string)) <%> .end
 
     XCTAssertEqual(
       RequestData(method: .get, path: ["users", "42"], query: [("ref", "pointfreeco")], body: nil),
@@ -57,7 +57,7 @@ final class URLRequestRouterTests: XCTestCase {
   }
 
   func testRequiredRouteParam() {
-    let route = .get </> "search" <?> ("q", require(.string))
+    let route = .get </> "search" <?> ("q", .require(.string))
 
     XCTAssertEqual(
       "search?q=blob",
