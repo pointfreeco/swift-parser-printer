@@ -8,6 +8,11 @@ jobs:
     steps:
       - checkout
 
+      - restore_cache:
+          keys:
+            - pre-build-cache-{{ .Branch }}
+            - pre-derivedData-cache-{{ .Branch }}
+
       - run:
           name: Mac info
           command: system_profiler SPSoftwareDataType
@@ -18,5 +23,25 @@ jobs:
           environment:
             SNAPSHOT_ARTIFACTS: /tmp/__SnapshotArtifacts__
 
+      - run:
+          name: Run macOS tests
+          command: make test-macos
+          environment:
+            SNAPSHOT_ARTIFACTS: /tmp/__SnapshotArtifacts__
+
+      - run:
+          name: Run playground tests
+          command: make test-playgrounds
+
       - store_artifacts:
           path: /tmp/__SnapshotArtifacts__
+
+      - save_cache:
+          key: pre-build-cache-{{ .Branch }}
+          paths:
+            - ".build"
+
+      - save_cache:
+          key: pre-derivedData-cache-{{ .Branch }}
+          paths:
+            - ".derivedData"

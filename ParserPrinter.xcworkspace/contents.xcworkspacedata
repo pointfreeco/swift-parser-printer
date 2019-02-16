@@ -5,6 +5,6 @@
       location = "group:ParserPrinter.playground">
    </FileRef>
    <FileRef
-      location = "group:PrinterParser.xcodeproj">
+      location = "group:ParserPrinter.xcodeproj">
    </FileRef>
 </Workspace>

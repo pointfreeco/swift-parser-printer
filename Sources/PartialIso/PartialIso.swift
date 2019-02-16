@@ -68,6 +68,13 @@ extension PartialIso {
       unapply: { .some($0.flatMap(iso.unapply)) }
     )
   }
+
+  public static func require<A0>(_ iso: PartialIso<A0, B>) -> PartialIso where A == A0? {
+    return PartialIso(
+      apply: { $0.flatMap(iso.apply) },
+      unapply: iso.unapply
+    )
+  }
 }
 
 extension PartialIso where A == B {
