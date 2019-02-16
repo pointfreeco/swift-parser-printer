@@ -5,16 +5,8 @@
       <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
         <BuildableReference
           BuildableIdentifier = "primary"
-          BuildableName = "'$(TARGET_NAME)'"
-          BlueprintName = "generate-partial-isos"
-          ReferencedContainer = "container:ParserPrinter.xcodeproj">
-        </BuildableReference>
-      </BuildActionEntry>
-      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
-        <BuildableReference
-          BuildableIdentifier = "primary"
           BuildableName = "'lib$(TARGET_NAME)'"
-          BlueprintName = "GeneratePartialIsos"
+          BlueprintName = "URLRequestRouter"
           ReferencedContainer = "container:ParserPrinter.xcodeproj">
         </BuildableReference>
       </BuildActionEntry>
@@ -29,8 +21,16 @@
       <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
         <BuildableReference
           BuildableIdentifier = "primary"
+          BuildableName = "'$(TARGET_NAME)'"
+          BlueprintName = "generate-partial-isos"
+          ReferencedContainer = "container:ParserPrinter.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
           BuildableName = "'lib$(TARGET_NAME)'"
-          BlueprintName = "URLRequestRouter"
+          BlueprintName = "GeneratePartialIsos"
           ReferencedContainer = "container:ParserPrinter.xcodeproj">
         </BuildableReference>
       </BuildActionEntry>
@@ -56,7 +56,7 @@
           <BuildableReference
             BuildableIdentifier = "primary"
             BuildableName = "'$(TARGET_NAME)'"
-            BlueprintName = "PartialIsoTests"
+            BlueprintName = "GeneratePartialIsosTests"
             ReferencedContainer = "container:ParserPrinter.xcodeproj">
           </BuildableReference>
         </TestableReference>
@@ -74,7 +74,7 @@
           <BuildableReference
             BuildableIdentifier = "primary"
             BuildableName = "'$(TARGET_NAME)'"
-            BlueprintName = "GeneratePartialIsosTests"
+            BlueprintName = "URLRequestRouterTests"
             ReferencedContainer = "container:ParserPrinter.xcodeproj">
           </BuildableReference>
         </TestableReference>
@@ -83,7 +83,7 @@
           <BuildableReference
             BuildableIdentifier = "primary"
             BuildableName = "'$(TARGET_NAME)'"
-            BlueprintName = "URLRequestRouterTests"
+            BlueprintName = "PartialIsoTests"
             ReferencedContainer = "container:ParserPrinter.xcodeproj">
           </BuildableReference>
         </TestableReference>
