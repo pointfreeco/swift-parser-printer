@@ -24,6 +24,12 @@ public struct Syntax<A, M: Equatable> {
     return match
   }
 
+  public func run(_ m: M) -> (M, A?) {
+    var m = m
+    let match = self._parse(&m)
+    return (m, match)
+  }
+
   public func print(_ a: A) -> M? {
     return self._print(a)
   }
@@ -180,5 +186,70 @@ extension Syntax {
       parse: { _ in nil },
       print: { _ in nil }
     )
+  }
+}
+
+public func many<A, M>(_ syntax: Syntax<A, M>) -> Syntax<[A], M> {
+
+  return Syntax<[A], M>.init(
+    monoid: syntax.monoid,
+    parse: { m in
+
+      var result: [A] = []
+      while (true) {
+        let copy = m
+        if let a = syntax._parse(&m) { result.append(a); continue }
+        m = copy
+        break
+      }
+      return result
+
+  }, print: { xs in
+    return xs.reduce(syntax.monoid.empty) { accum, x in
+      syntax.monoid.combine(accum, syntax._print(x) ?? syntax.monoid.empty)
+    }
+  })
+
+  // TODO: not sure why this doesn't work
+  //  return Syntax((), syntax.monoid).map(.`nil`())
+  //    .or(
+  //      (syntax.process(and: many(syntax))).map(.cons())
+  //  )
+}
+
+
+public func many<A, M>(_ syntax: Syntax<A, M>, _ intersperse: Syntax<(), M>) -> Syntax<[A], M> {
+
+  return Syntax<[A], M>.init(
+    monoid: syntax.monoid,
+    parse: { m in
+
+      var result: [A] = []
+      while (true) {
+        let copy = m
+        if let a = syntax._parse(&m), let _ = intersperse._parse(&m) { result.append(a); continue }
+        m = copy
+        if let a = syntax._parse(&m) { result.append(a); break }
+        m = copy
+        break
+      }
+      return result
+
+  }, print: { xs in
+    // TODO: fix intersperse
+    return xs.reduce(syntax.monoid.empty) { accum, x in
+      syntax.monoid.combine(accum, syntax._print(x) ?? syntax.monoid.empty)
+    }
+  })
+
+}
+
+extension Syntax {
+  public func flatten<B, C, D>() -> Syntax<(B, C, D), M> where A == ((B, C), D) {
+    return self.map(leftFlatten, leftParenthesize)
+  }
+
+  public func flatten<B, C, D, E>() -> Syntax<(B, C, D, E), M> where A == (((B, C), D), E) {
+    return self.map(leftFlatten, leftParenthesize)
   }
 }

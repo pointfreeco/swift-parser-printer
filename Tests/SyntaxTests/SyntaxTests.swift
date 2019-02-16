@@ -129,61 +129,6 @@ extension Syntax {
   }
 }
 
-func many<A, M>(_ syntax: Syntax<A, M>) -> Syntax<[A], M> {
-
-  return Syntax<[A], M>.init(
-    monoid: syntax.monoid,
-    parse: { m in
-
-      var result: [A] = []
-      while (true) {
-        let copy = m
-        if let a = syntax._parse(&m) { result.append(a); continue }
-        m = copy
-        break
-      }
-      return result
-
-  }, print: { xs in
-    return xs.reduce(syntax.monoid.empty) { accum, x in
-      syntax.monoid.combine(accum, syntax._print(x) ?? syntax.monoid.empty)
-    }
-  })
-
-  // TODO: not sure why this doesn't work
-//  return Syntax((), syntax.monoid).map(.`nil`())
-//    .or(
-//      (syntax.process(and: many(syntax))).map(.cons())
-//  )
-}
-
-
-func many<A, M>(_ syntax: Syntax<A, M>, _ intersperse: Syntax<(), M>) -> Syntax<[A], M> {
-
-  return Syntax<[A], M>.init(
-    monoid: syntax.monoid,
-    parse: { m in
-
-      var result: [A] = []
-      while (true) {
-        let copy = m
-        if let a = syntax._parse(&m), let _ = intersperse._parse(&m) { result.append(a); continue }
-        m = copy
-        if let a = syntax._parse(&m) { result.append(a); break }
-        m = copy
-        break
-      }
-      return result
-
-  }, print: { xs in
-    // TODO: fix intersperse
-    return xs.reduce(syntax.monoid.empty) { accum, x in
-      syntax.monoid.combine(accum, syntax._print(x) ?? syntax.monoid.empty)
-    }
-  })
-
-}
-
 import PartialIso
 extension PartialIso where A == () {
   static func `nil`<C>() -> PartialIso<A, B> where B == [C] {
@@ -203,12 +148,6 @@ extension PartialIso {
         return (head, Array(tail))
     }
     )
-  }
-}
-
-extension Syntax {
-  func flatten<B, C, D>() -> Syntax<(B, C, D), M> where A == ((B, C), D) {
-    return self.map(leftFlatten, leftParenthesize)
   }
 }
 
