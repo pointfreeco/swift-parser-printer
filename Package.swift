@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "PrinterParser",
+  name: "ParserPrinter",
   products: [
     .executable(name: "generate-partial-isos", targets: ["generate-partial-isos"]),
     .library(name: "GeneratePartialIsos", targets: ["GeneratePartialIsos"]),

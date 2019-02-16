@@ -23,7 +23,7 @@ final class URLRequestRouterTests: XCTestCase {
   }
 
   func testOptionalRouteParam() {
-    let route = .get </> "search" <?> ("q", optional(.string))
+    let route = .get </> "search" <?> ("q", .optional(.string))
 
     XCTAssertEqual(
       "search",

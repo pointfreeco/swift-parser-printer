@@ -58,7 +58,7 @@ extension PartialIso where A == User, B == Route {
 let router = Router<Route>(
   .match(.home, to: .get),
   .match(.episode, to: .get </> "episodes" </> .int),
-  .match(.search, to: .get </> "search" <?> ("q", .compose(.some, .string))),
+  .match(.search, to: .get </> "search" <?> ("q", .optional(.string))),
   .match(.signUp, to: .post(.json) </> "sign-up")
 )
 
@@ -81,3 +81,4 @@ router.request(for: Route.search("blob"))
 router.request(for: Route.search(""))
 router.request(for: Route.search(nil))
 router.request(for: Route.episode(42))
+
