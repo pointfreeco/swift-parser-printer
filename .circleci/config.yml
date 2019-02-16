@@ -12,11 +12,11 @@ jobs:
           name: Mac info
           command: system_profiler SPSoftwareDataType
 
-      # - run:
-      #     name: Run Swift tests
-      #     command: make test-swift
-      #     environment:
-      #       SNAPSHOT_ARTIFACTS: /tmp/__SnapshotArtifacts__
+      - run:
+          name: Run Swift tests
+          command: make test-swift
+          environment:
+            SNAPSHOT_ARTIFACTS: /tmp/__SnapshotArtifacts__
 
       - run:
           name: Run macOS tests
@@ -30,9 +30,9 @@ jobs:
           environment:
             SNAPSHOT_ARTIFACTS: /tmp/__SnapshotArtifacts__
 
-      # - store_artifacts:
-      #     path: /tmp/__SnapshotArtifacts__
-      # - store_artifacts:
-      #     path: /.build/
-      # - store_artifacts:
-      #   path: /.derivedData/
+      - store_artifacts:
+          path: /tmp/__SnapshotArtifacts__
+      - store_artifacts:
+          path: /.build/
+      - store_artifacts:
+          path: /.derivedData/
