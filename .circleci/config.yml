@@ -6,12 +6,12 @@ jobs:
       xcode: "10.1.0"
 
     steps:
+      - checkout
+
       - restore_cache:
           keys:
             - build-cache-{{ .Branch }}-{{ .Revision }}
             - derivedData-cache-{{ .Branch }}-{{ .Revision }}
-
-      - checkout
 
       - run:
           name: Mac info
