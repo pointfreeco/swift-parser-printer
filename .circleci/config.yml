@@ -32,7 +32,13 @@ jobs:
 
       - store_artifacts:
           path: /tmp/__SnapshotArtifacts__
-      - store_artifacts:
-          path: /.build/
-      - store_artifacts:
-          path: /.derivedData/
+
+      - save_cache:
+          key: build-cache-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".build"
+
+      - save_cache:
+          key: derivedData-cache-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".derivedData"
