@@ -1,15 +1,19 @@
-public func leftFlatten<A, B, C>(_ tuple: ((A, B), C)) -> (A, B, C) {
-  return (tuple.0.0, tuple.0.1, tuple.1)
-}
+extension PartialIso {
+  public static func leftFlatten<C, D, E>() -> PartialIso where A == ((C, D), E), B == (C, D, E) {
+    return PartialIso(
+      apply: { tuple in
+        (tuple.0.0, tuple.0.1, tuple.1)
+    }, unapply: { tuple in
+      ((tuple.0, tuple.1), tuple.2)
+    })
+  }
 
-public func leftParenthesize<A, B, C>(_ tuple: (A, B, C)) -> ((A, B), C) {
-  return ((tuple.0, tuple.1), tuple.2)
-}
-
-public func leftFlatten<A, B, C, D>(_ tuple: (((A, B), C), D)) -> (A, B, C, D) {
-  return (tuple.0.0.0, tuple.0.0.1, tuple.0.1, tuple.1)
-}
-
-public func leftParenthesize<A, B, C, D>(_ tuple: (A, B, C, D)) -> (((A, B), C), D) {
-  return (((tuple.0, tuple.1), tuple.2), tuple.3)
+  public static func leftFlatten<C, D, E, F>() -> PartialIso where A == (((C, D), E), F), B == (C, D, E, F) {
+    return PartialIso(
+      apply: { tuple in
+        (tuple.0.0.0, tuple.0.0.1, tuple.0.1, tuple.1)
+    }, unapply: { tuple in
+      (((tuple.0, tuple.1), tuple.2), tuple.3)
+    })
+  }
 }

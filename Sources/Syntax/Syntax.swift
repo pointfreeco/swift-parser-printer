@@ -244,11 +244,11 @@ extension Syntax {
 
 extension Syntax {
   public func flatten<B, C, D>() -> Syntax<(B, C, D), M> where A == ((B, C), D) {
-    return self.map(leftFlatten, leftParenthesize)
+    return self.map(.leftFlatten())
   }
 
   public func flatten<B, C, D, E>() -> Syntax<(B, C, D, E), M> where A == (((B, C), D), E) {
-    return self.map(leftFlatten, leftParenthesize)
+    return self.map(.leftFlatten())
   }
 }
 
@@ -258,7 +258,7 @@ extension Syntax {
     _ unapply: @escaping (Z) -> (B, C, D)
     ) -> Syntax<Z, M> where A == ((B, C), D) {
 
-    return self.map(leftFlatten, leftParenthesize).map(apply, unapply)
+    return self.flatten().map(apply, unapply)
   }
 
   public func flatten<B, C, D, E, Z>(
@@ -266,6 +266,6 @@ extension Syntax {
     _ unapply: @escaping (Z) -> (B, C, D, E)
     ) -> Syntax<Z, M> where A == (((B, C), D), E) {
     
-    return self.map(leftFlatten, leftParenthesize).map(apply, unapply)
+    return self.flatten().map(apply, unapply)
   }
 }
