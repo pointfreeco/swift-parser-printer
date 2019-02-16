@@ -32,8 +32,6 @@ jobs:
       - run:
           name: Run playground tests
           command: make test-playgrounds
-          environment:
-            SNAPSHOT_ARTIFACTS: /tmp/__SnapshotArtifacts__
 
       - store_artifacts:
           path: /tmp/__SnapshotArtifacts__
