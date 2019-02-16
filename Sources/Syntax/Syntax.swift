@@ -190,6 +190,7 @@ extension Syntax {
 }
 
 extension Syntax {
+  /// Runs a syntax multiple times on the input until it can't be run anymore.
   public static func many<Element>(_ syntax: Syntax<Element, M>) -> Syntax where A == [Element] {
     return Syntax(
       monoid: syntax.monoid,
@@ -210,6 +211,7 @@ extension Syntax {
     })
   }
 
+  /// Runs a syntax multiple times on the input, separated by runs of the `separatedBy` syntax.
   public static func many<Element>(
     _ syntax: Syntax<Element, M>,
     separatedBy: Syntax<(), M>
