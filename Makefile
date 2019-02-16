@@ -30,10 +30,10 @@ test-ios: generate-xcodeproj
 		| $(XCPRETTY)
 
 test-playgrounds: test-macos
-	swift \
-		-F .derivedData/Build/Products/Debug/ \
-		-suppress-warnings \
-		ParserPrinter.playground/Contents.swift
+	find . \
+		-path '*.playground/*' \
+		-name '*.swift' \
+		-exec swift -F .derivedData/Build/Products/Debug/ -suppress-warnings {} +
 
 test-all: test-linux test-macos test-ios test-playgrounds
 
