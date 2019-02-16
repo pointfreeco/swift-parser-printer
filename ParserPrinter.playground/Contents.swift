@@ -82,3 +82,4 @@ router.request(for: Route.search(""))
 router.request(for: Route.search(nil))
 router.request(for: Route.episode(42))
 
+compile-error
