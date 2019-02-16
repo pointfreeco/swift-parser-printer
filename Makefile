@@ -27,13 +27,13 @@ test-ios: generate-xcodeproj
 		-derivedDataPath ./.derivedData \
 		| xcpretty
 
-test-all: test-linux test-macos test-ios test-playgrounds
-
 test-playgrounds:
 	swift \
 		-F .derivedData/Build/Products/Debug/ \
 		-suppress-warnings \
 		ParserPrinter.playground/Contents.swift  
+
+test-all: test-linux test-macos test-ios test-playgrounds
 
 clean:
 	rm -rf .build/
