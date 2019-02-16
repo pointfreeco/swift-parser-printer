@@ -218,7 +218,7 @@ public func many<A, M>(_ syntax: Syntax<A, M>) -> Syntax<[A], M> {
 }
 
 
-public func many<A, M>(_ syntax: Syntax<A, M>, _ intersperse: Syntax<(), M>) -> Syntax<[A], M> {
+public func many<A, M>(_ syntax: Syntax<A, M>, separatedBy: Syntax<(), M>) -> Syntax<[A], M> {
 
   return Syntax<[A], M>.init(
     monoid: syntax.monoid,
@@ -227,7 +227,7 @@ public func many<A, M>(_ syntax: Syntax<A, M>, _ intersperse: Syntax<(), M>) -> 
       var result: [A] = []
       while (true) {
         let copy = m
-        if let a = syntax._parse(&m), let _ = intersperse._parse(&m) { result.append(a); continue }
+        if let a = syntax._parse(&m), let _ = separatedBy._parse(&m) { result.append(a); continue }
         m = copy
         if let a = syntax._parse(&m) { result.append(a); break }
         m = copy
@@ -236,9 +236,14 @@ public func many<A, M>(_ syntax: Syntax<A, M>, _ intersperse: Syntax<(), M>) -> 
       return result
 
   }, print: { xs in
-    // TODO: fix intersperse
-    return xs.reduce(syntax.monoid.empty) { accum, x in
-      syntax.monoid.combine(accum, syntax._print(x) ?? syntax.monoid.empty)
+    var idx = 0
+    // TODO: fix separatedBy
+    return xs.reduce(into: syntax.monoid.empty) { accum, x in
+      if idx > 0 {
+        syntax.monoid.mcombine(&accum, separatedBy._print(()) ?? syntax.monoid.empty)
+      }
+      syntax.monoid.mcombine(&accum, syntax._print(x) ?? syntax.monoid.empty)
+      idx += 1
     }
   })
 
