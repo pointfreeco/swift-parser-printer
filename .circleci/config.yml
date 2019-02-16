@@ -8,6 +8,11 @@ jobs:
     steps:
       - checkout
 
+      # https://medium.com/@bitrise/60-faster-builds-force-xcode-to-use-caching-on-bitrise-af8979ca39a6
+      - run:
+          name: Normalize modified timestamps
+          command: find . -type f -name "*.swift" -exec touch -a -m -t 201801291200 {} + 
+
       - restore_cache:
           keys:
             - pre-build-cache-{{ .Branch }}
