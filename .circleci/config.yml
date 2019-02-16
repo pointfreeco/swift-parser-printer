@@ -10,8 +10,8 @@ jobs:
 
       - restore_cache:
           keys:
-            - build-cache-{{ .Branch }}-{{ .Revision }}
-            - derivedData-cache-{{ .Branch }}-{{ .Revision }}
+            - build-cache-{{ .Branch }}
+            - derivedData-cache-{{ .Branch }}
 
       - run:
           name: Mac info
@@ -39,11 +39,11 @@ jobs:
           path: /tmp/__SnapshotArtifacts__
 
       - save_cache:
-          key: build-cache-{{ .Branch }}-{{ .Revision }}
+          key: build-cache-{{ .Branch }}
           paths:
             - ".build"
 
       - save_cache:
-          key: derivedData-cache-{{ .Branch }}-{{ .Revision }}
+          key: derivedData-cache-{{ .Branch }}
           paths:
             - ".derivedData"
