@@ -1,3 +1,5 @@
+XCPRETTY := $(if $(shell command -v xcpretty 2> /dev/null),xcpretty,cat)
+
 generate-xcodeproj:
 	swift package generate-xcodeproj
 
@@ -17,7 +19,7 @@ test-macos: generate-xcodeproj
 		-scheme ParserPrinter-Package \
 		-destination platform="macOS" \
 		-derivedDataPath ./.derivedData \
-		| xcpretty
+		| $(XCPRETTY)
 
 test-ios: generate-xcodeproj
 	set -o pipefail && \
@@ -25,13 +27,13 @@ test-ios: generate-xcodeproj
 		-scheme ParserPrinter-Package \
 		-destination platform="iOS Simulator,name=iPhone XR,OS=12.0" \
 		-derivedDataPath ./.derivedData \
-		| xcpretty
+		| $(XCPRETTY)
 
-test-playgrounds:
+test-playgrounds: test-macos
 	swift \
 		-F .derivedData/Build/Products/Debug/ \
 		-suppress-warnings \
-		ParserPrinter.playground/Contents.swift  
+		ParserPrinter.playground/Contents.swift
 
 test-all: test-linux test-macos test-ios test-playgrounds
 
