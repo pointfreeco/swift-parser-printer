@@ -1,10 +1,5 @@
 import Foundation
 
-// todo: rename?
-//   LossyEquivalence
-//   LossyConversion
-//   LossyBijection
-//   PartialBijection
 public struct PartialIso<A, B> {
   public let apply: (A) -> B?
   public let unapply: (B) -> A?
@@ -39,10 +34,6 @@ extension PartialIso {
     })
   }
 
-  public static func pipe<C, D>(_ a2c: PartialIso<A, C>, _ c2d: PartialIso<C, D>, _ d2b: PartialIso<D, B>) -> PartialIso {
-    return .pipe(a2c, .pipe(c2d, d2b))
-  }
-
   public static func compose<AB>(_ lhs: PartialIso<AB, B>, _ rhs: PartialIso<A, AB>) -> PartialIso {
     return PartialIso(
       apply: { a in
@@ -62,10 +53,19 @@ extension PartialIso {
 }
 
 extension PartialIso where B == A? {
-  public static var optional: PartialIso {
+  public static var some: PartialIso {
     return PartialIso(
       apply: Optional.some,
       unapply: { $0 }
+    )
+  }
+}
+
+extension PartialIso {
+  public static func optional<A0, B0>(_ iso: PartialIso<A0, B0>) -> PartialIso where A == A0?, B == B0? {
+    return PartialIso(
+      apply: { .some($0.flatMap(iso.apply)) },
+      unapply: { .some($0.flatMap(iso.unapply)) }
     )
   }
 }
@@ -74,13 +74,6 @@ public func require<A, B>(_ iso: PartialIso<A, B>) -> PartialIso<A?, B> {
   return PartialIso<A?, B>(
     apply: { $0.flatMap(iso.apply) },
     unapply: iso.unapply
-  )
-}
-
-public func optional<A, B>(_ iso: PartialIso<A, B>) -> PartialIso<A?, B?> {
-  return PartialIso<A?, B?>.init(
-    apply: { .some($0.flatMap(iso.apply)) },
-    unapply: { .some( $0.flatMap(iso.unapply)) }
   )
 }
 

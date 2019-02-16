@@ -1,9 +1,15 @@
 import XCTest
 
+extension PartialIsoTests {
+    static let __allTests = [
+        ("testExpressibleByStringLiteral", testExpressibleByStringLiteral),
+    ]
+}
+
 #if !os(macOS)
-public func allTests() -> [XCTestCaseEntry] {
+public func __allTests() -> [XCTestCaseEntry] {
     return [
-        testCase(swift_parser_printerTests.allTests),
+        testCase(PartialIsoTests.__allTests),
     ]
 }
 #endif

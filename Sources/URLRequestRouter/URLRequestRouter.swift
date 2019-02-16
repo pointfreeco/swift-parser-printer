@@ -103,7 +103,6 @@ extension Syntax where M == RequestData {
 
     return lhs <%> .queryParam(rhs.key, rhs.iso)
   }
-
 }
 
 extension Syntax where A == Void, M == RequestData {
