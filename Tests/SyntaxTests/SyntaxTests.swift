@@ -45,8 +45,7 @@ final class swift_parser_printerTests: XCTestCase {
     }
 
     let syntax = (int <%> comma <%> string <%> comma <%> bool)
-      .flatten()
-      .map(User.init, { ($0.id, $0.name, $0.admin) })
+      .flatten(User.init, { ($0.id, $0.name, $0.admin) })
 
     let parsed = syntax.parseCsv("123,Hello,true")
     let printed = syntax.printCsv(User(id: 1, name: "Hello", admin: true))
@@ -109,10 +108,10 @@ final class swift_parser_printerTests: XCTestCase {
     let signedNumber = (skipWs <%> sign <%> int)
       .map({ sign, int in sign.value * int }, { int in (int.sign, abs(int)) })
 
-    let parser = many(signedNumber, lit(","))
+    let parser = Syntax.many(signedNumber, separatedBy: lit(","))
 
     XCTAssertEqual([1,-1,2,-3], parser.parse("+1,-1,+2,-3"))
-    XCTAssertEqual("+1+2-3+4", parser.print([1, 2, -3, 4]))
+    XCTAssertEqual("+1,+2,-3,+4", parser.print([1, 2, -3, 4]))
 
     XCTAssertEqual(1, signedNumber.parse("+1"))
   }

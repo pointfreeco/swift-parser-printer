@@ -189,64 +189,57 @@ extension Syntax {
   }
 }
 
-public func many<A, M>(_ syntax: Syntax<A, M>) -> Syntax<[A], M> {
+extension Syntax {
+  public static func many<Element>(_ syntax: Syntax<Element, M>) -> Syntax where A == [Element] {
+    return Syntax(
+      monoid: syntax.monoid,
+      parse: { m in
+        var result: [Element] = []
+        while (true) {
+          let copy = m
+          if let a = syntax._parse(&m) { result.append(a); continue }
+          m = copy
+          break
+        }
+        return result
 
-  return Syntax<[A], M>.init(
-    monoid: syntax.monoid,
-    parse: { m in
-
-      var result: [A] = []
-      while (true) {
-        let copy = m
-        if let a = syntax._parse(&m) { result.append(a); continue }
-        m = copy
-        break
+    }, print: { xs in
+      return xs.reduce(syntax.monoid.empty) { accum, x in
+        syntax.monoid.combine(accum, syntax._print(x) ?? syntax.monoid.empty)
       }
-      return result
+    })
+  }
 
-  }, print: { xs in
-    return xs.reduce(syntax.monoid.empty) { accum, x in
-      syntax.monoid.combine(accum, syntax._print(x) ?? syntax.monoid.empty)
-    }
-  })
+  public static func many<Element>(
+    _ syntax: Syntax<Element, M>,
+    separatedBy: Syntax<(), M>
+    ) -> Syntax where A == [Element] {
 
-  // TODO: not sure why this doesn't work
-  //  return Syntax((), syntax.monoid).map(.`nil`())
-  //    .or(
-  //      (syntax.process(and: many(syntax))).map(.cons())
-  //  )
-}
+    return Syntax(
+      monoid: syntax.monoid,
+      parse: { m in
+        var result: [Element] = []
+        while (true) {
+          let copy = m
+          if let a = syntax._parse(&m), let _ = separatedBy._parse(&m) { result.append(a); continue }
+          m = copy
+          if let a = syntax._parse(&m) { result.append(a); break }
+          m = copy
+          break
+        }
+        return result
 
-
-public func many<A, M>(_ syntax: Syntax<A, M>, separatedBy: Syntax<(), M>) -> Syntax<[A], M> {
-
-  return Syntax<[A], M>.init(
-    monoid: syntax.monoid,
-    parse: { m in
-
-      var result: [A] = []
-      while (true) {
-        let copy = m
-        if let a = syntax._parse(&m), let _ = separatedBy._parse(&m) { result.append(a); continue }
-        m = copy
-        if let a = syntax._parse(&m) { result.append(a); break }
-        m = copy
-        break
+    }, print: { xs in
+      var idx = 0
+      return xs.reduce(into: syntax.monoid.empty) { accum, x in
+        if idx > 0 {
+          syntax.monoid.mcombine(&accum, separatedBy._print(()) ?? syntax.monoid.empty)
+        }
+        syntax.monoid.mcombine(&accum, syntax._print(x) ?? syntax.monoid.empty)
+        idx += 1
       }
-      return result
-
-  }, print: { xs in
-    var idx = 0
-    // TODO: fix separatedBy
-    return xs.reduce(into: syntax.monoid.empty) { accum, x in
-      if idx > 0 {
-        syntax.monoid.mcombine(&accum, separatedBy._print(()) ?? syntax.monoid.empty)
-      }
-      syntax.monoid.mcombine(&accum, syntax._print(x) ?? syntax.monoid.empty)
-      idx += 1
-    }
-  })
-
+    })
+  }
 }
 
 extension Syntax {
@@ -256,5 +249,23 @@ extension Syntax {
 
   public func flatten<B, C, D, E>() -> Syntax<(B, C, D, E), M> where A == (((B, C), D), E) {
     return self.map(leftFlatten, leftParenthesize)
+  }
+}
+
+extension Syntax {
+  public func flatten<B, C, D, Z>(
+    _ apply: @escaping (B, C, D) -> Z,
+    _ unapply: @escaping (Z) -> (B, C, D)
+    ) -> Syntax<Z, M> where A == ((B, C), D) {
+
+    return self.map(leftFlatten, leftParenthesize).map(apply, unapply)
+  }
+
+  public func flatten<B, C, D, E, Z>(
+    _ apply: @escaping (B, C, D, E) -> Z,
+    _ unapply: @escaping (Z) -> (B, C, D, E)
+    ) -> Syntax<Z, M> where A == (((B, C), D), E) {
+    
+    return self.map(leftFlatten, leftParenthesize).map(apply, unapply)
   }
 }

@@ -30,8 +30,9 @@ test-ios: generate-xcodeproj
 		| $(XCPRETTY)
 
 test-playgrounds: test-macos
+	# this isn't right...
 	find . \
-		-path '*.playground/*' \
+		-path '*.playground/Pages/*.xcplaygroundpage/*' \
 		-name '*.swift' \
 		-exec swift -F .derivedData/Build/Products/Debug/ -suppress-warnings {} +
 

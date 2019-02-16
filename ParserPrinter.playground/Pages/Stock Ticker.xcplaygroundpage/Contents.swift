@@ -33,8 +33,7 @@ let sign: Syntax<Stock.Sign, String> = (Syntax.string(length: 1)).map(.rawRepres
 let stockSyntax = (
   symbol <%> .optWs <%> .double <%> sign <%> .double
   )
-  .flatten()
-  .map(
+  .flatten(
     Stock.init(symbol:price:sign:change:),
     { ($0.symbol, $0.price, $0.sign, $0.change) }
 )
@@ -49,7 +48,7 @@ stockSyntax.run("MSFT 106.57=0.00")
 stockSyntax.print(Stock(symbol: "FB", price: 100, sign: .loss, change: 90))
 
 // A syntax for a full ticker by combining multiple stock syntaxes separated by newlines.
-let tickerSyntax = many(stockSyntax, separatedBy: .lit("\n"))
+let tickerSyntax = Syntax.many(stockSyntax, separatedBy: .lit("\n"))
 
 // Parse an entire ticker stream.
 tickerSyntax.parse("""
