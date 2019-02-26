@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ParserPrinter::URLRequestRouter"
-               BuildableName = "URLRequestRouter.framework"
-               BlueprintName = "URLRequestRouter"
-               ReferencedContainer = "container:ParserPrinter.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ParserPrinter::PartialIso"
-               BuildableName = "PartialIso.framework"
-               BlueprintName = "PartialIso"
+               BlueprintIdentifier = "ParserPrinter::Syntax"
+               BuildableName = "Syntax.framework"
+               BlueprintName = "Syntax"
                ReferencedContainer = "container:ParserPrinter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -70,9 +56,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ParserPrinter::Syntax"
-               BuildableName = "Syntax.framework"
-               BlueprintName = "Syntax"
+               BlueprintIdentifier = "ParserPrinter::PartialIso"
+               BuildableName = "PartialIso.framework"
+               BlueprintName = "PartialIso"
+               ReferencedContainer = "container:ParserPrinter.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ParserPrinter::URLRequestRouter"
+               BuildableName = "URLRequestRouter.framework"
+               BlueprintName = "URLRequestRouter"
                ReferencedContainer = "container:ParserPrinter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -98,6 +98,16 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ParserPrinter::PartialIsoTests"
+               BuildableName = "PartialIsoTests.xctest"
+               BlueprintName = "PartialIsoTests"
+               ReferencedContainer = "container:ParserPrinter.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "ParserPrinter::SyntaxTests"
                BuildableName = "SyntaxTests.xctest"
                BlueprintName = "SyntaxTests"
@@ -111,16 +121,6 @@
                BlueprintIdentifier = "ParserPrinter::URLRequestRouterTests"
                BuildableName = "URLRequestRouterTests.xctest"
                BlueprintName = "URLRequestRouterTests"
-               ReferencedContainer = "container:ParserPrinter.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ParserPrinter::PartialIsoTests"
-               BuildableName = "PartialIsoTests.xctest"
-               BlueprintName = "PartialIsoTests"
                ReferencedContainer = "container:ParserPrinter.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -141,9 +141,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ParserPrinter::URLRequestRouter"
-            BuildableName = "URLRequestRouter.framework"
-            BlueprintName = "URLRequestRouter"
+            BlueprintIdentifier = "ParserPrinter::Syntax"
+            BuildableName = "Syntax.framework"
+            BlueprintName = "Syntax"
             ReferencedContainer = "container:ParserPrinter.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

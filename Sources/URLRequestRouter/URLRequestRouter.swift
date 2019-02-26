@@ -35,7 +35,7 @@ extension Syntax where M == RequestData {
     return self._print(a).flatMap { $0.urlRequest?.url?.absoluteString }
   }
 
-  /* public? */ func route(requestData: RequestData) -> A? {
+  /* todo: public? */ func route(requestData: RequestData) -> A? {
     var requestData = requestData
     guard let match = (self <% .end)._parse(&requestData) else { return nil }
     guard requestData == self.monoid.empty else { return nil }

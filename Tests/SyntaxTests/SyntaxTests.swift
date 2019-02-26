@@ -45,8 +45,7 @@ final class swift_parser_printerTests: XCTestCase {
     }
 
     let syntax = (int <%> comma <%> string <%> comma <%> bool)
-      .flatten()
-      .map(User.init, { ($0.id, $0.name, $0.admin) })
+      .flatten(User.init, { ($0.id, $0.name, $0.admin) })
 
     let parsed = syntax.parseCsv("123,Hello,true")
     let printed = syntax.printCsv(User(id: 1, name: "Hello", admin: true))
@@ -109,10 +108,10 @@ final class swift_parser_printerTests: XCTestCase {
     let signedNumber = (skipWs <%> sign <%> int)
       .map({ sign, int in sign.value * int }, { int in (int.sign, abs(int)) })
 
-    let parser = many(signedNumber, lit(","))
+    let parser = Syntax.many(signedNumber, separatedBy: lit(","))
 
     XCTAssertEqual([1,-1,2,-3], parser.parse("+1,-1,+2,-3"))
-    XCTAssertEqual("+1+2-3+4", parser.print([1, 2, -3, 4]))
+    XCTAssertEqual("+1,+2,-3,+4", parser.print([1, 2, -3, 4]))
 
     XCTAssertEqual(1, signedNumber.parse("+1"))
   }
@@ -127,61 +126,6 @@ extension Syntax {
       print: { _ in monoid.empty }
     )
   }
-}
-
-func many<A, M>(_ syntax: Syntax<A, M>) -> Syntax<[A], M> {
-
-  return Syntax<[A], M>.init(
-    monoid: syntax.monoid,
-    parse: { m in
-
-      var result: [A] = []
-      while (true) {
-        let copy = m
-        if let a = syntax._parse(&m) { result.append(a); continue }
-        m = copy
-        break
-      }
-      return result
-
-  }, print: { xs in
-    return xs.reduce(syntax.monoid.empty) { accum, x in
-      syntax.monoid.combine(accum, syntax._print(x) ?? syntax.monoid.empty)
-    }
-  })
-
-  // TODO: not sure why this doesn't work
-//  return Syntax((), syntax.monoid).map(.`nil`())
-//    .or(
-//      (syntax.process(and: many(syntax))).map(.cons())
-//  )
-}
-
-
-func many<A, M>(_ syntax: Syntax<A, M>, _ intersperse: Syntax<(), M>) -> Syntax<[A], M> {
-
-  return Syntax<[A], M>.init(
-    monoid: syntax.monoid,
-    parse: { m in
-
-      var result: [A] = []
-      while (true) {
-        let copy = m
-        if let a = syntax._parse(&m), let _ = intersperse._parse(&m) { result.append(a); continue }
-        m = copy
-        if let a = syntax._parse(&m) { result.append(a); break }
-        m = copy
-        break
-      }
-      return result
-
-  }, print: { xs in
-    // TODO: fix intersperse
-    return xs.reduce(syntax.monoid.empty) { accum, x in
-      syntax.monoid.combine(accum, syntax._print(x) ?? syntax.monoid.empty)
-    }
-  })
-
 }
 
 import PartialIso
@@ -203,12 +147,6 @@ extension PartialIso {
         return (head, Array(tail))
     }
     )
-  }
-}
-
-extension Syntax {
-  func flatten<B, C, D>() -> Syntax<(B, C, D), M> where A == ((B, C), D) {
-    return self.map(leftFlatten, leftParenthesize)
   }
 }
 

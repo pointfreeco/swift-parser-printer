@@ -24,6 +24,12 @@ public struct Syntax<A, M: Equatable> {
     return match
   }
 
+  public func run(_ m: M) -> (M, A?) {
+    var m = m
+    let match = self._parse(&m)
+    return (m, match)
+  }
+
   public func print(_ a: A) -> M? {
     return self._print(a)
   }
@@ -180,5 +186,88 @@ extension Syntax {
       parse: { _ in nil },
       print: { _ in nil }
     )
+  }
+}
+
+extension Syntax {
+  /// Runs a syntax multiple times on the input until it can't be run anymore.
+  public static func many<Element>(_ syntax: Syntax<Element, M>) -> Syntax where A == [Element] {
+    return Syntax(
+      monoid: syntax.monoid,
+      parse: { m in
+        var result: [Element] = []
+        while (true) {
+          let copy = m
+          if let a = syntax._parse(&m) { result.append(a); continue }
+          m = copy
+          break
+        }
+        return result
+
+    }, print: { xs in
+      return xs.reduce(syntax.monoid.empty) { accum, x in
+        syntax.monoid.combine(accum, syntax._print(x) ?? syntax.monoid.empty)
+      }
+    })
+  }
+
+  /// Runs a syntax multiple times on the input, separated by runs of the `separatedBy` syntax.
+  public static func many<Element>(
+    _ syntax: Syntax<Element, M>,
+    separatedBy: Syntax<(), M>
+    ) -> Syntax where A == [Element] {
+
+    return Syntax(
+      monoid: syntax.monoid,
+      parse: { m in
+        var result: [Element] = []
+        while (true) {
+          let copy = m
+          if let a = syntax._parse(&m), let _ = separatedBy._parse(&m) { result.append(a); continue }
+          m = copy
+          if let a = syntax._parse(&m) { result.append(a); break }
+          m = copy
+          break
+        }
+        return result
+
+    }, print: { xs in
+      var idx = 0
+      return xs.reduce(into: syntax.monoid.empty) { accum, x in
+        if idx > 0 {
+          syntax.monoid.mcombine(&accum, separatedBy._print(()) ?? syntax.monoid.empty)
+        }
+        syntax.monoid.mcombine(&accum, syntax._print(x) ?? syntax.monoid.empty)
+        idx += 1
+      }
+    })
+  }
+}
+
+extension Syntax {
+  public func flatten<B, C, D>() -> Syntax<(B, C, D), M> where A == ((B, C), D) {
+    return self.map(.leftFlatten())
+  }
+
+  public func flatten<B, C, D, E>() -> Syntax<(B, C, D, E), M> where A == (((B, C), D), E) {
+    return self.map(.leftFlatten())
+  }
+}
+
+extension Syntax {
+  public func flatten<B, C, D, Z>(
+    _ apply: @escaping (B, C, D) -> Z,
+    _ unapply: @escaping (Z) -> (B, C, D)
+    ) -> Syntax<Z, M> where A == ((B, C), D) {
+
+    return self.flatten().map(apply, unapply)
+  }
+
+  public func flatten<B, C, D, E, Z>(
+    _ apply: @escaping (B, C, D, E) -> Z,
+    _ unapply: @escaping (Z) -> (B, C, D, E)
+    ) -> Syntax<Z, M> where A == (((B, C), D), E) {
+    
+    return self.flatten().map(apply, unapply)
   }
 }
