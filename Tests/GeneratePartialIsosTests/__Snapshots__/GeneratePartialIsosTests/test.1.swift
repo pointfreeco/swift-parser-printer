@@ -26,7 +26,7 @@ extension PartialIso where A == (username: String, password: String), B == Route
   }
   )
 }
-extension PartialIso where A == (String, Category.Id), B == Routes {
+extension PartialIso where A == Search, B == Routes {
   static let search = PartialIso(
     apply: Routes.search,
     unapply: {
@@ -35,12 +35,57 @@ extension PartialIso where A == (String, Category.Id), B == Routes {
   }
   )
 }
-extension PartialIso where A == (), B == Routes {
+extension PartialIso where A == Void, B == Routes {
   static let pathological = PartialIso(
     apply: Routes.pathological,
     unapply: {
       guard case let .pathological(value) = $0 else { return nil }
       return value
+  }
+  )
+}
+extension PartialIso where A == Void, B == Routes.Search {
+  static let index = PartialIso(
+    apply: { .index },
+    unapply: {
+      guard case .index = $0 else { return nil }
+      return ()
+  }
+  )
+}
+extension PartialIso where A == (String, Category.Id), B == Routes.Search {
+  static let query = PartialIso(
+    apply: Routes.Search.query,
+    unapply: {
+      guard case let .query(value) = $0 else { return nil }
+      return value
+  }
+  )
+}
+extension PartialIso where A == EasterEgg, B == Routes.Search {
+  static let easterEgg = PartialIso(
+    apply: Routes.Search.easterEgg,
+    unapply: {
+      guard case let .easterEgg(value) = $0 else { return nil }
+      return value
+  }
+  )
+}
+extension PartialIso where A == Void, B == Routes.Search.EasterEgg {
+  static let brandon = PartialIso(
+    apply: { .brandon },
+    unapply: {
+      guard case .brandon = $0 else { return nil }
+      return ()
+  }
+  )
+}
+extension PartialIso where A == Void, B == Routes.Search.EasterEgg {
+  static let stephen = PartialIso(
+    apply: { .stephen },
+    unapply: {
+      guard case .stephen = $0 else { return nil }
+      return ()
   }
   )
 }

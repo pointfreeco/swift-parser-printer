@@ -70,9 +70,13 @@
          );
       };
       "OBJ_10" = {
-         isa = "PBXFileReference";
-         path = "String.swift";
-         sourceTree = "<group>";
+         isa = "PBXGroup";
+         children = (
+            "OBJ_11"
+         );
+         name = "generate-partial-isos";
+         path = "Sources/generate-partial-isos";
+         sourceTree = "SOURCE_ROOT";
       };
       "OBJ_100" = {
          isa = "PBXFileReference";
@@ -126,7 +130,7 @@
       };
       "OBJ_11" = {
          isa = "PBXFileReference";
-         path = "Syntax.swift";
+         path = "main.swift";
          sourceTree = "<group>";
       };
       "OBJ_110" = {
@@ -193,10 +197,12 @@
       "OBJ_12" = {
          isa = "PBXGroup";
          children = (
-            "OBJ_13"
+            "OBJ_13",
+            "OBJ_14",
+            "OBJ_15"
          );
-         name = "generate-partial-isos";
-         path = "Sources/generate-partial-isos";
+         name = "PartialIso";
+         path = "Sources/PartialIso";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_120" = {
@@ -208,24 +214,24 @@
          isa = "PBXFileReference";
          explicitFileType = "sourcecode.swift";
          name = "Package.swift";
-         path = "/Users/brandon/projects/swift-parser-printer/.build/checkouts/swift-syntax.git--6203569313868573340/Package.swift";
+         path = "/Users/stephencelis/Developer/pointfreeco/swift-parser-printer/.build/checkouts/swift-syntax.git-6551255410123428459/Package.swift";
          sourceTree = "<group>";
       };
       "OBJ_122" = {
          isa = "PBXGroup";
          children = (
-            "ParserPrinter::GeneratePartialIsosTests::Product",
-            "SnapshotTesting::SnapshotTesting::Product",
-            "ParserPrinter::URLRequestRouterTests::Product",
-            "ParserPrinter::PartialIsoTests::Product",
-            "Monoid::Monoid::Product",
-            "ParserPrinter::SyntaxTests::Product",
-            "ParserPrinter::PartialIso::Product",
-            "ParserPrinter::URLRequestRouter::Product",
-            "ParserPrinter::GeneratePartialIsos::Product",
-            "SwiftSyntax::SwiftSyntax::Product",
             "ParserPrinter::Syntax::Product",
-            "ParserPrinter::generate-partial-isos::Product"
+            "SwiftSyntax::SwiftSyntax::Product",
+            "SnapshotTesting::SnapshotTesting::Product",
+            "ParserPrinter::GeneratePartialIsosTests::Product",
+            "Monoid::Monoid::Product",
+            "ParserPrinter::generate-partial-isos::Product",
+            "ParserPrinter::GeneratePartialIsos::Product",
+            "ParserPrinter::URLRequestRouter::Product",
+            "ParserPrinter::PartialIsoTests::Product",
+            "ParserPrinter::SyntaxTests::Product",
+            "ParserPrinter::URLRequestRouterTests::Product",
+            "ParserPrinter::PartialIso::Product"
          );
          name = "Products";
          path = "";
@@ -233,7 +239,7 @@
       };
       "OBJ_13" = {
          isa = "PBXFileReference";
-         path = "main.swift";
+         path = "ExpressibleByStringLiteral.swift";
          sourceTree = "<group>";
       };
       "OBJ_136" = {
@@ -326,18 +332,13 @@
          );
       };
       "OBJ_14" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_15",
-            "OBJ_16"
-         );
-         name = "URLRequestRouter";
-         path = "Sources/URLRequestRouter";
-         sourceTree = "SOURCE_ROOT";
+         isa = "PBXFileReference";
+         path = "Flatten.swift";
+         sourceTree = "<group>";
       };
       "OBJ_140" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_22";
+         fileRef = "OBJ_9";
       };
       "OBJ_141" = {
          isa = "PBXFrameworksBuildPhase";
@@ -443,24 +444,24 @@
       };
       "OBJ_15" = {
          isa = "PBXFileReference";
-         path = "RequestData.swift";
+         path = "PartialIso.swift";
          sourceTree = "<group>";
       };
       "OBJ_150" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_25";
+         fileRef = "OBJ_28";
       };
       "OBJ_151" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_26";
+         fileRef = "OBJ_29";
       };
       "OBJ_152" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_27";
+         fileRef = "OBJ_30";
       };
       "OBJ_153" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_30";
+         fileRef = "OBJ_33";
       };
       "OBJ_154" = {
          isa = "PBXFrameworksBuildPhase";
@@ -492,9 +493,15 @@
          target = "SnapshotTesting::SnapshotTesting";
       };
       "OBJ_16" = {
-         isa = "PBXFileReference";
-         path = "URLRequestRouter.swift";
-         sourceTree = "<group>";
+         isa = "PBXGroup";
+         children = (
+            "OBJ_17",
+            "OBJ_18",
+            "OBJ_19"
+         );
+         name = "Syntax";
+         path = "Sources/Syntax";
+         sourceTree = "SOURCE_ROOT";
       };
       "OBJ_161" = {
          isa = "PBXTargetDependency";
@@ -614,15 +621,9 @@
          );
       };
       "OBJ_17" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_18",
-            "OBJ_19",
-            "OBJ_20"
-         );
-         name = "PartialIso";
-         path = "Sources/PartialIso";
-         sourceTree = "SOURCE_ROOT";
+         isa = "PBXFileReference";
+         path = "Numeric.swift";
+         sourceTree = "<group>";
       };
       "OBJ_170" = {
          isa = "PBXBuildFile";
@@ -666,7 +667,7 @@
       };
       "OBJ_18" = {
          isa = "PBXFileReference";
-         path = "ExpressibleByStringLiteral.swift";
+         path = "String.swift";
          sourceTree = "<group>";
       };
       "OBJ_180" = {
@@ -713,7 +714,7 @@
       };
       "OBJ_19" = {
          isa = "PBXFileReference";
-         path = "Flatten.swift";
+         path = "Syntax.swift";
          sourceTree = "<group>";
       };
       "OBJ_190" = {
@@ -827,9 +828,14 @@
          defaultConfigurationName = "Release";
       };
       "OBJ_20" = {
-         isa = "PBXFileReference";
-         path = "PartialIso.swift";
-         sourceTree = "<group>";
+         isa = "PBXGroup";
+         children = (
+            "OBJ_21",
+            "OBJ_22"
+         );
+         name = "URLRequestRouter";
+         path = "Sources/URLRequestRouter";
+         sourceTree = "SOURCE_ROOT";
       };
       "OBJ_201" = {
          isa = "XCConfigurationList";
@@ -854,28 +860,24 @@
       };
       "OBJ_204" = {
          isa = "PBXTargetDependency";
-         target = "ParserPrinter::GeneratePartialIsosTests";
-      };
-      "OBJ_205" = {
-         isa = "PBXTargetDependency";
-         target = "ParserPrinter::PartialIsoTests";
-      };
-      "OBJ_207" = {
-         isa = "PBXTargetDependency";
          target = "ParserPrinter::SyntaxTests";
       };
-      "OBJ_209" = {
+      "OBJ_206" = {
          isa = "PBXTargetDependency";
          target = "ParserPrinter::URLRequestRouterTests";
       };
+      "OBJ_208" = {
+         isa = "PBXTargetDependency";
+         target = "ParserPrinter::PartialIsoTests";
+      };
       "OBJ_21" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_22"
-         );
-         name = "GeneratePartialIsos";
-         path = "Sources/GeneratePartialIsos";
-         sourceTree = "SOURCE_ROOT";
+         isa = "PBXFileReference";
+         path = "RequestData.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_210" = {
+         isa = "PBXTargetDependency";
+         target = "ParserPrinter::GeneratePartialIsosTests";
       };
       "OBJ_211" = {
          isa = "XCConfigurationList";
@@ -970,15 +972,15 @@
       };
       "OBJ_215" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_18";
+         fileRef = "OBJ_13";
       };
       "OBJ_216" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_19";
+         fileRef = "OBJ_14";
       };
       "OBJ_217" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_20";
+         fileRef = "OBJ_15";
       };
       "OBJ_218" = {
          isa = "PBXFrameworksBuildPhase";
@@ -996,7 +998,7 @@
       };
       "OBJ_22" = {
          isa = "PBXFileReference";
-         path = "GeneratePartialIsos.swift";
+         path = "URLRequestRouter.swift";
          sourceTree = "<group>";
       };
       "OBJ_220" = {
@@ -1078,11 +1080,11 @@
       };
       "OBJ_223" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_32";
+         fileRef = "OBJ_25";
       };
       "OBJ_224" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_33";
+         fileRef = "OBJ_26";
       };
       "OBJ_225" = {
          isa = "PBXFrameworksBuildPhase";
@@ -1148,7 +1150,7 @@
          isa = "PBXGroup";
          children = (
             "OBJ_24",
-            "OBJ_31",
+            "OBJ_27",
             "OBJ_34",
             "OBJ_37"
          );
@@ -1260,12 +1262,10 @@
          isa = "PBXGroup";
          children = (
             "OBJ_25",
-            "OBJ_26",
-            "OBJ_27",
-            "OBJ_28"
+            "OBJ_26"
          );
-         name = "GeneratePartialIsosTests";
-         path = "Tests/GeneratePartialIsosTests";
+         name = "PartialIsoTests";
+         path = "Tests/PartialIsoTests";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_240" = {
@@ -1310,7 +1310,7 @@
       };
       "OBJ_25" = {
          isa = "PBXFileReference";
-         path = "Fixture.swift";
+         path = "PartialIsoTests.swift";
          sourceTree = "<group>";
       };
       "OBJ_250" = {
@@ -1352,7 +1352,7 @@
       };
       "OBJ_26" = {
          isa = "PBXFileReference";
-         path = "GeneratePartialIsosTests.swift";
+         path = "XCTestManifests.swift";
          sourceTree = "<group>";
       };
       "OBJ_260" = {
@@ -1526,9 +1526,16 @@
          fileRef = "OBJ_97";
       };
       "OBJ_27" = {
-         isa = "PBXFileReference";
-         path = "XCTestManifests.swift";
-         sourceTree = "<group>";
+         isa = "PBXGroup";
+         children = (
+            "OBJ_28",
+            "OBJ_29",
+            "OBJ_30",
+            "OBJ_31"
+         );
+         name = "GeneratePartialIsosTests";
+         path = "Tests/GeneratePartialIsosTests";
+         sourceTree = "SOURCE_ROOT";
       };
       "OBJ_270" = {
          isa = "PBXBuildFile";
@@ -1571,12 +1578,8 @@
          fileRef = "OBJ_107";
       };
       "OBJ_28" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_29"
-         );
-         name = "__Snapshots__";
-         path = "__Snapshots__";
+         isa = "PBXFileReference";
+         path = "Fixture.swift";
          sourceTree = "<group>";
       };
       "OBJ_280" = {
@@ -1620,12 +1623,8 @@
          fileRef = "OBJ_118";
       };
       "OBJ_29" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_30"
-         );
-         name = "GeneratePartialIsosTests";
-         path = "GeneratePartialIsosTests";
+         isa = "PBXFileReference";
+         path = "GeneratePartialIsosTests.swift";
          sourceTree = "<group>";
       };
       "OBJ_290" = {
@@ -1737,7 +1736,7 @@
       };
       "OBJ_30" = {
          isa = "PBXFileReference";
-         path = "test.1.swift";
+         path = "XCTestManifests.swift";
          sourceTree = "<group>";
       };
       "OBJ_300" = {
@@ -1833,15 +1832,15 @@
       };
       "OBJ_304" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_9";
+         fileRef = "OBJ_17";
       };
       "OBJ_305" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_10";
+         fileRef = "OBJ_18";
       };
       "OBJ_306" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_11";
+         fileRef = "OBJ_19";
       };
       "OBJ_307" = {
          isa = "PBXFrameworksBuildPhase";
@@ -1861,12 +1860,11 @@
       "OBJ_31" = {
          isa = "PBXGroup";
          children = (
-            "OBJ_32",
-            "OBJ_33"
+            "OBJ_32"
          );
-         name = "PartialIsoTests";
-         path = "Tests/PartialIsoTests";
-         sourceTree = "SOURCE_ROOT";
+         name = "__Snapshots__";
+         path = "__Snapshots__";
+         sourceTree = "<group>";
       };
       "OBJ_310" = {
          isa = "PBXTargetDependency";
@@ -1964,11 +1962,11 @@
       };
       "OBJ_316" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_35";
+         fileRef = "OBJ_38";
       };
       "OBJ_317" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_36";
+         fileRef = "OBJ_39";
       };
       "OBJ_318" = {
          isa = "PBXFrameworksBuildPhase";
@@ -1983,8 +1981,12 @@
          fileRef = "ParserPrinter::Syntax::Product";
       };
       "OBJ_32" = {
-         isa = "PBXFileReference";
-         path = "PartialIsoTests.swift";
+         isa = "PBXGroup";
+         children = (
+            "OBJ_33"
+         );
+         name = "GeneratePartialIsosTests";
+         path = "GeneratePartialIsosTests";
          sourceTree = "<group>";
       };
       "OBJ_320" = {
@@ -2099,16 +2101,16 @@
       };
       "OBJ_33" = {
          isa = "PBXFileReference";
-         path = "XCTestManifests.swift";
+         path = "test.1.swift";
          sourceTree = "<group>";
       };
       "OBJ_330" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_15";
+         fileRef = "OBJ_21";
       };
       "OBJ_331" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_16";
+         fileRef = "OBJ_22";
       };
       "OBJ_332" = {
          isa = "PBXFrameworksBuildPhase";
@@ -2157,8 +2159,8 @@
             "OBJ_35",
             "OBJ_36"
          );
-         name = "SyntaxTests";
-         path = "Tests/SyntaxTests";
+         name = "URLRequestRouterTests";
+         path = "Tests/URLRequestRouterTests";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_340" = {
@@ -2240,11 +2242,11 @@
       };
       "OBJ_343" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_38";
+         fileRef = "OBJ_35";
       };
       "OBJ_344" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_39";
+         fileRef = "OBJ_36";
       };
       "OBJ_345" = {
          isa = "PBXFrameworksBuildPhase";
@@ -2273,7 +2275,7 @@
       };
       "OBJ_35" = {
          isa = "PBXFileReference";
-         path = "SyntaxTests.swift";
+         path = "URLRequestRouterTests.swift";
          sourceTree = "<group>";
       };
       "OBJ_350" = {
@@ -2379,7 +2381,7 @@
       };
       "OBJ_359" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_13";
+         fileRef = "OBJ_11";
       };
       "OBJ_36" = {
          isa = "PBXFileReference";
@@ -2415,13 +2417,13 @@
             "OBJ_38",
             "OBJ_39"
          );
-         name = "URLRequestRouterTests";
-         path = "Tests/URLRequestRouterTests";
+         name = "SyntaxTests";
+         path = "Tests/SyntaxTests";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_38" = {
          isa = "PBXFileReference";
-         path = "URLRequestRouterTests.swift";
+         path = "SyntaxTests.swift";
          sourceTree = "<group>";
       };
       "OBJ_39" = {
@@ -2500,7 +2502,7 @@
             "OBJ_55"
          );
          name = "SnapshotTesting";
-         path = ".build/checkouts/swift-snapshot-testing.git-881251057018528727/Sources/SnapshotTesting";
+         path = ".build/checkouts/swift-snapshot-testing.git--5120405597536721154/Sources/SnapshotTesting";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_44" = {
@@ -2682,10 +2684,10 @@
          isa = "PBXGroup";
          children = (
             "OBJ_8",
+            "OBJ_10",
             "OBJ_12",
-            "OBJ_14",
-            "OBJ_17",
-            "OBJ_21"
+            "OBJ_16",
+            "OBJ_20"
          );
          name = "Sources";
          path = "";
@@ -2705,7 +2707,7 @@
          isa = "PBXFileReference";
          explicitFileType = "sourcecode.swift";
          name = "Package.swift";
-         path = "/Users/brandon/projects/swift-parser-printer/.build/checkouts/swift-snapshot-testing.git-881251057018528727/Package.swift";
+         path = "/Users/stephencelis/Developer/pointfreeco/swift-parser-printer/.build/checkouts/swift-snapshot-testing.git--5120405597536721154/Package.swift";
          sourceTree = "<group>";
       };
       "OBJ_73" = {
@@ -2725,7 +2727,7 @@
             "OBJ_80"
          );
          name = "Monoid";
-         path = ".build/checkouts/swift-algebras--3128808632194706342/Sources/Monoid";
+         path = ".build/checkouts/swift-algebras-1501178186608326700/Sources/Monoid";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_75" = {
@@ -2763,12 +2765,10 @@
       "OBJ_8" = {
          isa = "PBXGroup";
          children = (
-            "OBJ_9",
-            "OBJ_10",
-            "OBJ_11"
+            "OBJ_9"
          );
-         name = "Syntax";
-         path = "Sources/Syntax";
+         name = "GeneratePartialIsos";
+         path = "Sources/GeneratePartialIsos";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_80" = {
@@ -2839,7 +2839,7 @@
       };
       "OBJ_9" = {
          isa = "PBXFileReference";
-         path = "Numeric.swift";
+         path = "GeneratePartialIsos.swift";
          sourceTree = "<group>";
       };
       "OBJ_90" = {
@@ -2866,7 +2866,7 @@
          isa = "PBXFileReference";
          explicitFileType = "sourcecode.swift";
          name = "Package.swift";
-         path = "/Users/brandon/projects/swift-parser-printer/.build/checkouts/swift-algebras--3128808632194706342/Package.swift";
+         path = "/Users/stephencelis/Developer/pointfreeco/swift-parser-printer/.build/checkouts/swift-algebras-1501178186608326700/Package.swift";
          sourceTree = "<group>";
       };
       "OBJ_95" = {
@@ -2900,7 +2900,7 @@
             "OBJ_112"
          );
          name = "SwiftSyntax";
-         path = ".build/checkouts/swift-syntax.git--6203569313868573340/Sources/SwiftSyntax";
+         path = ".build/checkouts/swift-syntax.git-6551255410123428459/Sources/SwiftSyntax";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_97" = {
@@ -2968,9 +2968,9 @@
          );
          dependencies = (
             "OBJ_204",
-            "OBJ_205",
-            "OBJ_207",
-            "OBJ_209"
+            "OBJ_206",
+            "OBJ_208",
+            "OBJ_210"
          );
          name = "ParserPrinterPackageTests";
          productName = "ParserPrinterPackageTests";

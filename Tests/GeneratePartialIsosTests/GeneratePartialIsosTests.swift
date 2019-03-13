@@ -17,6 +17,7 @@ extension Snapshotting where Value == URL, Format == String {
 
 final class GeneratePartialIsosTests: SnapshotTestCase {
   func test() throws {
+//    record=true
     assertSnapshot(
       matching: URL(fileURLWithPath: #file)
         .deletingLastPathComponent()
