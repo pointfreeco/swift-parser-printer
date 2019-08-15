@@ -50,11 +50,15 @@ extension Syntax where M == RequestData {
     self = routes.reduce(into: .init(.requestData)) { $0 = $0.or($1) }
   }
 
-  public static func match<A0>(_ f: PartialIso<A0, A>, to syntax: Syntax<A0, M>) -> Syntax {
-    return (syntax <% .end).map(f)
-  }
+//  public static func match<A0>(_ f: PartialIso<A0, A>, to syntax: Syntax<A0, M>) -> Syntax {
+//    return (syntax <% .end).map(f)
+//  }
 
   public static func match<A0>(_ f: @escaping (A0) -> A, to syntax: Syntax<A0, M>) -> Syntax {
+    return (syntax <% .end).map(PartialIso(case: f))
+  }
+
+  public static func match2<A0, A1>(_ f: @escaping (A0, A1) -> A, to syntax: Syntax<(A0, A1), M>) -> Syntax {
     return (syntax <% .end).map(PartialIso(case: f))
   }
 

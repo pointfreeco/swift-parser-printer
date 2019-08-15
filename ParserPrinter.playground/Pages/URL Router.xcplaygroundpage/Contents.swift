@@ -10,6 +10,7 @@ struct User: Codable {
 
 enum Route {
   case home
+  case episodes(limit: Int?, offset: Int?)
   case episode(Int)
   case search(String?)
   case signUp(User)
@@ -17,6 +18,10 @@ enum Route {
 
 let router = Router<Route>(
   .match({ _ in .home }, to: .get),
+  .match2(
+    Route.episodes(limit:offset:),
+    to: .get </> "episodes" <?> ("limit", .optional(.int)) <&> ("offset", .optional(.int))
+  ),
   .match(Route.episode, to: .get </> "episodes" </> .int),
   .match(Route.search, to: .get </> "search" <?> ("q", .optional(.string))),
   .match(Route.signUp, to: .post(.json) </> "sign-up")
@@ -24,6 +29,7 @@ let router = Router<Route>(
 
 router.match(urlString: "/?ga=1")
 router.match(urlString: "/episodes/1?ga=1")
+router.match(urlString: "/episodes?limit=10")
 router.match(urlString: "/search?ga=1")
 router.match(urlString: "/search?q=point-free&ga=1")
 router.match(urlString: "/search")

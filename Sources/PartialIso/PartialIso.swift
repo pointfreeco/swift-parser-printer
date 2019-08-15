@@ -23,6 +23,24 @@ extension PartialIso {
     }
   }
 
+  public init<C, D>(case: @escaping (C, D) -> B) where A == (C, D) {
+    self.init(apply: `case`) { root in
+      let rootChildren = Mirror(reflecting: root).children
+      guard
+        let (labelC, anyC) = rootChildren.first,
+        let c = anyC as? C
+            ?? Mirror(reflecting: anyC).children.first?.value as? C,
+        let (labelD, anyD) = rootChildren.dropFirst().first,
+        let d = anyD as? D
+            ?? Mirror(reflecting: anyD).children.first?.value as? D,
+        case let b = Mirror(reflecting: `case`(c, d)).children,
+        b.first?.label == labelC,
+        b.dropFirst().first?.label == labelD
+        else { return nil }
+      return (c, d)
+    }
+  }
+
   /// Inverts the partial isomorphism.
   public var inverted: PartialIso<B, A> {
     return .init(apply: self.unapply, unapply: self.apply)
