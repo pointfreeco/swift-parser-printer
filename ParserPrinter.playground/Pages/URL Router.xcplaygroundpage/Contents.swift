@@ -17,7 +17,7 @@ enum Route {
 }
 
 let router = Router(
-  .match({ _ in .home }, to: .get),
+  .match(.home, to: .get),
   .match(
     Route.episodes(limit:offset:),
     to: .get </> "episodes" <?> ("limit", .optional(.int)) <&> ("offset", .optional(.int))
@@ -47,3 +47,4 @@ router.request(for: Route.search("blob"))
 router.request(for: Route.search(""))
 router.request(for: Route.search(nil))
 router.request(for: Route.episode(42))
+router.request(for: Route.episodes(limit: 10, offset: 10))
