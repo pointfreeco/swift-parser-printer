@@ -16,9 +16,9 @@ enum Route {
   case signUp(User)
 }
 
-let router = Router<Route>(
+let router = Router(
   .match({ _ in .home }, to: .get),
-  .match2(
+  .match(
     Route.episodes(limit:offset:),
     to: .get </> "episodes" <?> ("limit", .optional(.int)) <&> ("offset", .optional(.int))
   ),

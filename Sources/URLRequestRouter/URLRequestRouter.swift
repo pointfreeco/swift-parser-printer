@@ -58,10 +58,6 @@ extension Syntax where M == RequestData {
     return (syntax <% .end).map(PartialIso(case: f))
   }
 
-  public static func match2<A0, A1>(_ f: @escaping (A0, A1) -> A, to syntax: Syntax<(A0, A1), M>) -> Syntax {
-    return (syntax <% .end).map(PartialIso(case: f))
-  }
-
   public static func pathParam(_ iso: PartialIso<String, A>) -> Syntax<A, M> {
     return Syntax(
       parse: { request in
